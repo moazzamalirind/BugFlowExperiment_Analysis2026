@@ -86,7 +86,7 @@ ________________________________________________________________________________
 
 \## Model Formulation
 
-!\[image](https://github.com/moazzamalirind/BugFlowExperiment\_Analysis2026/Documents/Model_Structure.png)
+!\[image](https://github.com/moazzamalirind/BugFlowExperiment/Analysis2026/Documents/Model_Structure.png)
 
 
 
