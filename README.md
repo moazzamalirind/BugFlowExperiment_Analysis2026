@@ -9,17 +9,21 @@ ________________________________________________________________________________
 
 _________________________________________________________________________________________________________________________________________________________________________________________________
 
-This study is part of my M.S. degree in Civil and Environmental Engineering at \*\*Utah State University, Utah, USA.
+This study is part of my M.S. degree in Civil and Environmental Engineering at **Utah State University, Utah, USA**
+
 This research was jointly funded by the Future of the Colorado River Project and the Higher Education Commission (HEC) of Pakistan.
-Corresponding Author: \*\*Moazzam Ali Rind\*\* (moazzamalirind@gmail.com)
-Advised by: \*\*Dr. David E. Rosenberg\*\* (http://rosenberg.usu.edu/)
+
+Corresponding Author: **Moazzam Ali Rind** (moazzamalirind@gmail.com)
+
+Advised by: **Dr. David E. Rosenberg** (http://rosenberg.usu.edu/)
 
 Starting Date: 6/1/2019
-Lasted updated: 7/19/2026
+
+Lasted updated: 7/20/2026
 
 \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
 
-\## Project Summary: 
+## Project Summary: 
 
 
 
@@ -27,7 +31,7 @@ This study quantifies the trade-offs between the number of days with steady rese
 
 ___________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
 
-\## Objectives
+## Objectives
 
 * Quantify the tradeoffs between ecosystem objectives, represented by the number of low, steady-flow days, and traditional reservoir-management objectives, represented by monthly hydropower-peaking value.
 
@@ -41,7 +45,7 @@ ________________________________________________________________________________
 
 \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
 
-\## Features of the study
+## Features of the study
 
 1\. We have transformed a monthly non-linear hydropower objective with 744 hourly release decisions (24 hours \*31 days) to a linear problem with only 6 sub-daily decisions i.e: 3 day type (Saturday, Sunday, and Weekday) and 2 periods per day.
 
