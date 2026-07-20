@@ -42,7 +42,7 @@ Lasted updated: 7/19/2026
 
 This study quantifies the trade-offs between the number of days with steady reservoir releases and hydropower-peaking objectives. A steady-flow day—during which releases remain constant throughout the day—provides suitable conditions for aquatic invertebrates to lay eggs and for those eggs to hatch. Since 2018, a Bug Flow Experiment has been implemented at Glen Canyon Dam, with summer releases kept low and steady on weekends. The overarching questions are:1) How does hydropeaking value vary as steady flow days expand from weekends to weekdays? 2) How can the tradeoff results be used to inform an ecosystem manager’s budget and commitments regarding the number and timing of Bug Flow days to purchase from hydropower producers? The optimization model, using constraint method, was used to quantify the tradeoffs. The model runs for one month with two sub-daily timesteps and is subjected to reservoir’s physical and managerial constraints. Estimates include scenarios that vary monthly release volume, weekend offset release, energy-pricing structure (market versus contract prices), and the model’s sensitivity to 2014 versus 2024 energy prices. The results help design a program where ecosystem managers can purchase additional days of steady releases from hydropower producers and compensate the producers for the lost hydropower revenue.
 
-\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+___________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
 
 \## Objectives
 
@@ -86,7 +86,7 @@ This study quantifies the trade-offs between the number of days with steady rese
 
 \## Model Formulation
 
-!\[image](https://github.com/moazzamalirind/BugFlowExperiment\_Analysis2026/Documents/Model\_Structure.png)
+!\[image](https://github.com/moazzamalirind/BugFlowExperiment\_Analysis2026/Documents/Model_Structure.png)
 
 
 
