@@ -76,16 +76,18 @@ Throughout this project, we produced a range of documents, including the researc
 **b. EnergyPrices and Supporting Data**
 
 There are three subfolders with distinct infromation.
-*1. 2014Prices*
 
+**i. 2014Prices**
 
-*2. 2024Prices*
+"EnergyRates_2014.xlsx" contains the raw hourly energy prices received from WAPA for 2014. The hourly data were aggregated into two time periods per day, and the average price for each period was used to represent the 2014 energy prices for each month. 
 
-*3. Observed_Hydrographs*
+**ii. 2024Prices**
+
+This folder contains all files and code required to generate the 2024 energy-price dataset. The accompanying README provides step-by-step instructions for navigating the folder and executing the complete data-generation workflow. Supplementary Tables S1–S2 and Figures S2–S3 were adopted from the output file "GCDEnergyPrice.pdf".
+
+**iii. Observed_Hydrographs**
 
 File named "Hydrographs_Observed_Used.xlsx" contains obserevd releases at Lees Ferry below Glen Canyon Dam,Arizona ([https://waterdata.usgs.gov/usa/nwis/uv?09380000](https://waterdata.usgs.gov/monitoring-location/USGS-09380000)). There are observed hydrographs from 2013 to 2021 and those excel files have some initial data analysis, visualization, and selections. Figure 2 in the main article and supplementary Figure S4-S6 are prepared using the observed information. "Hydropower_Fluctuations(2018).xlsx" provides an approximate estimate of variations in hydropower generation resulting from changes in reservoir storage levels (Supplementary Table S6).
-
-Initially, we developed a model with two daytypes: Weekday and Weekend. However, this overlooked the importance of Saturday energy prices. To address this, we created an updated model with three daytypes (Weekday, Saturday, and Sunday) and performed preliminary comparisons and calculations to assess the improvement. These calculations, documented in "Model Results Summary.xlsx," are primarily for our reference and may not be easily understandable to users.
 
 **c. Results_2014Pricing**
 
