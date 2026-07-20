@@ -1,4 +1,5 @@
 # BugFlowExperiment\_Analysis2026
+________________________________________________________________________________________________________________________________________________________________________________________________
 
 Glen Canyon Dam Bug Flow Experiment featuring GAMS optimization models and supporting data for evaluating trade-offs between ecological flow objectives and hydropower generation.
 
@@ -6,30 +7,14 @@ ________________________________________________________________________________
 
 ## Bugs Buy Steady Releases from Hydropower Producers to Reduce Hydropeaking Ecosystem Conflict 
 
-\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+_________________________________________________________________________________________________________________________________________________________________________________________________
 
-
-
-This study is part of my M.S. degree in Civil and Environmental Engineering at \*\*Utah State University, Utah, USA\*\*
-
-
-
+This study is part of my M.S. degree in Civil and Environmental Engineering at \*\*Utah State University, Utah, USA.
 This research was jointly funded by the Future of the Colorado River Project and the Higher Education Commission (HEC) of Pakistan.
-
-
-
 Corresponding Author: \*\*Moazzam Ali Rind\*\* (moazzamalirind@gmail.com)
-
-
-
 Advised by: \*\*Dr. David E. Rosenberg\*\* (http://rosenberg.usu.edu/)
 
-
-
 Starting Date: 6/1/2019
-
-
-
 Lasted updated: 7/19/2026
 
 \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
