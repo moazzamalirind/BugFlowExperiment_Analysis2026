@@ -1,0 +1,3674 @@
+
+--- Job July18_Marketpricing_Updated.gms Start 11/25/24 02:07:34 30.3.0 rc5da09e WEX-WEI x86 64bit/MS Windows
+--- GAMS Parameters defined
+    Input C:\Users\Mooz\Documents\GitHub\GCD_BugFlowExperiment\Models\July 2018\Market-Contract Price Model\July18_Marketpricing_Updated.gms
+    PageWidth 80
+    PageSize 0
+    PageContr 3
+    Action CE
+    ScrDir C:\Users\Mooz\Documents\GitHub\GCD_BugFlowExperiment\Models\July 2018\Market-Contract Price Model\225a\
+    SysDir C:\GAMS\win64\30.3\
+    WorkDir C:\Users\Mooz\Documents\GitHub\GCD_BugFlowExperiment\Models\July 2018\Market-Contract Price Model\
+    LogOption 3
+    DFormat 0
+    TFormat 0
+    License C:\Users\Mooz\Downloads\gamslice.txt
+    ErrorLog 99
+    IDE 1
+GAMS 30.3.0   Copyright (C) 1987-2020 GAMS Development. All rights reserved
+Licensee: Small MUD - 5 User License                     G200622/0001AP-GEN
+          Utah State University, Utah Water Research Laboratory      DC7087
+--- Starting compilation
+--- July18_Marketpricing_Updated.gms(395) 3 Mb
+--- Starting execution: elapsed 0:00:00.090
+--- July18_Marketpricing_Updated.gms(287) 4 Mb
+--- Generating LP model Model1
+--- July18_Marketpricing_Updated.gms(297) 4 Mb
+--- LOOPS PriceScen = PriceScen1
+---       Offset = H4
+---       tot_vol = V1
+---       Nu_SteadyDays = case1
+---   85 rows  45 columns  153 non-zeroes
+--- Executing CPLEX: elapsed 0:00:00.111
+
+IBM ILOG CPLEX   30.3.0 rc5da09e Released Mar 06, 2020 WEI x86 64bit/MS Window
+--- GAMS/Cplex Link licensed for continuous and discrete problems.
+Cplex 12.10.0.0
+
+Reading data...
+Starting Cplex...
+Space for names approximately 0.01 Mb
+Use option 'names no' to turn use of names off
+Version identifier: 12.10.0.0 | 2019-11-26 | 843d4de2ae
+CPXPARAM_Advance                                 0
+CPXPARAM_Threads                                 1
+CPXPARAM_Parallel                                1
+CPXPARAM_Simplex_Limits_Iterations               2000000000
+CPXPARAM_TimeLimit                               1000
+CPXPARAM_Tune_TimeLimit                          200
+Tried aggregator 1 time.
+LP Presolve eliminated 70 rows and 29 columns.
+Aggregator did 5 substitutions.
+Reduced LP has 10 rows, 11 columns, and 25 nonzeros.
+Presolve time = 0.00 sec. (0.05 ticks)
+Initializing dual steep norms . . .
+
+Iteration log . . .
+Iteration:     1   Scaled dual infeas =          1571.092539
+Iteration:     7   Dual objective     =      21903397.574434
+LP status(1): optimal
+Cplex Time: 0.09sec (det. 0.09 ticks)
+
+Optimal solution found.
+Objective :    21433364.878071
+
+--- Restarting execution
+--- July18_Marketpricing_Updated.gms(297) 2 Mb
+--- Reading solution for model Model1
+--- Executing after solve: elapsed 0:00:00.404
+--- July18_Marketpricing_Updated.gms(287) 3 Mb
+--- Generating LP model Model1
+--- July18_Marketpricing_Updated.gms(297) 3 Mb
+--- LOOPS PriceScen = PriceScen1
+---       Offset = H4
+---       tot_vol = V1
+---       Nu_SteadyDays = case2
+---   96 rows  47 columns  175 non-zeroes
+--- Executing CPLEX: elapsed 0:00:00.413
+
+IBM ILOG CPLEX   30.3.0 rc5da09e Released Mar 06, 2020 WEI x86 64bit/MS Window
+--- GAMS/Cplex Link licensed for continuous and discrete problems.
+Cplex 12.10.0.0
+
+Reading data...
+Starting Cplex...
+Space for names approximately 0.01 Mb
+Use option 'names no' to turn use of names off
+Version identifier: 12.10.0.0 | 2019-11-26 | 843d4de2ae
+CPXPARAM_Advance                                 2
+CPXPARAM_Threads                                 1
+CPXPARAM_Parallel                                1
+CPXPARAM_Simplex_Limits_Iterations               2000000000
+CPXPARAM_TimeLimit                               1000
+CPXPARAM_Tune_TimeLimit                          200
+Tried aggregator 1 time.
+LP Presolve eliminated 75 rows and 25 columns.
+Aggregator did 7 substitutions.
+Reduced LP has 14 rows, 15 columns, and 35 nonzeros.
+Presolve time = 0.00 sec. (0.05 ticks)
+
+Iteration log . . .
+Iteration:     1   Scaled dual infeas =          3616.000000
+Iteration:    21   Dual objective     =      22490684.603468
+LP status(1): optimal
+Cplex Time: 0.00sec (det. 0.20 ticks)
+
+Optimal solution found.
+Objective :    21436673.040343
+
+--- Restarting execution
+--- July18_Marketpricing_Updated.gms(297) 2 Mb
+--- Reading solution for model Model1
+--- Executing after solve: elapsed 0:00:00.643
+--- July18_Marketpricing_Updated.gms(287) 3 Mb
+--- Generating LP model Model1
+--- July18_Marketpricing_Updated.gms(297) 3 Mb
+--- LOOPS PriceScen = PriceScen1
+---       Offset = H4
+---       tot_vol = V1
+---       Nu_SteadyDays = case3
+---   96 rows  47 columns  175 non-zeroes
+--- Executing CPLEX: elapsed 0:00:00.651
+
+IBM ILOG CPLEX   30.3.0 rc5da09e Released Mar 06, 2020 WEI x86 64bit/MS Window
+--- GAMS/Cplex Link licensed for continuous and discrete problems.
+Cplex 12.10.0.0
+
+Reading data...
+Starting Cplex...
+Space for names approximately 0.01 Mb
+Use option 'names no' to turn use of names off
+Version identifier: 12.10.0.0 | 2019-11-26 | 843d4de2ae
+CPXPARAM_Advance                                 2
+CPXPARAM_Threads                                 1
+CPXPARAM_Parallel                                1
+CPXPARAM_Simplex_Limits_Iterations               2000000000
+CPXPARAM_TimeLimit                               1000
+CPXPARAM_Tune_TimeLimit                          200
+Tried aggregator 1 time.
+LP Presolve eliminated 75 rows and 25 columns.
+Aggregator did 7 substitutions.
+Reduced LP has 14 rows, 15 columns, and 35 nonzeros.
+Presolve time = 0.00 sec. (0.05 ticks)
+
+Iteration log . . .
+Iteration:     1   Scaled dual infeas =          3604.533732
+Iteration:    18   Dual objective     =      21550962.939375
+LP status(1): optimal
+Cplex Time: 0.00sec (det. 0.20 ticks)
+
+Optimal solution found.
+Objective :    21447043.271188
+
+--- Restarting execution
+--- July18_Marketpricing_Updated.gms(297) 2 Mb
+--- Reading solution for model Model1
+--- Executing after solve: elapsed 0:00:00.881
+--- July18_Marketpricing_Updated.gms(287) 3 Mb
+--- Generating LP model Model1
+--- July18_Marketpricing_Updated.gms(297) 3 Mb
+--- LOOPS PriceScen = PriceScen1
+---       Offset = H4
+---       tot_vol = V1
+---       Nu_SteadyDays = case4
+---   85 rows  45 columns  153 non-zeroes
+--- Executing CPLEX: elapsed 0:00:00.889
+
+IBM ILOG CPLEX   30.3.0 rc5da09e Released Mar 06, 2020 WEI x86 64bit/MS Window
+--- GAMS/Cplex Link licensed for continuous and discrete problems.
+Cplex 12.10.0.0
+
+Reading data...
+Starting Cplex...
+Space for names approximately 0.01 Mb
+Use option 'names no' to turn use of names off
+Version identifier: 12.10.0.0 | 2019-11-26 | 843d4de2ae
+CPXPARAM_Advance                                 2
+CPXPARAM_Threads                                 1
+CPXPARAM_Parallel                                1
+CPXPARAM_Simplex_Limits_Iterations               2000000000
+CPXPARAM_TimeLimit                               1000
+CPXPARAM_Tune_TimeLimit                          200
+Tried aggregator 1 time.
+LP Presolve eliminated 68 rows and 27 columns.
+Aggregator did 5 substitutions.
+Reduced LP has 12 rows, 13 columns, and 30 nonzeros.
+Presolve time = 0.00 sec. (0.05 ticks)
+
+Iteration log . . .
+Iteration:     1   Scaled dual infeas =          3328.000000
+Iteration:    16   Dual objective     =      21596242.202175
+LP status(1): optimal
+Cplex Time: 0.00sec (det. 0.17 ticks)
+
+Optimal solution found.
+Objective :    21476678.662507
+
+--- Restarting execution
+--- July18_Marketpricing_Updated.gms(297) 2 Mb
+--- Reading solution for model Model1
+--- Executing after solve: elapsed 0:00:01.107
+--- July18_Marketpricing_Updated.gms(287) 3 Mb
+--- Generating LP model Model1
+--- July18_Marketpricing_Updated.gms(297) 3 Mb
+--- LOOPS PriceScen = PriceScen1
+---       Offset = H4
+---       tot_vol = V1
+---       Nu_SteadyDays = case5
+---   94 rows  47 columns  171 non-zeroes
+--- Executing CPLEX: elapsed 0:00:01.117
+
+IBM ILOG CPLEX   30.3.0 rc5da09e Released Mar 06, 2020 WEI x86 64bit/MS Window
+--- GAMS/Cplex Link licensed for continuous and discrete problems.
+Cplex 12.10.0.0
+
+Reading data...
+Starting Cplex...
+Space for names approximately 0.01 Mb
+Use option 'names no' to turn use of names off
+Version identifier: 12.10.0.0 | 2019-11-26 | 843d4de2ae
+CPXPARAM_Advance                                 2
+CPXPARAM_Threads                                 1
+CPXPARAM_Parallel                                1
+CPXPARAM_Simplex_Limits_Iterations               2000000000
+CPXPARAM_TimeLimit                               1000
+CPXPARAM_Tune_TimeLimit                          200
+Tried aggregator 1 time.
+LP Presolve eliminated 71 rows and 23 columns.
+Aggregator did 7 substitutions.
+Reduced LP has 16 rows, 17 columns, and 40 nonzeros.
+Presolve time = 0.00 sec. (0.05 ticks)
+
+Iteration log . . .
+Iteration:     1   Scaled dual infeas =          3328.000000
+Iteration:    22   Dual objective     =      22030906.691741
+LP status(1): optimal
+Cplex Time: 0.00sec (det. 0.20 ticks)
+
+Optimal solution found.
+Objective :    21399819.055842
+
+--- Restarting execution
+--- July18_Marketpricing_Updated.gms(297) 2 Mb
+--- Reading solution for model Model1
+--- Executing after solve: elapsed 0:00:01.363
+--- July18_Marketpricing_Updated.gms(287) 3 Mb
+--- Generating LP model Model1
+--- July18_Marketpricing_Updated.gms(297) 3 Mb
+--- LOOPS PriceScen = PriceScen1
+---       Offset = H4
+---       tot_vol = V1
+---       Nu_SteadyDays = case6
+---   83 rows  45 columns  149 non-zeroes
+--- Executing CPLEX: elapsed 0:00:01.372
+
+IBM ILOG CPLEX   30.3.0 rc5da09e Released Mar 06, 2020 WEI x86 64bit/MS Window
+--- GAMS/Cplex Link licensed for continuous and discrete problems.
+Cplex 12.10.0.0
+
+Reading data...
+Starting Cplex...
+Space for names approximately 0.01 Mb
+Use option 'names no' to turn use of names off
+Version identifier: 12.10.0.0 | 2019-11-26 | 843d4de2ae
+CPXPARAM_Advance                                 2
+CPXPARAM_Threads                                 1
+CPXPARAM_Parallel                                1
+CPXPARAM_Simplex_Limits_Iterations               2000000000
+CPXPARAM_TimeLimit                               1000
+CPXPARAM_Tune_TimeLimit                          200
+Tried aggregator 1 time.
+LP Presolve eliminated 66 rows and 27 columns.
+Aggregator did 5 substitutions.
+Reduced LP has 12 rows, 13 columns, and 30 nonzeros.
+Presolve time = 0.00 sec. (0.05 ticks)
+
+Iteration log . . .
+Iteration:     1   Scaled dual infeas =          3328.000000
+Iteration:    17   Dual objective     =      21781387.485975
+LP status(1): optimal
+Cplex Time: 0.01sec (det. 0.17 ticks)
+
+Optimal solution found.
+Objective :    21339183.916549
+
+--- Restarting execution
+--- July18_Marketpricing_Updated.gms(297) 2 Mb
+--- Reading solution for model Model1
+--- Executing after solve: elapsed 0:00:01.610
+--- July18_Marketpricing_Updated.gms(287) 3 Mb
+--- Generating LP model Model1
+--- July18_Marketpricing_Updated.gms(297) 3 Mb
+--- LOOPS PriceScen = PriceScen1
+---       Offset = H4
+---       tot_vol = V1
+---       Nu_SteadyDays = case7
+---   92 rows  47 columns  167 non-zeroes
+--- Executing CPLEX: elapsed 0:00:01.621
+
+IBM ILOG CPLEX   30.3.0 rc5da09e Released Mar 06, 2020 WEI x86 64bit/MS Window
+--- GAMS/Cplex Link licensed for continuous and discrete problems.
+Cplex 12.10.0.0
+
+Reading data...
+Starting Cplex...
+Space for names approximately 0.01 Mb
+Use option 'names no' to turn use of names off
+Version identifier: 12.10.0.0 | 2019-11-26 | 843d4de2ae
+CPXPARAM_Advance                                 2
+CPXPARAM_Threads                                 1
+CPXPARAM_Parallel                                1
+CPXPARAM_Simplex_Limits_Iterations               2000000000
+CPXPARAM_TimeLimit                               1000
+CPXPARAM_Tune_TimeLimit                          200
+Tried aggregator 1 time.
+LP Presolve eliminated 69 rows and 23 columns.
+Aggregator did 7 substitutions.
+Reduced LP has 16 rows, 17 columns, and 40 nonzeros.
+Presolve time = 0.00 sec. (0.05 ticks)
+
+Iteration log . . .
+Iteration:     1   Scaled dual infeas =          3424.000000
+Iteration:    25   Dual objective     =      21826472.253300
+LP status(1): optimal
+Cplex Time: 0.00sec (det. 0.20 ticks)
+
+Optimal solution found.
+Objective :    21215946.146655
+
+--- Restarting execution
+--- July18_Marketpricing_Updated.gms(297) 2 Mb
+--- Reading solution for model Model1
+--- Executing after solve: elapsed 0:00:01.844
+--- July18_Marketpricing_Updated.gms(287) 3 Mb
+--- Generating LP model Model1
+--- July18_Marketpricing_Updated.gms(297) 3 Mb
+--- LOOPS PriceScen = PriceScen1
+---       Offset = H4
+---       tot_vol = V1
+---       Nu_SteadyDays = case8
+---   92 rows  47 columns  167 non-zeroes
+--- Executing CPLEX: elapsed 0:00:01.853
+
+IBM ILOG CPLEX   30.3.0 rc5da09e Released Mar 06, 2020 WEI x86 64bit/MS Window
+--- GAMS/Cplex Link licensed for continuous and discrete problems.
+Cplex 12.10.0.0
+
+Reading data...
+Starting Cplex...
+Space for names approximately 0.01 Mb
+Use option 'names no' to turn use of names off
+Version identifier: 12.10.0.0 | 2019-11-26 | 843d4de2ae
+CPXPARAM_Advance                                 2
+CPXPARAM_Threads                                 1
+CPXPARAM_Parallel                                1
+CPXPARAM_Simplex_Limits_Iterations               2000000000
+CPXPARAM_TimeLimit                               1000
+CPXPARAM_Tune_TimeLimit                          200
+Tried aggregator 1 time.
+LP Presolve eliminated 69 rows and 23 columns.
+Aggregator did 7 substitutions.
+Reduced LP has 16 rows, 17 columns, and 40 nonzeros.
+Presolve time = 0.02 sec. (0.05 ticks)
+
+Iteration log . . .
+Iteration:     1   Scaled dual infeas =          3392.000000
+Iteration:    23   Dual objective     =      22161578.351031
+LP status(1): optimal
+Cplex Time: 0.02sec (det. 0.20 ticks)
+
+Optimal solution found.
+Objective :    21092708.376761
+
+--- Restarting execution
+--- July18_Marketpricing_Updated.gms(297) 2 Mb
+--- Reading solution for model Model1
+--- Executing after solve: elapsed 0:00:02.086
+--- July18_Marketpricing_Updated.gms(287) 3 Mb
+--- Generating LP model Model1
+--- July18_Marketpricing_Updated.gms(297) 3 Mb
+--- LOOPS PriceScen = PriceScen1
+---       Offset = H4
+---       tot_vol = V1
+---       Nu_SteadyDays = case9
+---   92 rows  47 columns  167 non-zeroes
+--- Executing CPLEX: elapsed 0:00:02.095
+
+IBM ILOG CPLEX   30.3.0 rc5da09e Released Mar 06, 2020 WEI x86 64bit/MS Window
+--- GAMS/Cplex Link licensed for continuous and discrete problems.
+Cplex 12.10.0.0
+
+Reading data...
+Starting Cplex...
+Space for names approximately 0.01 Mb
+Use option 'names no' to turn use of names off
+Version identifier: 12.10.0.0 | 2019-11-26 | 843d4de2ae
+CPXPARAM_Advance                                 2
+CPXPARAM_Threads                                 1
+CPXPARAM_Parallel                                1
+CPXPARAM_Simplex_Limits_Iterations               2000000000
+CPXPARAM_TimeLimit                               1000
+CPXPARAM_Tune_TimeLimit                          200
+Tried aggregator 1 time.
+LP Presolve eliminated 69 rows and 23 columns.
+Aggregator did 7 substitutions.
+Reduced LP has 16 rows, 17 columns, and 40 nonzeros.
+Presolve time = 0.00 sec. (0.05 ticks)
+
+Iteration log . . .
+Iteration:     1   Scaled dual infeas =          5647.822970
+Iteration:    23   Dual objective     =      21286800.743550
+LP status(1): optimal
+Cplex Time: 0.00sec (det. 0.21 ticks)
+
+Optimal solution found.
+Objective :    20846232.836972
+
+--- Restarting execution
+--- July18_Marketpricing_Updated.gms(297) 2 Mb
+--- Reading solution for model Model1
+--- Executing after solve: elapsed 0:00:02.322
+--- July18_Marketpricing_Updated.gms(287) 3 Mb
+--- Generating LP model Model1
+--- July18_Marketpricing_Updated.gms(297) 3 Mb
+--- LOOPS PriceScen = PriceScen1
+---       Offset = H4
+---       tot_vol = V1
+---       Nu_SteadyDays = case10
+---   92 rows  47 columns  167 non-zeroes
+--- Executing CPLEX: elapsed 0:00:02.331
+
+IBM ILOG CPLEX   30.3.0 rc5da09e Released Mar 06, 2020 WEI x86 64bit/MS Window
+--- GAMS/Cplex Link licensed for continuous and discrete problems.
+Cplex 12.10.0.0
+
+Reading data...
+Starting Cplex...
+Space for names approximately 0.01 Mb
+Use option 'names no' to turn use of names off
+Version identifier: 12.10.0.0 | 2019-11-26 | 843d4de2ae
+CPXPARAM_Advance                                 2
+CPXPARAM_Threads                                 1
+CPXPARAM_Parallel                                1
+CPXPARAM_Simplex_Limits_Iterations               2000000000
+CPXPARAM_TimeLimit                               1000
+CPXPARAM_Tune_TimeLimit                          200
+Tried aggregator 1 time.
+LP Presolve eliminated 71 rows and 25 columns.
+Aggregator did 7 substitutions.
+Reduced LP has 14 rows, 15 columns, and 35 nonzeros.
+Presolve time = 0.00 sec. (0.05 ticks)
+
+Iteration log . . .
+Iteration:     1   Scaled dual infeas =          6237.354560
+Iteration:    20   Dual objective     =      21065889.515365
+LP status(1): optimal
+Cplex Time: 0.00sec (det. 0.20 ticks)
+
+Optimal solution found.
+Objective :    20501919.126130
+
+--- Restarting execution
+--- July18_Marketpricing_Updated.gms(297) 2 Mb
+--- Reading solution for model Model1
+--- Executing after solve: elapsed 0:00:02.556
+--- July18_Marketpricing_Updated.gms(287) 3 Mb
+--- Generating LP model Model1
+--- July18_Marketpricing_Updated.gms(297) 3 Mb
+--- LOOPS PriceScen = PriceScen1
+---       Offset = H4
+---       tot_vol = V1
+---       Nu_SteadyDays = case11
+---   92 rows  47 columns  167 non-zeroes
+--- Executing CPLEX: elapsed 0:00:02.565
+
+IBM ILOG CPLEX   30.3.0 rc5da09e Released Mar 06, 2020 WEI x86 64bit/MS Window
+--- GAMS/Cplex Link licensed for continuous and discrete problems.
+Cplex 12.10.0.0
+
+Reading data...
+Starting Cplex...
+Space for names approximately 0.01 Mb
+Use option 'names no' to turn use of names off
+Version identifier: 12.10.0.0 | 2019-11-26 | 843d4de2ae
+CPXPARAM_Advance                                 2
+CPXPARAM_Threads                                 1
+CPXPARAM_Parallel                                1
+CPXPARAM_Simplex_Limits_Iterations               2000000000
+CPXPARAM_TimeLimit                               1000
+CPXPARAM_Tune_TimeLimit                          200
+Tried aggregator 1 time.
+LP Presolve eliminated 78 rows and 32 columns.
+Aggregator did 8 substitutions.
+Reduced LP has 6 rows, 7 columns, and 15 nonzeros.
+Presolve time = 0.00 sec. (0.05 ticks)
+
+Iteration log . . .
+Iteration:     1   Scaled dual infeas =          4480.000000
+Iteration:     9   Dual objective     =      20053847.878805
+LP status(1): optimal
+Cplex Time: 0.00sec (det. 0.17 ticks)
+
+Optimal solution found.
+Objective :    20053847.878805
+
+--- Restarting execution
+--- July18_Marketpricing_Updated.gms(297) 2 Mb
+--- Reading solution for model Model1
+--- Executing after solve: elapsed 0:00:02.791
+--- July18_Marketpricing_Updated.gms(287) 3 Mb
+--- Generating LP model Model1
+--- July18_Marketpricing_Updated.gms(297) 3 Mb
+--- LOOPS PriceScen = PriceScen1
+---       Offset = H4
+---       tot_vol = V1
+---       Nu_SteadyDays = case12
+---   92 rows  47 columns  167 non-zeroes
+--- Executing CPLEX: elapsed 0:00:02.801
+
+IBM ILOG CPLEX   30.3.0 rc5da09e Released Mar 06, 2020 WEI x86 64bit/MS Window
+--- GAMS/Cplex Link licensed for continuous and discrete problems.
+Cplex 12.10.0.0
+
+Reading data...
+Starting Cplex...
+Space for names approximately 0.01 Mb
+Use option 'names no' to turn use of names off
+Version identifier: 12.10.0.0 | 2019-11-26 | 843d4de2ae
+CPXPARAM_Advance                                 2
+CPXPARAM_Threads                                 1
+CPXPARAM_Parallel                                1
+CPXPARAM_Simplex_Limits_Iterations               2000000000
+CPXPARAM_TimeLimit                               1000
+CPXPARAM_Tune_TimeLimit                          200
+Tried aggregator 1 time.
+LP Presolve eliminated 80 rows and 34 columns.
+Aggregator did 8 substitutions.
+Reduced LP has 4 rows, 5 columns, and 10 nonzeros.
+Presolve time = 0.00 sec. (0.05 ticks)
+
+Iteration log . . .
+Iteration:     1   Scaled dual infeas =          4224.000000
+Iteration:     6   Dual objective     =      19665667.987270
+LP status(1): optimal
+Cplex Time: 0.00sec (det. 0.16 ticks)
+
+Optimal solution found.
+Objective :    19665667.987270
+
+--- Restarting execution
+--- July18_Marketpricing_Updated.gms(297) 2 Mb
+--- Reading solution for model Model1
+--- Executing after solve: elapsed 0:00:03.023
+--- July18_Marketpricing_Updated.gms(287) 3 Mb
+--- Generating LP model Model1
+--- July18_Marketpricing_Updated.gms(297) 3 Mb
+--- LOOPS PriceScen = PriceScen1
+---       Offset = H4
+---       tot_vol = V1
+---       Nu_SteadyDays = case13
+---   83 rows  45 columns  149 non-zeroes
+--- Executing CPLEX: elapsed 0:00:03.031
+
+IBM ILOG CPLEX   30.3.0 rc5da09e Released Mar 06, 2020 WEI x86 64bit/MS Window
+--- GAMS/Cplex Link licensed for continuous and discrete problems.
+Cplex 12.10.0.0
+
+Reading data...
+Starting Cplex...
+Space for names approximately 0.01 Mb
+Use option 'names no' to turn use of names off
+Version identifier: 12.10.0.0 | 2019-11-26 | 843d4de2ae
+CPXPARAM_Advance                                 2
+CPXPARAM_Threads                                 1
+CPXPARAM_Parallel                                1
+CPXPARAM_Simplex_Limits_Iterations               2000000000
+CPXPARAM_TimeLimit                               1000
+CPXPARAM_Tune_TimeLimit                          200
+Tried aggregator 1 time.
+LP Presolve eliminated 78 rows and 40 columns.
+Aggregator did 5 substitutions.
+All rows and columns eliminated.
+Presolve time = 0.00 sec. (0.04 ticks)
+LP status(1): optimal
+Cplex Time: 0.00sec (det. 0.11 ticks)
+
+Optimal solution found.
+Objective :    19249654.271356
+
+--- Restarting execution
+--- July18_Marketpricing_Updated.gms(297) 2 Mb
+--- Reading solution for model Model1
+--- Executing after solve: elapsed 0:00:03.208
+--- July18_Marketpricing_Updated.gms(287) 3 Mb
+--- Generating LP model Model1
+--- July18_Marketpricing_Updated.gms(297) 3 Mb
+--- LOOPS PriceScen = PriceScen1
+---       Offset = H4
+---       tot_vol = V2
+---       Nu_SteadyDays = case1
+---   85 rows  45 columns  153 non-zeroes
+--- Executing CPLEX: elapsed 0:00:03.217
+
+IBM ILOG CPLEX   30.3.0 rc5da09e Released Mar 06, 2020 WEI x86 64bit/MS Window
+--- GAMS/Cplex Link licensed for continuous and discrete problems.
+Cplex 12.10.0.0
+
+Reading data...
+Starting Cplex...
+Space for names approximately 0.01 Mb
+Use option 'names no' to turn use of names off
+Version identifier: 12.10.0.0 | 2019-11-26 | 843d4de2ae
+CPXPARAM_Advance                                 2
+CPXPARAM_Threads                                 1
+CPXPARAM_Parallel                                1
+CPXPARAM_Simplex_Limits_Iterations               2000000000
+CPXPARAM_TimeLimit                               1000
+CPXPARAM_Tune_TimeLimit                          200
+Tried aggregator 1 time.
+LP Presolve eliminated 68 rows and 27 columns.
+Aggregator did 5 substitutions.
+Reduced LP has 12 rows, 13 columns, and 30 nonzeros.
+Presolve time = 0.00 sec. (0.05 ticks)
+
+Iteration log . . .
+Iteration:     1   Scaled dual infeas =          3839.999999
+Iteration:    20   Dual objective     =      25383544.345629
+LP status(1): optimal
+Cplex Time: 0.00sec (det. 0.17 ticks)
+
+Optimal solution found.
+Objective :    24614610.031582
+
+--- Restarting execution
+--- July18_Marketpricing_Updated.gms(297) 2 Mb
+--- Reading solution for model Model1
+--- Executing after solve: elapsed 0:00:03.391
+--- July18_Marketpricing_Updated.gms(287) 3 Mb
+--- Generating LP model Model1
+--- July18_Marketpricing_Updated.gms(297) 3 Mb
+--- LOOPS PriceScen = PriceScen1
+---       Offset = H4
+---       tot_vol = V2
+---       Nu_SteadyDays = case2
+---   96 rows  47 columns  175 non-zeroes
+--- Executing CPLEX: elapsed 0:00:03.400
+
+IBM ILOG CPLEX   30.3.0 rc5da09e Released Mar 06, 2020 WEI x86 64bit/MS Window
+--- GAMS/Cplex Link licensed for continuous and discrete problems.
+Cplex 12.10.0.0
+
+Reading data...
+Starting Cplex...
+Space for names approximately 0.01 Mb
+Use option 'names no' to turn use of names off
+Version identifier: 12.10.0.0 | 2019-11-26 | 843d4de2ae
+CPXPARAM_Advance                                 2
+CPXPARAM_Threads                                 1
+CPXPARAM_Parallel                                1
+CPXPARAM_Simplex_Limits_Iterations               2000000000
+CPXPARAM_TimeLimit                               1000
+CPXPARAM_Tune_TimeLimit                          200
+Tried aggregator 1 time.
+LP Presolve eliminated 73 rows and 23 columns.
+Aggregator did 7 substitutions.
+Reduced LP has 16 rows, 17 columns, and 40 nonzeros.
+Presolve time = 0.00 sec. (0.05 ticks)
+
+Iteration log . . .
+Iteration:     1   Scaled dual infeas =          3744.000000
+Iteration:    24   Dual objective     =      25218818.968009
+LP status(1): optimal
+Cplex Time: 0.00sec (det. 0.21 ticks)
+
+Optimal solution found.
+Objective :    24615851.212047
+
+--- Restarting execution
+--- July18_Marketpricing_Updated.gms(297) 2 Mb
+--- Reading solution for model Model1
+--- Executing after solve: elapsed 0:00:03.644
+--- July18_Marketpricing_Updated.gms(287) 3 Mb
+--- Generating LP model Model1
+--- July18_Marketpricing_Updated.gms(297) 3 Mb
+--- LOOPS PriceScen = PriceScen1
+---       Offset = H4
+---       tot_vol = V2
+---       Nu_SteadyDays = case3
+---   96 rows  47 columns  175 non-zeroes
+--- Executing CPLEX: elapsed 0:00:03.652
+
+IBM ILOG CPLEX   30.3.0 rc5da09e Released Mar 06, 2020 WEI x86 64bit/MS Window
+--- GAMS/Cplex Link licensed for continuous and discrete problems.
+Cplex 12.10.0.0
+
+Reading data...
+Starting Cplex...
+Space for names approximately 0.01 Mb
+Use option 'names no' to turn use of names off
+Version identifier: 12.10.0.0 | 2019-11-26 | 843d4de2ae
+CPXPARAM_Advance                                 2
+CPXPARAM_Threads                                 1
+CPXPARAM_Parallel                                1
+CPXPARAM_Simplex_Limits_Iterations               2000000000
+CPXPARAM_TimeLimit                               1000
+CPXPARAM_Tune_TimeLimit                          200
+Tried aggregator 1 time.
+LP Presolve eliminated 73 rows and 23 columns.
+Aggregator did 7 substitutions.
+Reduced LP has 16 rows, 17 columns, and 40 nonzeros.
+Presolve time = 0.00 sec. (0.05 ticks)
+
+Iteration log . . .
+Iteration:     1   Scaled dual infeas =          3839.999999
+Iteration:    20   Dual objective     =      27435018.016274
+LP status(1): optimal
+Cplex Time: 0.00sec (det. 0.21 ticks)
+
+Optimal solution found.
+Objective :    24618033.068564
+
+--- Restarting execution
+--- July18_Marketpricing_Updated.gms(297) 2 Mb
+--- Reading solution for model Model1
+--- Executing after solve: elapsed 0:00:03.862
+--- July18_Marketpricing_Updated.gms(287) 3 Mb
+--- Generating LP model Model1
+--- July18_Marketpricing_Updated.gms(297) 3 Mb
+--- LOOPS PriceScen = PriceScen1
+---       Offset = H4
+---       tot_vol = V2
+---       Nu_SteadyDays = case4
+---   85 rows  45 columns  153 non-zeroes
+--- Executing CPLEX: elapsed 0:00:03.870
+
+IBM ILOG CPLEX   30.3.0 rc5da09e Released Mar 06, 2020 WEI x86 64bit/MS Window
+--- GAMS/Cplex Link licensed for continuous and discrete problems.
+Cplex 12.10.0.0
+
+Reading data...
+Starting Cplex...
+Space for names approximately 0.01 Mb
+Use option 'names no' to turn use of names off
+Version identifier: 12.10.0.0 | 2019-11-26 | 843d4de2ae
+CPXPARAM_Advance                                 2
+CPXPARAM_Threads                                 1
+CPXPARAM_Parallel                                1
+CPXPARAM_Simplex_Limits_Iterations               2000000000
+CPXPARAM_TimeLimit                               1000
+CPXPARAM_Tune_TimeLimit                          200
+Tried aggregator 1 time.
+LP Presolve eliminated 68 rows and 27 columns.
+Aggregator did 5 substitutions.
+Reduced LP has 12 rows, 13 columns, and 30 nonzeros.
+Presolve time = 0.00 sec. (0.05 ticks)
+
+Iteration log . . .
+Iteration:     1   Scaled dual infeas =          3328.000000
+Iteration:    19   Dual objective     =      25235095.928120
+LP status(1): optimal
+Cplex Time: 0.00sec (det. 0.17 ticks)
+
+Optimal solution found.
+Objective :    24625636.888001
+
+--- Restarting execution
+--- July18_Marketpricing_Updated.gms(297) 2 Mb
+--- Reading solution for model Model1
+--- Executing after solve: elapsed 0:00:04.103
+--- July18_Marketpricing_Updated.gms(287) 3 Mb
+--- Generating LP model Model1
+--- July18_Marketpricing_Updated.gms(297) 3 Mb
+--- LOOPS PriceScen = PriceScen1
+---       Offset = H4
+---       tot_vol = V2
+---       Nu_SteadyDays = case5
+---   94 rows  47 columns  171 non-zeroes
+--- Executing CPLEX: elapsed 0:00:04.113
+
+IBM ILOG CPLEX   30.3.0 rc5da09e Released Mar 06, 2020 WEI x86 64bit/MS Window
+--- GAMS/Cplex Link licensed for continuous and discrete problems.
+Cplex 12.10.0.0
+
+Reading data...
+Starting Cplex...
+Space for names approximately 0.01 Mb
+Use option 'names no' to turn use of names off
+Version identifier: 12.10.0.0 | 2019-11-26 | 843d4de2ae
+CPXPARAM_Advance                                 2
+CPXPARAM_Threads                                 1
+CPXPARAM_Parallel                                1
+CPXPARAM_Simplex_Limits_Iterations               2000000000
+CPXPARAM_TimeLimit                               1000
+CPXPARAM_Tune_TimeLimit                          200
+Tried aggregator 1 time.
+LP Presolve eliminated 71 rows and 23 columns.
+Aggregator did 7 substitutions.
+Reduced LP has 16 rows, 17 columns, and 40 nonzeros.
+Presolve time = 0.00 sec. (0.05 ticks)
+
+Iteration log . . .
+Iteration:     1   Scaled dual infeas =          3328.000000
+Iteration:    22   Dual objective     =      26522510.022618
+LP status(1): optimal
+Cplex Time: 0.00sec (det. 0.21 ticks)
+
+Optimal solution found.
+Objective :    24554422.681071
+
+--- Restarting execution
+--- July18_Marketpricing_Updated.gms(297) 2 Mb
+--- Reading solution for model Model1
+--- Executing after solve: elapsed 0:00:04.346
+--- July18_Marketpricing_Updated.gms(287) 3 Mb
+--- Generating LP model Model1
+--- July18_Marketpricing_Updated.gms(297) 3 Mb
+--- LOOPS PriceScen = PriceScen1
+---       Offset = H4
+---       tot_vol = V2
+---       Nu_SteadyDays = case6
+---   83 rows  45 columns  149 non-zeroes
+--- Executing CPLEX: elapsed 0:00:04.354
+
+IBM ILOG CPLEX   30.3.0 rc5da09e Released Mar 06, 2020 WEI x86 64bit/MS Window
+--- GAMS/Cplex Link licensed for continuous and discrete problems.
+Cplex 12.10.0.0
+
+Reading data...
+Starting Cplex...
+Space for names approximately 0.01 Mb
+Use option 'names no' to turn use of names off
+Version identifier: 12.10.0.0 | 2019-11-26 | 843d4de2ae
+CPXPARAM_Advance                                 2
+CPXPARAM_Threads                                 1
+CPXPARAM_Parallel                                1
+CPXPARAM_Simplex_Limits_Iterations               2000000000
+CPXPARAM_TimeLimit                               1000
+CPXPARAM_Tune_TimeLimit                          200
+Tried aggregator 1 time.
+LP Presolve eliminated 66 rows and 27 columns.
+Aggregator did 5 substitutions.
+Reduced LP has 12 rows, 13 columns, and 30 nonzeros.
+Presolve time = 0.00 sec. (0.05 ticks)
+
+Iteration log . . .
+Iteration:     1   Scaled dual infeas =          3328.000000
+Iteration:    18   Dual objective     =      25404764.849677
+LP status(1): optimal
+Cplex Time: 0.00sec (det. 0.17 ticks)
+
+Optimal solution found.
+Objective :    24476797.975263
+
+--- Restarting execution
+--- July18_Marketpricing_Updated.gms(297) 2 Mb
+--- Reading solution for model Model1
+--- Executing after solve: elapsed 0:00:04.573
+--- July18_Marketpricing_Updated.gms(287) 3 Mb
+--- Generating LP model Model1
+--- July18_Marketpricing_Updated.gms(297) 3 Mb
+--- LOOPS PriceScen = PriceScen1
+---       Offset = H4
+---       tot_vol = V2
+---       Nu_SteadyDays = case7
+---   92 rows  47 columns  167 non-zeroes
+--- Executing CPLEX: elapsed 0:00:04.583
+
+IBM ILOG CPLEX   30.3.0 rc5da09e Released Mar 06, 2020 WEI x86 64bit/MS Window
+--- GAMS/Cplex Link licensed for continuous and discrete problems.
+Cplex 12.10.0.0
+
+Reading data...
+Starting Cplex...
+Space for names approximately 0.01 Mb
+Use option 'names no' to turn use of names off
+Version identifier: 12.10.0.0 | 2019-11-26 | 843d4de2ae
+CPXPARAM_Advance                                 2
+CPXPARAM_Threads                                 1
+CPXPARAM_Parallel                                1
+CPXPARAM_Simplex_Limits_Iterations               2000000000
+CPXPARAM_TimeLimit                               1000
+CPXPARAM_Tune_TimeLimit                          200
+Tried aggregator 1 time.
+LP Presolve eliminated 69 rows and 23 columns.
+Aggregator did 7 substitutions.
+Reduced LP has 16 rows, 17 columns, and 40 nonzeros.
+Presolve time = 0.00 sec. (0.05 ticks)
+
+Iteration log . . .
+Iteration:     1   Scaled dual infeas =          3424.000000
+Iteration:    25   Dual objective     =      25217170.869367
+LP status(1): optimal
+Cplex Time: 0.00sec (det. 0.20 ticks)
+
+Optimal solution found.
+Objective :    24321806.544230
+
+--- Restarting execution
+--- July18_Marketpricing_Updated.gms(297) 2 Mb
+--- Reading solution for model Model1
+--- Executing after solve: elapsed 0:00:04.806
+--- July18_Marketpricing_Updated.gms(287) 3 Mb
+--- Generating LP model Model1
+--- July18_Marketpricing_Updated.gms(297) 3 Mb
+--- LOOPS PriceScen = PriceScen1
+---       Offset = H4
+---       tot_vol = V2
+---       Nu_SteadyDays = case8
+---   92 rows  47 columns  167 non-zeroes
+--- Executing CPLEX: elapsed 0:00:04.815
+
+IBM ILOG CPLEX   30.3.0 rc5da09e Released Mar 06, 2020 WEI x86 64bit/MS Window
+--- GAMS/Cplex Link licensed for continuous and discrete problems.
+Cplex 12.10.0.0
+
+Reading data...
+Starting Cplex...
+Space for names approximately 0.01 Mb
+Use option 'names no' to turn use of names off
+Version identifier: 12.10.0.0 | 2019-11-26 | 843d4de2ae
+CPXPARAM_Advance                                 2
+CPXPARAM_Threads                                 1
+CPXPARAM_Parallel                                1
+CPXPARAM_Simplex_Limits_Iterations               2000000000
+CPXPARAM_TimeLimit                               1000
+CPXPARAM_Tune_TimeLimit                          200
+Tried aggregator 1 time.
+LP Presolve eliminated 69 rows and 23 columns.
+Aggregator did 7 substitutions.
+Reduced LP has 16 rows, 17 columns, and 40 nonzeros.
+Presolve time = 0.00 sec. (0.05 ticks)
+
+Iteration log . . .
+Iteration:     1   Scaled dual infeas =          3520.000000
+Iteration:    25   Dual objective     =      24945935.017067
+LP status(1): optimal
+Cplex Time: 0.00sec (det. 0.20 ticks)
+
+Optimal solution found.
+Objective :    24166815.113196
+
+--- Restarting execution
+--- July18_Marketpricing_Updated.gms(297) 2 Mb
+--- Reading solution for model Model1
+--- Executing after solve: elapsed 0:00:05.057
+--- July18_Marketpricing_Updated.gms(287) 3 Mb
+--- Generating LP model Model1
+--- July18_Marketpricing_Updated.gms(297) 3 Mb
+--- LOOPS PriceScen = PriceScen1
+---       Offset = H4
+---       tot_vol = V2
+---       Nu_SteadyDays = case9
+---   92 rows  47 columns  167 non-zeroes
+--- Executing CPLEX: elapsed 0:00:05.068
+
+IBM ILOG CPLEX   30.3.0 rc5da09e Released Mar 06, 2020 WEI x86 64bit/MS Window
+--- GAMS/Cplex Link licensed for continuous and discrete problems.
+Cplex 12.10.0.0
+
+Reading data...
+Starting Cplex...
+Space for names approximately 0.01 Mb
+Use option 'names no' to turn use of names off
+Version identifier: 12.10.0.0 | 2019-11-26 | 843d4de2ae
+CPXPARAM_Advance                                 2
+CPXPARAM_Threads                                 1
+CPXPARAM_Parallel                                1
+CPXPARAM_Simplex_Limits_Iterations               2000000000
+CPXPARAM_TimeLimit                               1000
+CPXPARAM_Tune_TimeLimit                          200
+Tried aggregator 1 time.
+LP Presolve eliminated 71 rows and 25 columns.
+Aggregator did 7 substitutions.
+Reduced LP has 14 rows, 15 columns, and 35 nonzeros.
+Presolve time = 0.00 sec. (0.05 ticks)
+
+Iteration log . . .
+Iteration:     1   Scaled dual infeas =          5187.149510
+Iteration:    19   Dual objective     =      24370405.701418
+LP status(1): optimal
+Cplex Time: 0.00sec (det. 0.19 ticks)
+
+Optimal solution found.
+Objective :    23867178.641740
+
+--- Restarting execution
+--- July18_Marketpricing_Updated.gms(297) 2 Mb
+--- Reading solution for model Model1
+--- Executing after solve: elapsed 0:00:05.304
+--- July18_Marketpricing_Updated.gms(287) 3 Mb
+--- Generating LP model Model1
+--- July18_Marketpricing_Updated.gms(297) 3 Mb
+--- LOOPS PriceScen = PriceScen1
+---       Offset = H4
+---       tot_vol = V2
+---       Nu_SteadyDays = case10
+---   92 rows  47 columns  167 non-zeroes
+--- Executing CPLEX: elapsed 0:00:05.313
+
+IBM ILOG CPLEX   30.3.0 rc5da09e Released Mar 06, 2020 WEI x86 64bit/MS Window
+--- GAMS/Cplex Link licensed for continuous and discrete problems.
+Cplex 12.10.0.0
+
+Reading data...
+Starting Cplex...
+Space for names approximately 0.01 Mb
+Use option 'names no' to turn use of names off
+Version identifier: 12.10.0.0 | 2019-11-26 | 843d4de2ae
+CPXPARAM_Advance                                 2
+CPXPARAM_Threads                                 1
+CPXPARAM_Parallel                                1
+CPXPARAM_Simplex_Limits_Iterations               2000000000
+CPXPARAM_TimeLimit                               1000
+CPXPARAM_Tune_TimeLimit                          200
+Tried aggregator 1 time.
+LP Presolve eliminated 73 rows and 27 columns.
+Aggregator did 7 substitutions.
+Reduced LP has 12 rows, 13 columns, and 30 nonzeros.
+Presolve time = 0.00 sec. (0.05 ticks)
+
+Iteration log . . .
+Iteration:     1   Scaled dual infeas =          5870.677280
+Iteration:    16   Dual objective     =      24689668.411087
+LP status(1): optimal
+Cplex Time: 0.00sec (det. 0.19 ticks)
+
+Optimal solution found.
+Objective :    23486351.745171
+
+--- Restarting execution
+--- July18_Marketpricing_Updated.gms(297) 2 Mb
+--- Reading solution for model Model1
+--- Executing after solve: elapsed 0:00:05.548
+--- July18_Marketpricing_Updated.gms(287) 3 Mb
+--- Generating LP model Model1
+--- July18_Marketpricing_Updated.gms(297) 3 Mb
+--- LOOPS PriceScen = PriceScen1
+---       Offset = H4
+---       tot_vol = V2
+---       Nu_SteadyDays = case11
+---   92 rows  47 columns  167 non-zeroes
+--- Executing CPLEX: elapsed 0:00:05.557
+
+IBM ILOG CPLEX   30.3.0 rc5da09e Released Mar 06, 2020 WEI x86 64bit/MS Window
+--- GAMS/Cplex Link licensed for continuous and discrete problems.
+Cplex 12.10.0.0
+
+Reading data...
+Starting Cplex...
+Space for names approximately 0.01 Mb
+Use option 'names no' to turn use of names off
+Version identifier: 12.10.0.0 | 2019-11-26 | 843d4de2ae
+CPXPARAM_Advance                                 2
+CPXPARAM_Threads                                 1
+CPXPARAM_Parallel                                1
+CPXPARAM_Simplex_Limits_Iterations               2000000000
+CPXPARAM_TimeLimit                               1000
+CPXPARAM_Tune_TimeLimit                          200
+Tried aggregator 1 time.
+LP Presolve eliminated 75 rows and 29 columns.
+Aggregator did 7 substitutions.
+Reduced LP has 10 rows, 11 columns, and 25 nonzeros.
+Presolve time = 0.00 sec. (0.05 ticks)
+
+Iteration log . . .
+Iteration:     1   Scaled dual infeas =          5760.000000
+Iteration:    13   Dual objective     =      28593298.045906
+LP status(1): optimal
+Cplex Time: 0.00sec (det. 0.18 ticks)
+
+Optimal solution found.
+Objective :    22976533.378298
+
+--- Restarting execution
+--- July18_Marketpricing_Updated.gms(297) 2 Mb
+--- Reading solution for model Model1
+--- Executing after solve: elapsed 0:00:05.783
+--- July18_Marketpricing_Updated.gms(287) 3 Mb
+--- Generating LP model Model1
+--- July18_Marketpricing_Updated.gms(297) 3 Mb
+--- LOOPS PriceScen = PriceScen1
+---       Offset = H4
+---       tot_vol = V2
+---       Nu_SteadyDays = case12
+---   92 rows  47 columns  167 non-zeroes
+--- Executing CPLEX: elapsed 0:00:05.792
+
+IBM ILOG CPLEX   30.3.0 rc5da09e Released Mar 06, 2020 WEI x86 64bit/MS Window
+--- GAMS/Cplex Link licensed for continuous and discrete problems.
+Cplex 12.10.0.0
+
+Reading data...
+Starting Cplex...
+Space for names approximately 0.01 Mb
+Use option 'names no' to turn use of names off
+Version identifier: 12.10.0.0 | 2019-11-26 | 843d4de2ae
+CPXPARAM_Advance                                 2
+CPXPARAM_Threads                                 1
+CPXPARAM_Parallel                                1
+CPXPARAM_Simplex_Limits_Iterations               2000000000
+CPXPARAM_TimeLimit                               1000
+CPXPARAM_Tune_TimeLimit                          200
+Tried aggregator 1 time.
+LP Presolve eliminated 79 rows and 33 columns.
+Aggregator did 9 substitutions.
+Reduced LP has 4 rows, 5 columns, and 10 nonzeros.
+Presolve time = 0.00 sec. (0.05 ticks)
+
+Iteration log . . .
+Iteration:     1   Scaled dual infeas =          4224.000000
+Iteration:     6   Dual objective     =      22550911.037812
+LP status(1): optimal
+Cplex Time: 0.00sec (det. 0.16 ticks)
+
+Optimal solution found.
+Objective :    22550911.037812
+
+--- Restarting execution
+--- July18_Marketpricing_Updated.gms(297) 2 Mb
+--- Reading solution for model Model1
+--- Executing after solve: elapsed 0:00:06.013
+--- July18_Marketpricing_Updated.gms(287) 3 Mb
+--- Generating LP model Model1
+--- July18_Marketpricing_Updated.gms(297) 3 Mb
+--- LOOPS PriceScen = PriceScen1
+---       Offset = H4
+---       tot_vol = V2
+---       Nu_SteadyDays = case13
+---   83 rows  45 columns  149 non-zeroes
+--- Executing CPLEX: elapsed 0:00:06.021
+
+IBM ILOG CPLEX   30.3.0 rc5da09e Released Mar 06, 2020 WEI x86 64bit/MS Window
+--- GAMS/Cplex Link licensed for continuous and discrete problems.
+Cplex 12.10.0.0
+
+Reading data...
+Starting Cplex...
+Space for names approximately 0.01 Mb
+Use option 'names no' to turn use of names off
+Version identifier: 12.10.0.0 | 2019-11-26 | 843d4de2ae
+CPXPARAM_Advance                                 2
+CPXPARAM_Threads                                 1
+CPXPARAM_Parallel                                1
+CPXPARAM_Simplex_Limits_Iterations               2000000000
+CPXPARAM_TimeLimit                               1000
+CPXPARAM_Tune_TimeLimit                          200
+Tried aggregator 1 time.
+LP Presolve eliminated 78 rows and 40 columns.
+Aggregator did 5 substitutions.
+All rows and columns eliminated.
+Presolve time = 0.00 sec. (0.04 ticks)
+LP status(1): optimal
+Cplex Time: 0.00sec (det. 0.11 ticks)
+
+Optimal solution found.
+Objective :    22113061.692078
+
+--- Restarting execution
+--- July18_Marketpricing_Updated.gms(297) 2 Mb
+--- Reading solution for model Model1
+--- Executing after solve: elapsed 0:00:06.206
+--- July18_Marketpricing_Updated.gms(287) 3 Mb
+--- Generating LP model Model1
+--- July18_Marketpricing_Updated.gms(297) 3 Mb
+--- LOOPS PriceScen = PriceScen1
+---       Offset = H4
+---       tot_vol = V3
+---       Nu_SteadyDays = case1
+---   85 rows  45 columns  153 non-zeroes
+--- Executing CPLEX: elapsed 0:00:06.225
+
+IBM ILOG CPLEX   30.3.0 rc5da09e Released Mar 06, 2020 WEI x86 64bit/MS Window
+--- GAMS/Cplex Link licensed for continuous and discrete problems.
+Cplex 12.10.0.0
+
+Reading data...
+Starting Cplex...
+Space for names approximately 0.01 Mb
+Use option 'names no' to turn use of names off
+Version identifier: 12.10.0.0 | 2019-11-26 | 843d4de2ae
+CPXPARAM_Advance                                 2
+CPXPARAM_Threads                                 1
+CPXPARAM_Parallel                                1
+CPXPARAM_Simplex_Limits_Iterations               2000000000
+CPXPARAM_TimeLimit                               1000
+CPXPARAM_Tune_TimeLimit                          200
+Tried aggregator 1 time.
+LP Presolve eliminated 70 rows and 29 columns.
+Aggregator did 5 substitutions.
+Reduced LP has 10 rows, 11 columns, and 25 nonzeros.
+Presolve time = 0.00 sec. (0.05 ticks)
+
+Iteration log . . .
+Iteration:     1   Scaled dual infeas =          3405.913042
+Iteration:    15   Dual objective     =      31035332.715336
+LP status(1): optimal
+Cplex Time: 0.00sec (det. 0.17 ticks)
+
+Optimal solution found.
+Objective :    27961303.249962
+
+--- Restarting execution
+--- July18_Marketpricing_Updated.gms(297) 2 Mb
+--- Reading solution for model Model1
+--- Executing after solve: elapsed 0:00:06.420
+--- July18_Marketpricing_Updated.gms(287) 3 Mb
+--- Generating LP model Model1
+--- July18_Marketpricing_Updated.gms(297) 3 Mb
+--- LOOPS PriceScen = PriceScen1
+---       Offset = H4
+---       tot_vol = V3
+---       Nu_SteadyDays = case2
+---   96 rows  47 columns  175 non-zeroes
+--- Executing CPLEX: elapsed 0:00:06.429
+
+IBM ILOG CPLEX   30.3.0 rc5da09e Released Mar 06, 2020 WEI x86 64bit/MS Window
+--- GAMS/Cplex Link licensed for continuous and discrete problems.
+Cplex 12.10.0.0
+
+Reading data...
+Starting Cplex...
+Space for names approximately 0.01 Mb
+Use option 'names no' to turn use of names off
+Version identifier: 12.10.0.0 | 2019-11-26 | 843d4de2ae
+CPXPARAM_Advance                                 2
+CPXPARAM_Threads                                 1
+CPXPARAM_Parallel                                1
+CPXPARAM_Simplex_Limits_Iterations               2000000000
+CPXPARAM_TimeLimit                               1000
+CPXPARAM_Tune_TimeLimit                          200
+Tried aggregator 1 time.
+LP Presolve eliminated 75 rows and 25 columns.
+Aggregator did 7 substitutions.
+Reduced LP has 14 rows, 15 columns, and 35 nonzeros.
+Presolve time = 0.00 sec. (0.05 ticks)
+
+Iteration log . . .
+Iteration:     1   Scaled dual infeas =          3616.000000
+Iteration:    20   Dual objective     =      28779475.120568
+LP status(1): optimal
+Cplex Time: 0.00sec (det. 0.21 ticks)
+
+Optimal solution found.
+Objective :    27970038.019180
+
+--- Restarting execution
+--- July18_Marketpricing_Updated.gms(297) 2 Mb
+--- Reading solution for model Model1
+--- Executing after solve: elapsed 0:00:06.674
+--- July18_Marketpricing_Updated.gms(287) 3 Mb
+--- Generating LP model Model1
+--- July18_Marketpricing_Updated.gms(297) 3 Mb
+--- LOOPS PriceScen = PriceScen1
+---       Offset = H4
+---       tot_vol = V3
+---       Nu_SteadyDays = case3
+---   96 rows  47 columns  175 non-zeroes
+--- Executing CPLEX: elapsed 0:00:06.683
+
+IBM ILOG CPLEX   30.3.0 rc5da09e Released Mar 06, 2020 WEI x86 64bit/MS Window
+--- GAMS/Cplex Link licensed for continuous and discrete problems.
+Cplex 12.10.0.0
+
+Reading data...
+Starting Cplex...
+Space for names approximately 0.01 Mb
+Use option 'names no' to turn use of names off
+Version identifier: 12.10.0.0 | 2019-11-26 | 843d4de2ae
+CPXPARAM_Advance                                 2
+CPXPARAM_Threads                                 1
+CPXPARAM_Parallel                                1
+CPXPARAM_Simplex_Limits_Iterations               2000000000
+CPXPARAM_TimeLimit                               1000
+CPXPARAM_Tune_TimeLimit                          200
+Tried aggregator 1 time.
+LP Presolve eliminated 75 rows and 25 columns.
+Aggregator did 7 substitutions.
+Reduced LP has 14 rows, 15 columns, and 35 nonzeros.
+Presolve time = 0.00 sec. (0.05 ticks)
+
+Iteration log . . .
+Iteration:     1   Scaled dual infeas =          3604.533732
+Iteration:    18   Dual objective     =      28039369.323875
+LP status(1): optimal
+Cplex Time: 0.00sec (det. 0.20 ticks)
+
+Optimal solution found.
+Objective :    27983318.103832
+
+--- Restarting execution
+--- July18_Marketpricing_Updated.gms(297) 2 Mb
+--- Reading solution for model Model1
+--- Executing after solve: elapsed 0:00:06.916
+--- July18_Marketpricing_Updated.gms(287) 3 Mb
+--- Generating LP model Model1
+--- July18_Marketpricing_Updated.gms(297) 3 Mb
+--- LOOPS PriceScen = PriceScen1
+---       Offset = H4
+---       tot_vol = V3
+---       Nu_SteadyDays = case4
+---   85 rows  45 columns  153 non-zeroes
+--- Executing CPLEX: elapsed 0:00:06.925
+
+IBM ILOG CPLEX   30.3.0 rc5da09e Released Mar 06, 2020 WEI x86 64bit/MS Window
+--- GAMS/Cplex Link licensed for continuous and discrete problems.
+Cplex 12.10.0.0
+
+Reading data...
+Starting Cplex...
+Space for names approximately 0.01 Mb
+Use option 'names no' to turn use of names off
+Version identifier: 12.10.0.0 | 2019-11-26 | 843d4de2ae
+CPXPARAM_Advance                                 2
+CPXPARAM_Threads                                 1
+CPXPARAM_Parallel                                1
+CPXPARAM_Simplex_Limits_Iterations               2000000000
+CPXPARAM_TimeLimit                               1000
+CPXPARAM_Tune_TimeLimit                          200
+Tried aggregator 1 time.
+LP Presolve eliminated 68 rows and 27 columns.
+Aggregator did 5 substitutions.
+Reduced LP has 12 rows, 13 columns, and 30 nonzeros.
+Presolve time = 0.00 sec. (0.05 ticks)
+
+Iteration log . . .
+Iteration:     1   Scaled dual infeas =          3328.000000
+Iteration:    16   Dual objective     =      28222816.596897
+LP status(1): optimal
+Cplex Time: 0.00sec (det. 0.17 ticks)
+
+Optimal solution found.
+Objective :    28022720.231870
+
+--- Restarting execution
+--- July18_Marketpricing_Updated.gms(297) 2 Mb
+--- Reading solution for model Model1
+--- Executing after solve: elapsed 0:00:07.169
+--- July18_Marketpricing_Updated.gms(287) 3 Mb
+--- Generating LP model Model1
+--- July18_Marketpricing_Updated.gms(297) 3 Mb
+--- LOOPS PriceScen = PriceScen1
+---       Offset = H4
+---       tot_vol = V3
+---       Nu_SteadyDays = case5
+---   94 rows  47 columns  171 non-zeroes
+--- Executing CPLEX: elapsed 0:00:07.178
+
+IBM ILOG CPLEX   30.3.0 rc5da09e Released Mar 06, 2020 WEI x86 64bit/MS Window
+--- GAMS/Cplex Link licensed for continuous and discrete problems.
+Cplex 12.10.0.0
+
+Reading data...
+Starting Cplex...
+Space for names approximately 0.01 Mb
+Use option 'names no' to turn use of names off
+Version identifier: 12.10.0.0 | 2019-11-26 | 843d4de2ae
+CPXPARAM_Advance                                 2
+CPXPARAM_Threads                                 1
+CPXPARAM_Parallel                                1
+CPXPARAM_Simplex_Limits_Iterations               2000000000
+CPXPARAM_TimeLimit                               1000
+CPXPARAM_Tune_TimeLimit                          200
+Tried aggregator 1 time.
+LP Presolve eliminated 71 rows and 23 columns.
+Aggregator did 7 substitutions.
+Reduced LP has 16 rows, 17 columns, and 40 nonzeros.
+Presolve time = 0.00 sec. (0.05 ticks)
+
+Iteration log . . .
+Iteration:     1   Scaled dual infeas =          3328.000000
+Iteration:    23   Dual objective     =      28124304.118100
+LP status(1): optimal
+Cplex Time: 0.02sec (det. 0.21 ticks)
+
+Optimal solution found.
+Objective :    27937255.378997
+
+--- Restarting execution
+--- July18_Marketpricing_Updated.gms(297) 2 Mb
+--- Reading solution for model Model1
+--- Executing after solve: elapsed 0:00:07.419
+--- July18_Marketpricing_Updated.gms(287) 3 Mb
+--- Generating LP model Model1
+--- July18_Marketpricing_Updated.gms(297) 3 Mb
+--- LOOPS PriceScen = PriceScen1
+---       Offset = H4
+---       tot_vol = V3
+---       Nu_SteadyDays = case6
+---   83 rows  45 columns  149 non-zeroes
+--- Executing CPLEX: elapsed 0:00:07.427
+
+IBM ILOG CPLEX   30.3.0 rc5da09e Released Mar 06, 2020 WEI x86 64bit/MS Window
+--- GAMS/Cplex Link licensed for continuous and discrete problems.
+Cplex 12.10.0.0
+
+Reading data...
+Starting Cplex...
+Space for names approximately 0.01 Mb
+Use option 'names no' to turn use of names off
+Version identifier: 12.10.0.0 | 2019-11-26 | 843d4de2ae
+CPXPARAM_Advance                                 2
+CPXPARAM_Threads                                 1
+CPXPARAM_Parallel                                1
+CPXPARAM_Simplex_Limits_Iterations               2000000000
+CPXPARAM_TimeLimit                               1000
+CPXPARAM_Tune_TimeLimit                          200
+Tried aggregator 1 time.
+LP Presolve eliminated 66 rows and 27 columns.
+Aggregator did 5 substitutions.
+Reduced LP has 12 rows, 13 columns, and 30 nonzeros.
+Presolve time = 0.00 sec. (0.05 ticks)
+
+Iteration log . . .
+Iteration:     1   Scaled dual infeas =          3328.000000
+Iteration:    18   Dual objective     =      29011309.615493
+LP status(1): optimal
+Cplex Time: 0.00sec (det. 0.17 ticks)
+
+Optimal solution found.
+Objective :    27856666.114494
+
+--- Restarting execution
+--- July18_Marketpricing_Updated.gms(297) 2 Mb
+--- Reading solution for model Model1
+--- Executing after solve: elapsed 0:00:07.663
+--- July18_Marketpricing_Updated.gms(287) 3 Mb
+--- Generating LP model Model1
+--- July18_Marketpricing_Updated.gms(297) 3 Mb
+--- LOOPS PriceScen = PriceScen1
+---       Offset = H4
+---       tot_vol = V3
+---       Nu_SteadyDays = case7
+---   92 rows  47 columns  167 non-zeroes
+--- Executing CPLEX: elapsed 0:00:07.672
+
+IBM ILOG CPLEX   30.3.0 rc5da09e Released Mar 06, 2020 WEI x86 64bit/MS Window
+--- GAMS/Cplex Link licensed for continuous and discrete problems.
+Cplex 12.10.0.0
+
+Reading data...
+Starting Cplex...
+Space for names approximately 0.01 Mb
+Use option 'names no' to turn use of names off
+Version identifier: 12.10.0.0 | 2019-11-26 | 843d4de2ae
+CPXPARAM_Advance                                 2
+CPXPARAM_Threads                                 1
+CPXPARAM_Parallel                                1
+CPXPARAM_Simplex_Limits_Iterations               2000000000
+CPXPARAM_TimeLimit                               1000
+CPXPARAM_Tune_TimeLimit                          200
+Tried aggregator 1 time.
+LP Presolve eliminated 69 rows and 23 columns.
+Aggregator did 7 substitutions.
+Reduced LP has 16 rows, 17 columns, and 40 nonzeros.
+Presolve time = 0.00 sec. (0.05 ticks)
+
+Iteration log . . .
+Iteration:     1   Scaled dual infeas =          3424.000000
+Iteration:    24   Dual objective     =      27899102.542851
+LP status(1): optimal
+Cplex Time: 0.00sec (det. 0.21 ticks)
+
+Optimal solution found.
+Objective :    27725588.698385
+
+--- Restarting execution
+--- July18_Marketpricing_Updated.gms(297) 2 Mb
+--- Reading solution for model Model1
+--- Executing after solve: elapsed 0:00:07.911
+--- July18_Marketpricing_Updated.gms(287) 3 Mb
+--- Generating LP model Model1
+--- July18_Marketpricing_Updated.gms(297) 3 Mb
+--- LOOPS PriceScen = PriceScen1
+---       Offset = H4
+---       tot_vol = V3
+---       Nu_SteadyDays = case8
+---   92 rows  47 columns  167 non-zeroes
+--- Executing CPLEX: elapsed 0:00:07.920
+
+IBM ILOG CPLEX   30.3.0 rc5da09e Released Mar 06, 2020 WEI x86 64bit/MS Window
+--- GAMS/Cplex Link licensed for continuous and discrete problems.
+Cplex 12.10.0.0
+
+Reading data...
+Starting Cplex...
+Space for names approximately 0.01 Mb
+Use option 'names no' to turn use of names off
+Version identifier: 12.10.0.0 | 2019-11-26 | 843d4de2ae
+CPXPARAM_Advance                                 2
+CPXPARAM_Threads                                 1
+CPXPARAM_Parallel                                1
+CPXPARAM_Simplex_Limits_Iterations               2000000000
+CPXPARAM_TimeLimit                               1000
+CPXPARAM_Tune_TimeLimit                          200
+Tried aggregator 1 time.
+LP Presolve eliminated 69 rows and 23 columns.
+Aggregator did 7 substitutions.
+Reduced LP has 16 rows, 17 columns, and 40 nonzeros.
+Presolve time = 0.00 sec. (0.05 ticks)
+
+Iteration log . . .
+Iteration:     1   Scaled dual infeas =          3392.000000
+Iteration:    23   Dual objective     =      28797591.549557
+LP status(1): optimal
+Cplex Time: 0.00sec (det. 0.20 ticks)
+
+Optimal solution found.
+Objective :    27594511.282277
+
+--- Restarting execution
+--- July18_Marketpricing_Updated.gms(297) 2 Mb
+--- Reading solution for model Model1
+--- Executing after solve: elapsed 0:00:08.166
+--- July18_Marketpricing_Updated.gms(287) 3 Mb
+--- Generating LP model Model1
+--- July18_Marketpricing_Updated.gms(297) 3 Mb
+--- LOOPS PriceScen = PriceScen1
+---       Offset = H4
+---       tot_vol = V3
+---       Nu_SteadyDays = case9
+---   92 rows  47 columns  167 non-zeroes
+--- Executing CPLEX: elapsed 0:00:08.174
+
+IBM ILOG CPLEX   30.3.0 rc5da09e Released Mar 06, 2020 WEI x86 64bit/MS Window
+--- GAMS/Cplex Link licensed for continuous and discrete problems.
+Cplex 12.10.0.0
+
+Reading data...
+Starting Cplex...
+Space for names approximately 0.01 Mb
+Use option 'names no' to turn use of names off
+Version identifier: 12.10.0.0 | 2019-11-26 | 843d4de2ae
+CPXPARAM_Advance                                 2
+CPXPARAM_Threads                                 1
+CPXPARAM_Parallel                                1
+CPXPARAM_Simplex_Limits_Iterations               2000000000
+CPXPARAM_TimeLimit                               1000
+CPXPARAM_Tune_TimeLimit                          200
+Tried aggregator 1 time.
+LP Presolve eliminated 69 rows and 23 columns.
+Aggregator did 7 substitutions.
+Reduced LP has 16 rows, 17 columns, and 40 nonzeros.
+Presolve time = 0.00 sec. (0.05 ticks)
+
+Iteration log . . .
+Iteration:     1   Scaled dual infeas =          5647.822970
+Iteration:    23   Dual objective     =      30403933.707160
+LP status(1): optimal
+Cplex Time: 0.00sec (det. 0.21 ticks)
+
+Optimal solution found.
+Objective :    27332356.450059
+
+--- Restarting execution
+--- July18_Marketpricing_Updated.gms(297) 2 Mb
+--- Reading solution for model Model1
+--- Executing after solve: elapsed 0:00:08.395
+--- July18_Marketpricing_Updated.gms(287) 3 Mb
+--- Generating LP model Model1
+--- July18_Marketpricing_Updated.gms(297) 3 Mb
+--- LOOPS PriceScen = PriceScen1
+---       Offset = H4
+---       tot_vol = V3
+---       Nu_SteadyDays = case10
+---   92 rows  47 columns  167 non-zeroes
+--- Executing CPLEX: elapsed 0:00:08.403
+
+IBM ILOG CPLEX   30.3.0 rc5da09e Released Mar 06, 2020 WEI x86 64bit/MS Window
+--- GAMS/Cplex Link licensed for continuous and discrete problems.
+Cplex 12.10.0.0
+
+Reading data...
+Starting Cplex...
+Space for names approximately 0.01 Mb
+Use option 'names no' to turn use of names off
+Version identifier: 12.10.0.0 | 2019-11-26 | 843d4de2ae
+CPXPARAM_Advance                                 2
+CPXPARAM_Threads                                 1
+CPXPARAM_Parallel                                1
+CPXPARAM_Simplex_Limits_Iterations               2000000000
+CPXPARAM_TimeLimit                               1000
+CPXPARAM_Tune_TimeLimit                          200
+Tried aggregator 1 time.
+LP Presolve eliminated 73 rows and 27 columns.
+Aggregator did 7 substitutions.
+Reduced LP has 12 rows, 13 columns, and 30 nonzeros.
+Presolve time = 0.00 sec. (0.05 ticks)
+
+Iteration log . . .
+Iteration:     1   Scaled dual infeas =          6109.354560
+Iteration:    16   Dual objective     =      28448268.421815
+LP status(1): optimal
+Cplex Time: 0.00sec (det. 0.19 ticks)
+
+Optimal solution found.
+Objective :    26979474.616877
+
+--- Restarting execution
+--- July18_Marketpricing_Updated.gms(297) 2 Mb
+--- Reading solution for model Model1
+--- Executing after solve: elapsed 0:00:08.662
+--- July18_Marketpricing_Updated.gms(287) 3 Mb
+--- Generating LP model Model1
+--- July18_Marketpricing_Updated.gms(297) 3 Mb
+--- LOOPS PriceScen = PriceScen1
+---       Offset = H4
+---       tot_vol = V3
+---       Nu_SteadyDays = case11
+---   92 rows  47 columns  167 non-zeroes
+--- Executing CPLEX: elapsed 0:00:08.671
+
+IBM ILOG CPLEX   30.3.0 rc5da09e Released Mar 06, 2020 WEI x86 64bit/MS Window
+--- GAMS/Cplex Link licensed for continuous and discrete problems.
+Cplex 12.10.0.0
+
+Reading data...
+Starting Cplex...
+Space for names approximately 0.01 Mb
+Use option 'names no' to turn use of names off
+Version identifier: 12.10.0.0 | 2019-11-26 | 843d4de2ae
+CPXPARAM_Advance                                 2
+CPXPARAM_Threads                                 1
+CPXPARAM_Parallel                                1
+CPXPARAM_Simplex_Limits_Iterations               2000000000
+CPXPARAM_TimeLimit                               1000
+CPXPARAM_Tune_TimeLimit                          200
+Tried aggregator 1 time.
+LP Presolve eliminated 75 rows and 29 columns.
+Aggregator did 7 substitutions.
+Reduced LP has 10 rows, 11 columns, and 25 nonzeros.
+Presolve time = 0.00 sec. (0.05 ticks)
+
+Iteration log . . .
+Iteration:     1   Scaled dual infeas =          5760.000000
+Iteration:    13   Dual objective     =      33084861.785322
+LP status(1): optimal
+Cplex Time: 0.00sec (det. 0.18 ticks)
+
+Optimal solution found.
+Objective :    26552272.323161
+
+--- Restarting execution
+--- July18_Marketpricing_Updated.gms(297) 2 Mb
+--- Reading solution for model Model1
+--- Executing after solve: elapsed 0:00:08.892
+--- July18_Marketpricing_Updated.gms(287) 3 Mb
+--- Generating LP model Model1
+--- July18_Marketpricing_Updated.gms(297) 3 Mb
+--- LOOPS PriceScen = PriceScen1
+---       Offset = H4
+---       tot_vol = V3
+---       Nu_SteadyDays = case12
+---   92 rows  47 columns  167 non-zeroes
+--- Executing CPLEX: elapsed 0:00:08.901
+
+IBM ILOG CPLEX   30.3.0 rc5da09e Released Mar 06, 2020 WEI x86 64bit/MS Window
+--- GAMS/Cplex Link licensed for continuous and discrete problems.
+Cplex 12.10.0.0
+
+Reading data...
+Starting Cplex...
+Space for names approximately 0.01 Mb
+Use option 'names no' to turn use of names off
+Version identifier: 12.10.0.0 | 2019-11-26 | 843d4de2ae
+CPXPARAM_Advance                                 2
+CPXPARAM_Threads                                 1
+CPXPARAM_Parallel                                1
+CPXPARAM_Simplex_Limits_Iterations               2000000000
+CPXPARAM_TimeLimit                               1000
+CPXPARAM_Tune_TimeLimit                          200
+Tried aggregator 1 time.
+LP Presolve eliminated 79 rows and 33 columns.
+Aggregator did 9 substitutions.
+Reduced LP has 4 rows, 5 columns, and 10 nonzeros.
+Presolve time = 0.00 sec. (0.05 ticks)
+
+Iteration log . . .
+Iteration:     1   Scaled dual infeas =          4224.000000
+Iteration:     6   Dual objective     =      26188867.025424
+LP status(1): optimal
+Cplex Time: 0.00sec (det. 0.16 ticks)
+
+Optimal solution found.
+Objective :    26188867.025424
+
+--- Restarting execution
+--- July18_Marketpricing_Updated.gms(297) 2 Mb
+--- Reading solution for model Model1
+--- Executing after solve: elapsed 0:00:09.141
+--- July18_Marketpricing_Updated.gms(287) 3 Mb
+--- Generating LP model Model1
+--- July18_Marketpricing_Updated.gms(297) 3 Mb
+--- LOOPS PriceScen = PriceScen1
+---       Offset = H4
+---       tot_vol = V3
+---       Nu_SteadyDays = case13
+---   83 rows  45 columns  149 non-zeroes
+--- Executing CPLEX: elapsed 0:00:09.149
+
+IBM ILOG CPLEX   30.3.0 rc5da09e Released Mar 06, 2020 WEI x86 64bit/MS Window
+--- GAMS/Cplex Link licensed for continuous and discrete problems.
+Cplex 12.10.0.0
+
+Reading data...
+Starting Cplex...
+Space for names approximately 0.01 Mb
+Use option 'names no' to turn use of names off
+Version identifier: 12.10.0.0 | 2019-11-26 | 843d4de2ae
+CPXPARAM_Advance                                 2
+CPXPARAM_Threads                                 1
+CPXPARAM_Parallel                                1
+CPXPARAM_Simplex_Limits_Iterations               2000000000
+CPXPARAM_TimeLimit                               1000
+CPXPARAM_Tune_TimeLimit                          200
+Tried aggregator 1 time.
+LP Presolve eliminated 78 rows and 40 columns.
+Aggregator did 5 substitutions.
+All rows and columns eliminated.
+Presolve time = 0.00 sec. (0.04 ticks)
+LP status(1): optimal
+Cplex Time: 0.00sec (det. 0.11 ticks)
+
+Optimal solution found.
+Objective :    25808016.518852
+
+--- Restarting execution
+--- July18_Marketpricing_Updated.gms(297) 2 Mb
+--- Reading solution for model Model1
+--- Executing after solve: elapsed 0:00:09.326
+--- July18_Marketpricing_Updated.gms(287) 3 Mb
+--- Generating LP model Model1
+--- July18_Marketpricing_Updated.gms(297) 3 Mb
+--- LOOPS PriceScen = PriceScen2
+---       Offset = H4
+---       tot_vol = V1
+---       Nu_SteadyDays = case1
+---   85 rows  45 columns  153 non-zeroes
+--- Executing CPLEX: elapsed 0:00:09.347
+
+IBM ILOG CPLEX   30.3.0 rc5da09e Released Mar 06, 2020 WEI x86 64bit/MS Window
+--- GAMS/Cplex Link licensed for continuous and discrete problems.
+Cplex 12.10.0.0
+
+Reading data...
+Starting Cplex...
+Space for names approximately 0.01 Mb
+Use option 'names no' to turn use of names off
+Version identifier: 12.10.0.0 | 2019-11-26 | 843d4de2ae
+CPXPARAM_Advance                                 2
+CPXPARAM_Threads                                 1
+CPXPARAM_Parallel                                1
+CPXPARAM_Simplex_Limits_Iterations               2000000000
+CPXPARAM_TimeLimit                               1000
+CPXPARAM_Tune_TimeLimit                          200
+Tried aggregator 1 time.
+LP Presolve eliminated 70 rows and 29 columns.
+Aggregator did 5 substitutions.
+Reduced LP has 10 rows, 11 columns, and 25 nonzeros.
+Presolve time = 0.00 sec. (0.05 ticks)
+
+Iteration log . . .
+Iteration:     1   Scaled dual infeas =          3712.000000
+Iteration:    16   Dual objective     =      22396734.745265
+LP status(1): optimal
+Cplex Time: 0.00sec (det. 0.17 ticks)
+
+Optimal solution found.
+Objective :    21541645.866698
+
+--- Restarting execution
+--- July18_Marketpricing_Updated.gms(297) 2 Mb
+--- Reading solution for model Model1
+--- Executing after solve: elapsed 0:00:09.521
+--- July18_Marketpricing_Updated.gms(287) 3 Mb
+--- Generating LP model Model1
+--- July18_Marketpricing_Updated.gms(297) 3 Mb
+--- LOOPS PriceScen = PriceScen2
+---       Offset = H4
+---       tot_vol = V1
+---       Nu_SteadyDays = case2
+---   96 rows  47 columns  175 non-zeroes
+--- Executing CPLEX: elapsed 0:00:09.529
+
+IBM ILOG CPLEX   30.3.0 rc5da09e Released Mar 06, 2020 WEI x86 64bit/MS Window
+--- GAMS/Cplex Link licensed for continuous and discrete problems.
+Cplex 12.10.0.0
+
+Reading data...
+Starting Cplex...
+Space for names approximately 0.01 Mb
+Use option 'names no' to turn use of names off
+Version identifier: 12.10.0.0 | 2019-11-26 | 843d4de2ae
+CPXPARAM_Advance                                 2
+CPXPARAM_Threads                                 1
+CPXPARAM_Parallel                                1
+CPXPARAM_Simplex_Limits_Iterations               2000000000
+CPXPARAM_TimeLimit                               1000
+CPXPARAM_Tune_TimeLimit                          200
+Tried aggregator 1 time.
+LP Presolve eliminated 75 rows and 25 columns.
+Aggregator did 7 substitutions.
+Reduced LP has 14 rows, 15 columns, and 35 nonzeros.
+Presolve time = 0.00 sec. (0.05 ticks)
+
+Iteration log . . .
+Iteration:     1   Scaled dual infeas =          3872.000000
+Iteration:    20   Dual objective     =      22004449.489865
+LP status(1): optimal
+Cplex Time: 0.00sec (det. 0.21 ticks)
+
+Optimal solution found.
+Objective :    21544954.028970
+
+--- Restarting execution
+--- July18_Marketpricing_Updated.gms(297) 2 Mb
+--- Reading solution for model Model1
+--- Executing after solve: elapsed 0:00:09.757
+--- July18_Marketpricing_Updated.gms(287) 3 Mb
+--- Generating LP model Model1
+--- July18_Marketpricing_Updated.gms(297) 3 Mb
+--- LOOPS PriceScen = PriceScen2
+---       Offset = H4
+---       tot_vol = V1
+---       Nu_SteadyDays = case3
+---   96 rows  47 columns  175 non-zeroes
+--- Executing CPLEX: elapsed 0:00:09.766
+
+IBM ILOG CPLEX   30.3.0 rc5da09e Released Mar 06, 2020 WEI x86 64bit/MS Window
+--- GAMS/Cplex Link licensed for continuous and discrete problems.
+Cplex 12.10.0.0
+
+Reading data...
+Starting Cplex...
+Space for names approximately 0.01 Mb
+Use option 'names no' to turn use of names off
+Version identifier: 12.10.0.0 | 2019-11-26 | 843d4de2ae
+CPXPARAM_Advance                                 2
+CPXPARAM_Threads                                 1
+CPXPARAM_Parallel                                1
+CPXPARAM_Simplex_Limits_Iterations               2000000000
+CPXPARAM_TimeLimit                               1000
+CPXPARAM_Tune_TimeLimit                          200
+Tried aggregator 1 time.
+LP Presolve eliminated 75 rows and 25 columns.
+Aggregator did 7 substitutions.
+Reduced LP has 14 rows, 15 columns, and 35 nonzeros.
+Presolve time = 0.00 sec. (0.05 ticks)
+
+Iteration log . . .
+Iteration:     1   Scaled dual infeas =          4032.000000
+Iteration:    17   Dual objective     =      21891942.689273
+LP status(1): optimal
+Cplex Time: 0.00sec (det. 0.20 ticks)
+
+Optimal solution found.
+Objective :    21555324.259815
+
+--- Restarting execution
+--- July18_Marketpricing_Updated.gms(297) 2 Mb
+--- Reading solution for model Model1
+--- Executing after solve: elapsed 0:00:10.014
+--- July18_Marketpricing_Updated.gms(287) 3 Mb
+--- Generating LP model Model1
+--- July18_Marketpricing_Updated.gms(297) 3 Mb
+--- LOOPS PriceScen = PriceScen2
+---       Offset = H4
+---       tot_vol = V1
+---       Nu_SteadyDays = case4
+---   85 rows  45 columns  153 non-zeroes
+--- Executing CPLEX: elapsed 0:00:10.023
+
+IBM ILOG CPLEX   30.3.0 rc5da09e Released Mar 06, 2020 WEI x86 64bit/MS Window
+--- GAMS/Cplex Link licensed for continuous and discrete problems.
+Cplex 12.10.0.0
+
+Reading data...
+Starting Cplex...
+Space for names approximately 0.01 Mb
+Use option 'names no' to turn use of names off
+Version identifier: 12.10.0.0 | 2019-11-26 | 843d4de2ae
+CPXPARAM_Advance                                 2
+CPXPARAM_Threads                                 1
+CPXPARAM_Parallel                                1
+CPXPARAM_Simplex_Limits_Iterations               2000000000
+CPXPARAM_TimeLimit                               1000
+CPXPARAM_Tune_TimeLimit                          200
+Tried aggregator 1 time.
+LP Presolve eliminated 68 rows and 27 columns.
+Aggregator did 5 substitutions.
+Reduced LP has 12 rows, 13 columns, and 30 nonzeros.
+Presolve time = 0.00 sec. (0.05 ticks)
+
+Iteration log . . .
+Iteration:     1   Scaled dual infeas =          4224.000000
+Iteration:    17   Dual objective     =      21798999.374717
+LP status(1): optimal
+Cplex Time: 0.00sec (det. 0.18 ticks)
+
+Optimal solution found.
+Objective :    21584959.651134
+
+--- Restarting execution
+--- July18_Marketpricing_Updated.gms(297) 2 Mb
+--- Reading solution for model Model1
+--- Executing after solve: elapsed 0:00:10.266
+--- July18_Marketpricing_Updated.gms(287) 3 Mb
+--- Generating LP model Model1
+--- July18_Marketpricing_Updated.gms(297) 3 Mb
+--- LOOPS PriceScen = PriceScen2
+---       Offset = H4
+---       tot_vol = V1
+---       Nu_SteadyDays = case5
+---   94 rows  47 columns  171 non-zeroes
+--- Executing CPLEX: elapsed 0:00:10.275
+
+IBM ILOG CPLEX   30.3.0 rc5da09e Released Mar 06, 2020 WEI x86 64bit/MS Window
+--- GAMS/Cplex Link licensed for continuous and discrete problems.
+Cplex 12.10.0.0
+
+Reading data...
+Starting Cplex...
+Space for names approximately 0.01 Mb
+Use option 'names no' to turn use of names off
+Version identifier: 12.10.0.0 | 2019-11-26 | 843d4de2ae
+CPXPARAM_Advance                                 2
+CPXPARAM_Threads                                 1
+CPXPARAM_Parallel                                1
+CPXPARAM_Simplex_Limits_Iterations               2000000000
+CPXPARAM_TimeLimit                               1000
+CPXPARAM_Tune_TimeLimit                          200
+Tried aggregator 1 time.
+LP Presolve eliminated 71 rows and 23 columns.
+Aggregator did 7 substitutions.
+Reduced LP has 16 rows, 17 columns, and 40 nonzeros.
+Presolve time = 0.02 sec. (0.05 ticks)
+
+Iteration log . . .
+Iteration:     1   Scaled dual infeas =          4480.000000
+Iteration:    24   Dual objective     =      22053563.178121
+LP status(1): optimal
+Cplex Time: 0.02sec (det. 0.21 ticks)
+
+Optimal solution found.
+Objective :    21508100.044468
+
+--- Restarting execution
+--- July18_Marketpricing_Updated.gms(297) 2 Mb
+--- Reading solution for model Model1
+--- Executing after solve: elapsed 0:00:10.495
+--- July18_Marketpricing_Updated.gms(287) 3 Mb
+--- Generating LP model Model1
+--- July18_Marketpricing_Updated.gms(297) 3 Mb
+--- LOOPS PriceScen = PriceScen2
+---       Offset = H4
+---       tot_vol = V1
+---       Nu_SteadyDays = case6
+---   83 rows  45 columns  149 non-zeroes
+--- Executing CPLEX: elapsed 0:00:10.503
+
+IBM ILOG CPLEX   30.3.0 rc5da09e Released Mar 06, 2020 WEI x86 64bit/MS Window
+--- GAMS/Cplex Link licensed for continuous and discrete problems.
+Cplex 12.10.0.0
+
+Reading data...
+Starting Cplex...
+Space for names approximately 0.01 Mb
+Use option 'names no' to turn use of names off
+Version identifier: 12.10.0.0 | 2019-11-26 | 843d4de2ae
+CPXPARAM_Advance                                 2
+CPXPARAM_Threads                                 1
+CPXPARAM_Parallel                                1
+CPXPARAM_Simplex_Limits_Iterations               2000000000
+CPXPARAM_TimeLimit                               1000
+CPXPARAM_Tune_TimeLimit                          200
+Tried aggregator 1 time.
+LP Presolve eliminated 66 rows and 27 columns.
+Aggregator did 5 substitutions.
+Reduced LP has 12 rows, 13 columns, and 30 nonzeros.
+Presolve time = 0.00 sec. (0.05 ticks)
+
+Iteration log . . .
+Iteration:     1   Scaled dual infeas =          6528.000000
+Iteration:    19   Dual objective     =      21447464.905176
+LP status(1): optimal
+Cplex Time: 0.00sec (det. 0.17 ticks)
+
+Optimal solution found.
+Objective :    21447464.905176
+
+--- Restarting execution
+--- July18_Marketpricing_Updated.gms(297) 2 Mb
+--- Reading solution for model Model1
+--- Executing after solve: elapsed 0:00:10.743
+--- July18_Marketpricing_Updated.gms(287) 3 Mb
+--- Generating LP model Model1
+--- July18_Marketpricing_Updated.gms(297) 3 Mb
+--- LOOPS PriceScen = PriceScen2
+---       Offset = H4
+---       tot_vol = V1
+---       Nu_SteadyDays = case7
+---   92 rows  47 columns  167 non-zeroes
+--- Executing CPLEX: elapsed 0:00:10.751
+
+IBM ILOG CPLEX   30.3.0 rc5da09e Released Mar 06, 2020 WEI x86 64bit/MS Window
+--- GAMS/Cplex Link licensed for continuous and discrete problems.
+Cplex 12.10.0.0
+
+Reading data...
+Starting Cplex...
+Space for names approximately 0.01 Mb
+Use option 'names no' to turn use of names off
+Version identifier: 12.10.0.0 | 2019-11-26 | 843d4de2ae
+CPXPARAM_Advance                                 2
+CPXPARAM_Threads                                 1
+CPXPARAM_Parallel                                1
+CPXPARAM_Simplex_Limits_Iterations               2000000000
+CPXPARAM_TimeLimit                               1000
+CPXPARAM_Tune_TimeLimit                          200
+Tried aggregator 1 time.
+LP Presolve eliminated 69 rows and 23 columns.
+Aggregator did 7 substitutions.
+Reduced LP has 16 rows, 17 columns, and 40 nonzeros.
+Presolve time = 0.00 sec. (0.05 ticks)
+
+Iteration log . . .
+Iteration:     1   Scaled dual infeas =          6720.000000
+Iteration:    26   Dual objective     =      21440463.907219
+LP status(1): optimal
+Cplex Time: 0.00sec (det. 0.20 ticks)
+
+Optimal solution found.
+Objective :    21324227.135281
+
+--- Restarting execution
+--- July18_Marketpricing_Updated.gms(297) 2 Mb
+--- Reading solution for model Model1
+--- Executing after solve: elapsed 0:00:10.979
+--- July18_Marketpricing_Updated.gms(287) 3 Mb
+--- Generating LP model Model1
+--- July18_Marketpricing_Updated.gms(297) 3 Mb
+--- LOOPS PriceScen = PriceScen2
+---       Offset = H4
+---       tot_vol = V1
+---       Nu_SteadyDays = case8
+---   92 rows  47 columns  167 non-zeroes
+--- Executing CPLEX: elapsed 0:00:10.987
+
+IBM ILOG CPLEX   30.3.0 rc5da09e Released Mar 06, 2020 WEI x86 64bit/MS Window
+--- GAMS/Cplex Link licensed for continuous and discrete problems.
+Cplex 12.10.0.0
+
+Reading data...
+Starting Cplex...
+Space for names approximately 0.01 Mb
+Use option 'names no' to turn use of names off
+Version identifier: 12.10.0.0 | 2019-11-26 | 843d4de2ae
+CPXPARAM_Advance                                 2
+CPXPARAM_Threads                                 1
+CPXPARAM_Parallel                                1
+CPXPARAM_Simplex_Limits_Iterations               2000000000
+CPXPARAM_TimeLimit                               1000
+CPXPARAM_Tune_TimeLimit                          200
+Tried aggregator 1 time.
+LP Presolve eliminated 69 rows and 23 columns.
+Aggregator did 7 substitutions.
+Reduced LP has 16 rows, 17 columns, and 40 nonzeros.
+Presolve time = 0.00 sec. (0.05 ticks)
+
+Iteration log . . .
+Iteration:     1   Scaled dual infeas =          6804.552483
+Iteration:    23   Dual objective     =      23280436.005548
+LP status(1): optimal
+Cplex Time: 0.00sec (det. 0.20 ticks)
+
+Optimal solution found.
+Objective :    21200989.365387
+
+--- Restarting execution
+--- July18_Marketpricing_Updated.gms(297) 2 Mb
+--- Reading solution for model Model1
+--- Executing after solve: elapsed 0:00:11.213
+--- July18_Marketpricing_Updated.gms(287) 3 Mb
+--- Generating LP model Model1
+--- July18_Marketpricing_Updated.gms(297) 3 Mb
+--- LOOPS PriceScen = PriceScen2
+---       Offset = H4
+---       tot_vol = V1
+---       Nu_SteadyDays = case9
+---   92 rows  47 columns  167 non-zeroes
+--- Executing CPLEX: elapsed 0:00:11.222
+
+IBM ILOG CPLEX   30.3.0 rc5da09e Released Mar 06, 2020 WEI x86 64bit/MS Window
+--- GAMS/Cplex Link licensed for continuous and discrete problems.
+Cplex 12.10.0.0
+
+Reading data...
+Starting Cplex...
+Space for names approximately 0.01 Mb
+Use option 'names no' to turn use of names off
+Version identifier: 12.10.0.0 | 2019-11-26 | 843d4de2ae
+CPXPARAM_Advance                                 2
+CPXPARAM_Threads                                 1
+CPXPARAM_Parallel                                1
+CPXPARAM_Simplex_Limits_Iterations               2000000000
+CPXPARAM_TimeLimit                               1000
+CPXPARAM_Tune_TimeLimit                          200
+Tried aggregator 1 time.
+LP Presolve eliminated 69 rows and 23 columns.
+Aggregator did 7 substitutions.
+Reduced LP has 16 rows, 17 columns, and 40 nonzeros.
+Presolve time = 0.00 sec. (0.05 ticks)
+
+Iteration log . . .
+Iteration:     1   Scaled dual infeas =          7558.858540
+Iteration:    23   Dual objective     =      21328064.020336
+LP status(1): optimal
+Cplex Time: 0.00sec (det. 0.20 ticks)
+
+Optimal solution found.
+Objective :    20954513.825598
+
+--- Restarting execution
+--- July18_Marketpricing_Updated.gms(297) 2 Mb
+--- Reading solution for model Model1
+--- Executing after solve: elapsed 0:00:11.452
+--- July18_Marketpricing_Updated.gms(287) 3 Mb
+--- Generating LP model Model1
+--- July18_Marketpricing_Updated.gms(297) 3 Mb
+--- LOOPS PriceScen = PriceScen2
+---       Offset = H4
+---       tot_vol = V1
+---       Nu_SteadyDays = case10
+---   92 rows  47 columns  167 non-zeroes
+--- Executing CPLEX: elapsed 0:00:11.461
+
+IBM ILOG CPLEX   30.3.0 rc5da09e Released Mar 06, 2020 WEI x86 64bit/MS Window
+--- GAMS/Cplex Link licensed for continuous and discrete problems.
+Cplex 12.10.0.0
+
+Reading data...
+Starting Cplex...
+Space for names approximately 0.01 Mb
+Use option 'names no' to turn use of names off
+Version identifier: 12.10.0.0 | 2019-11-26 | 843d4de2ae
+CPXPARAM_Advance                                 2
+CPXPARAM_Threads                                 1
+CPXPARAM_Parallel                                1
+CPXPARAM_Simplex_Limits_Iterations               2000000000
+CPXPARAM_TimeLimit                               1000
+CPXPARAM_Tune_TimeLimit                          200
+Tried aggregator 1 time.
+LP Presolve eliminated 71 rows and 25 columns.
+Aggregator did 7 substitutions.
+Reduced LP has 14 rows, 15 columns, and 35 nonzeros.
+Presolve time = 0.00 sec. (0.05 ticks)
+
+Iteration log . . .
+Iteration:     1   Scaled dual infeas =          7168.000000
+Iteration:    20   Dual objective     =      20832814.395664
+LP status(1): optimal
+Cplex Time: 0.02sec (det. 0.20 ticks)
+
+Optimal solution found.
+Objective :    20610200.114757
+
+--- Restarting execution
+--- July18_Marketpricing_Updated.gms(297) 2 Mb
+--- Reading solution for model Model1
+--- Executing after solve: elapsed 0:00:11.674
+--- July18_Marketpricing_Updated.gms(287) 3 Mb
+--- Generating LP model Model1
+--- July18_Marketpricing_Updated.gms(297) 3 Mb
+--- LOOPS PriceScen = PriceScen2
+---       Offset = H4
+---       tot_vol = V1
+---       Nu_SteadyDays = case11
+---   92 rows  47 columns  167 non-zeroes
+--- Executing CPLEX: elapsed 0:00:11.682
+
+IBM ILOG CPLEX   30.3.0 rc5da09e Released Mar 06, 2020 WEI x86 64bit/MS Window
+--- GAMS/Cplex Link licensed for continuous and discrete problems.
+Cplex 12.10.0.0
+
+Reading data...
+Starting Cplex...
+Space for names approximately 0.01 Mb
+Use option 'names no' to turn use of names off
+Version identifier: 12.10.0.0 | 2019-11-26 | 843d4de2ae
+CPXPARAM_Advance                                 2
+CPXPARAM_Threads                                 1
+CPXPARAM_Parallel                                1
+CPXPARAM_Simplex_Limits_Iterations               2000000000
+CPXPARAM_TimeLimit                               1000
+CPXPARAM_Tune_TimeLimit                          200
+Tried aggregator 1 time.
+LP Presolve eliminated 78 rows and 32 columns.
+Aggregator did 8 substitutions.
+Reduced LP has 6 rows, 7 columns, and 15 nonzeros.
+Presolve time = 0.00 sec. (0.05 ticks)
+
+Iteration log . . .
+Iteration:     1   Scaled dual infeas =          4864.000000
+Iteration:     9   Dual objective     =      20262568.251120
+LP status(1): optimal
+Cplex Time: 0.02sec (det. 0.17 ticks)
+
+Optimal solution found.
+Objective :    20162128.867431
+
+--- Restarting execution
+--- July18_Marketpricing_Updated.gms(297) 2 Mb
+--- Reading solution for model Model1
+--- Executing after solve: elapsed 0:00:11.913
+--- July18_Marketpricing_Updated.gms(287) 3 Mb
+--- Generating LP model Model1
+--- July18_Marketpricing_Updated.gms(297) 3 Mb
+--- LOOPS PriceScen = PriceScen2
+---       Offset = H4
+---       tot_vol = V1
+---       Nu_SteadyDays = case12
+---   92 rows  47 columns  167 non-zeroes
+--- Executing CPLEX: elapsed 0:00:11.922
+
+IBM ILOG CPLEX   30.3.0 rc5da09e Released Mar 06, 2020 WEI x86 64bit/MS Window
+--- GAMS/Cplex Link licensed for continuous and discrete problems.
+Cplex 12.10.0.0
+
+Reading data...
+Starting Cplex...
+Space for names approximately 0.01 Mb
+Use option 'names no' to turn use of names off
+Version identifier: 12.10.0.0 | 2019-11-26 | 843d4de2ae
+CPXPARAM_Advance                                 2
+CPXPARAM_Threads                                 1
+CPXPARAM_Parallel                                1
+CPXPARAM_Simplex_Limits_Iterations               2000000000
+CPXPARAM_TimeLimit                               1000
+CPXPARAM_Tune_TimeLimit                          200
+Tried aggregator 1 time.
+LP Presolve eliminated 80 rows and 34 columns.
+Aggregator did 8 substitutions.
+Reduced LP has 4 rows, 5 columns, and 10 nonzeros.
+Presolve time = 0.00 sec. (0.05 ticks)
+
+Iteration log . . .
+Iteration:     1   Scaled dual infeas =          4352.000000
+Iteration:     6   Dual objective     =      19773948.975897
+LP status(1): optimal
+Cplex Time: 0.00sec (det. 0.16 ticks)
+
+Optimal solution found.
+Objective :    19773948.975897
+
+--- Restarting execution
+--- July18_Marketpricing_Updated.gms(297) 2 Mb
+--- Reading solution for model Model1
+--- Executing after solve: elapsed 0:00:12.170
+--- July18_Marketpricing_Updated.gms(287) 3 Mb
+--- Generating LP model Model1
+--- July18_Marketpricing_Updated.gms(297) 3 Mb
+--- LOOPS PriceScen = PriceScen2
+---       Offset = H4
+---       tot_vol = V1
+---       Nu_SteadyDays = case13
+---   83 rows  45 columns  149 non-zeroes
+--- Executing CPLEX: elapsed 0:00:12.178
+
+IBM ILOG CPLEX   30.3.0 rc5da09e Released Mar 06, 2020 WEI x86 64bit/MS Window
+--- GAMS/Cplex Link licensed for continuous and discrete problems.
+Cplex 12.10.0.0
+
+Reading data...
+Starting Cplex...
+Space for names approximately 0.01 Mb
+Use option 'names no' to turn use of names off
+Version identifier: 12.10.0.0 | 2019-11-26 | 843d4de2ae
+CPXPARAM_Advance                                 2
+CPXPARAM_Threads                                 1
+CPXPARAM_Parallel                                1
+CPXPARAM_Simplex_Limits_Iterations               2000000000
+CPXPARAM_TimeLimit                               1000
+CPXPARAM_Tune_TimeLimit                          200
+Tried aggregator 1 time.
+LP Presolve eliminated 78 rows and 40 columns.
+Aggregator did 5 substitutions.
+All rows and columns eliminated.
+Presolve time = 0.00 sec. (0.04 ticks)
+LP status(1): optimal
+Cplex Time: 0.00sec (det. 0.11 ticks)
+
+Optimal solution found.
+Objective :    19357935.259983
+
+--- Restarting execution
+--- July18_Marketpricing_Updated.gms(297) 2 Mb
+--- Reading solution for model Model1
+--- Executing after solve: elapsed 0:00:12.348
+--- July18_Marketpricing_Updated.gms(287) 3 Mb
+--- Generating LP model Model1
+--- July18_Marketpricing_Updated.gms(297) 3 Mb
+--- LOOPS PriceScen = PriceScen2
+---       Offset = H4
+---       tot_vol = V2
+---       Nu_SteadyDays = case1
+---   85 rows  45 columns  153 non-zeroes
+--- Executing CPLEX: elapsed 0:00:12.357
+
+IBM ILOG CPLEX   30.3.0 rc5da09e Released Mar 06, 2020 WEI x86 64bit/MS Window
+--- GAMS/Cplex Link licensed for continuous and discrete problems.
+Cplex 12.10.0.0
+
+Reading data...
+Starting Cplex...
+Space for names approximately 0.01 Mb
+Use option 'names no' to turn use of names off
+Version identifier: 12.10.0.0 | 2019-11-26 | 843d4de2ae
+CPXPARAM_Advance                                 2
+CPXPARAM_Threads                                 1
+CPXPARAM_Parallel                                1
+CPXPARAM_Simplex_Limits_Iterations               2000000000
+CPXPARAM_TimeLimit                               1000
+CPXPARAM_Tune_TimeLimit                          200
+Tried aggregator 1 time.
+LP Presolve eliminated 68 rows and 27 columns.
+Aggregator did 5 substitutions.
+Reduced LP has 12 rows, 13 columns, and 30 nonzeros.
+Presolve time = 0.00 sec. (0.05 ticks)
+
+Iteration log . . .
+Iteration:     1   Scaled dual infeas =          4095.999999
+Iteration:    15   Dual objective     =      25989174.301844
+LP status(1): optimal
+Cplex Time: 0.00sec (det. 0.18 ticks)
+
+Optimal solution found.
+Objective :    24662899.329281
+
+--- Restarting execution
+--- July18_Marketpricing_Updated.gms(297) 2 Mb
+--- Reading solution for model Model1
+--- Executing after solve: elapsed 0:00:12.539
+--- July18_Marketpricing_Updated.gms(287) 3 Mb
+--- Generating LP model Model1
+--- July18_Marketpricing_Updated.gms(297) 3 Mb
+--- LOOPS PriceScen = PriceScen2
+---       Offset = H4
+---       tot_vol = V2
+---       Nu_SteadyDays = case2
+---   96 rows  47 columns  175 non-zeroes
+--- Executing CPLEX: elapsed 0:00:12.551
+
+IBM ILOG CPLEX   30.3.0 rc5da09e Released Mar 06, 2020 WEI x86 64bit/MS Window
+--- GAMS/Cplex Link licensed for continuous and discrete problems.
+Cplex 12.10.0.0
+
+Reading data...
+Starting Cplex...
+Space for names approximately 0.01 Mb
+Use option 'names no' to turn use of names off
+Version identifier: 12.10.0.0 | 2019-11-26 | 843d4de2ae
+CPXPARAM_Advance                                 2
+CPXPARAM_Threads                                 1
+CPXPARAM_Parallel                                1
+CPXPARAM_Simplex_Limits_Iterations               2000000000
+CPXPARAM_TimeLimit                               1000
+CPXPARAM_Tune_TimeLimit                          200
+Tried aggregator 1 time.
+LP Presolve eliminated 73 rows and 23 columns.
+Aggregator did 7 substitutions.
+Reduced LP has 16 rows, 17 columns, and 40 nonzeros.
+Presolve time = 0.00 sec. (0.05 ticks)
+
+Iteration log . . .
+Iteration:     1   Scaled dual infeas =          4000.000000
+Iteration:    23   Dual objective     =      25746353.859314
+LP status(1): optimal
+Cplex Time: 0.02sec (det. 0.22 ticks)
+
+Optimal solution found.
+Objective :    24664140.509746
+
+--- Restarting execution
+--- July18_Marketpricing_Updated.gms(297) 2 Mb
+--- Reading solution for model Model1
+--- Executing after solve: elapsed 0:00:12.777
+--- July18_Marketpricing_Updated.gms(287) 3 Mb
+--- Generating LP model Model1
+--- July18_Marketpricing_Updated.gms(297) 3 Mb
+--- LOOPS PriceScen = PriceScen2
+---       Offset = H4
+---       tot_vol = V2
+---       Nu_SteadyDays = case3
+---   96 rows  47 columns  175 non-zeroes
+--- Executing CPLEX: elapsed 0:00:12.786
+
+IBM ILOG CPLEX   30.3.0 rc5da09e Released Mar 06, 2020 WEI x86 64bit/MS Window
+--- GAMS/Cplex Link licensed for continuous and discrete problems.
+Cplex 12.10.0.0
+
+Reading data...
+Starting Cplex...
+Space for names approximately 0.01 Mb
+Use option 'names no' to turn use of names off
+Version identifier: 12.10.0.0 | 2019-11-26 | 843d4de2ae
+CPXPARAM_Advance                                 2
+CPXPARAM_Threads                                 1
+CPXPARAM_Parallel                                1
+CPXPARAM_Simplex_Limits_Iterations               2000000000
+CPXPARAM_TimeLimit                               1000
+CPXPARAM_Tune_TimeLimit                          200
+Tried aggregator 1 time.
+LP Presolve eliminated 73 rows and 23 columns.
+Aggregator did 7 substitutions.
+Reduced LP has 16 rows, 17 columns, and 40 nonzeros.
+Presolve time = 0.00 sec. (0.05 ticks)
+
+Iteration log . . .
+Iteration:     1   Scaled dual infeas =          4223.999999
+Iteration:    18   Dual objective     =      35750951.309409
+LP status(1): optimal
+Cplex Time: 0.01sec (det. 0.21 ticks)
+
+Optimal solution found.
+Objective :    24666322.366263
+
+--- Restarting execution
+--- July18_Marketpricing_Updated.gms(297) 2 Mb
+--- Reading solution for model Model1
+--- Executing after solve: elapsed 0:00:13.023
+--- July18_Marketpricing_Updated.gms(287) 3 Mb
+--- Generating LP model Model1
+--- July18_Marketpricing_Updated.gms(297) 3 Mb
+--- LOOPS PriceScen = PriceScen2
+---       Offset = H4
+---       tot_vol = V2
+---       Nu_SteadyDays = case4
+---   85 rows  45 columns  153 non-zeroes
+--- Executing CPLEX: elapsed 0:00:13.034
+
+IBM ILOG CPLEX   30.3.0 rc5da09e Released Mar 06, 2020 WEI x86 64bit/MS Window
+--- GAMS/Cplex Link licensed for continuous and discrete problems.
+Cplex 12.10.0.0
+
+Reading data...
+Starting Cplex...
+Space for names approximately 0.01 Mb
+Use option 'names no' to turn use of names off
+Version identifier: 12.10.0.0 | 2019-11-26 | 843d4de2ae
+CPXPARAM_Advance                                 2
+CPXPARAM_Threads                                 1
+CPXPARAM_Parallel                                1
+CPXPARAM_Simplex_Limits_Iterations               2000000000
+CPXPARAM_TimeLimit                               1000
+CPXPARAM_Tune_TimeLimit                          200
+Tried aggregator 1 time.
+LP Presolve eliminated 68 rows and 27 columns.
+Aggregator did 5 substitutions.
+Reduced LP has 12 rows, 13 columns, and 30 nonzeros.
+Presolve time = 0.00 sec. (0.05 ticks)
+
+Iteration log . . .
+Iteration:     1   Scaled dual infeas =          4224.000000
+Iteration:    18   Dual objective     =      24845716.375081
+LP status(1): optimal
+Cplex Time: 0.01sec (det. 0.17 ticks)
+
+Optimal solution found.
+Objective :    24673926.185700
+
+--- Restarting execution
+--- July18_Marketpricing_Updated.gms(297) 2 Mb
+--- Reading solution for model Model1
+--- Executing after solve: elapsed 0:00:13.277
+--- July18_Marketpricing_Updated.gms(287) 3 Mb
+--- Generating LP model Model1
+--- July18_Marketpricing_Updated.gms(297) 3 Mb
+--- LOOPS PriceScen = PriceScen2
+---       Offset = H4
+---       tot_vol = V2
+---       Nu_SteadyDays = case5
+---   94 rows  47 columns  171 non-zeroes
+--- Executing CPLEX: elapsed 0:00:13.286
+
+IBM ILOG CPLEX   30.3.0 rc5da09e Released Mar 06, 2020 WEI x86 64bit/MS Window
+--- GAMS/Cplex Link licensed for continuous and discrete problems.
+Cplex 12.10.0.0
+
+Reading data...
+Starting Cplex...
+Space for names approximately 0.01 Mb
+Use option 'names no' to turn use of names off
+Version identifier: 12.10.0.0 | 2019-11-26 | 843d4de2ae
+CPXPARAM_Advance                                 2
+CPXPARAM_Threads                                 1
+CPXPARAM_Parallel                                1
+CPXPARAM_Simplex_Limits_Iterations               2000000000
+CPXPARAM_TimeLimit                               1000
+CPXPARAM_Tune_TimeLimit                          200
+Tried aggregator 1 time.
+LP Presolve eliminated 71 rows and 23 columns.
+Aggregator did 7 substitutions.
+Reduced LP has 16 rows, 17 columns, and 40 nonzeros.
+Presolve time = 0.00 sec. (0.05 ticks)
+
+Iteration log . . .
+Iteration:     1   Scaled dual infeas =          4480.000000
+Iteration:    24   Dual objective     =      25541931.571509
+LP status(1): optimal
+Cplex Time: 0.00sec (det. 0.21 ticks)
+
+Optimal solution found.
+Objective :    24602711.978770
+
+--- Restarting execution
+--- July18_Marketpricing_Updated.gms(297) 2 Mb
+--- Reading solution for model Model1
+--- Executing after solve: elapsed 0:00:13.522
+--- July18_Marketpricing_Updated.gms(287) 3 Mb
+--- Generating LP model Model1
+--- July18_Marketpricing_Updated.gms(297) 3 Mb
+--- LOOPS PriceScen = PriceScen2
+---       Offset = H4
+---       tot_vol = V2
+---       Nu_SteadyDays = case6
+---   83 rows  45 columns  149 non-zeroes
+--- Executing CPLEX: elapsed 0:00:13.532
+
+IBM ILOG CPLEX   30.3.0 rc5da09e Released Mar 06, 2020 WEI x86 64bit/MS Window
+--- GAMS/Cplex Link licensed for continuous and discrete problems.
+Cplex 12.10.0.0
+
+Reading data...
+Starting Cplex...
+Space for names approximately 0.01 Mb
+Use option 'names no' to turn use of names off
+Version identifier: 12.10.0.0 | 2019-11-26 | 843d4de2ae
+CPXPARAM_Advance                                 2
+CPXPARAM_Threads                                 1
+CPXPARAM_Parallel                                1
+CPXPARAM_Simplex_Limits_Iterations               2000000000
+CPXPARAM_TimeLimit                               1000
+CPXPARAM_Tune_TimeLimit                          200
+Tried aggregator 1 time.
+LP Presolve eliminated 66 rows and 27 columns.
+Aggregator did 5 substitutions.
+Reduced LP has 12 rows, 13 columns, and 30 nonzeros.
+Presolve time = 0.00 sec. (0.05 ticks)
+
+Iteration log . . .
+Iteration:     1   Scaled dual infeas =          6528.000000
+Iteration:    17   Dual objective     =      29961251.849725
+LP status(1): optimal
+Cplex Time: 0.00sec (det. 0.17 ticks)
+
+Optimal solution found.
+Objective :    24525087.272962
+
+--- Restarting execution
+--- July18_Marketpricing_Updated.gms(297) 2 Mb
+--- Reading solution for model Model1
+--- Executing after solve: elapsed 0:00:13.769
+--- July18_Marketpricing_Updated.gms(287) 3 Mb
+--- Generating LP model Model1
+--- July18_Marketpricing_Updated.gms(297) 3 Mb
+--- LOOPS PriceScen = PriceScen2
+---       Offset = H4
+---       tot_vol = V2
+---       Nu_SteadyDays = case7
+---   92 rows  47 columns  167 non-zeroes
+--- Executing CPLEX: elapsed 0:00:13.777
+
+IBM ILOG CPLEX   30.3.0 rc5da09e Released Mar 06, 2020 WEI x86 64bit/MS Window
+--- GAMS/Cplex Link licensed for continuous and discrete problems.
+Cplex 12.10.0.0
+
+Reading data...
+Starting Cplex...
+Space for names approximately 0.01 Mb
+Use option 'names no' to turn use of names off
+Version identifier: 12.10.0.0 | 2019-11-26 | 843d4de2ae
+CPXPARAM_Advance                                 2
+CPXPARAM_Threads                                 1
+CPXPARAM_Parallel                                1
+CPXPARAM_Simplex_Limits_Iterations               2000000000
+CPXPARAM_TimeLimit                               1000
+CPXPARAM_Tune_TimeLimit                          200
+Tried aggregator 1 time.
+LP Presolve eliminated 69 rows and 23 columns.
+Aggregator did 7 substitutions.
+Reduced LP has 16 rows, 17 columns, and 40 nonzeros.
+Presolve time = 0.00 sec. (0.05 ticks)
+
+Iteration log . . .
+Iteration:     1   Scaled dual infeas =          6720.000000
+Iteration:    23   Dual objective     =      29792373.102515
+LP status(1): optimal
+Cplex Time: 0.02sec (det. 0.20 ticks)
+
+Optimal solution found.
+Objective :    24370095.841929
+
+--- Restarting execution
+--- July18_Marketpricing_Updated.gms(297) 2 Mb
+--- Reading solution for model Model1
+--- Executing after solve: elapsed 0:00:14.015
+--- July18_Marketpricing_Updated.gms(287) 3 Mb
+--- Generating LP model Model1
+--- July18_Marketpricing_Updated.gms(297) 3 Mb
+--- LOOPS PriceScen = PriceScen2
+---       Offset = H4
+---       tot_vol = V2
+---       Nu_SteadyDays = case8
+---   92 rows  47 columns  167 non-zeroes
+--- Executing CPLEX: elapsed 0:00:14.023
+
+IBM ILOG CPLEX   30.3.0 rc5da09e Released Mar 06, 2020 WEI x86 64bit/MS Window
+--- GAMS/Cplex Link licensed for continuous and discrete problems.
+Cplex 12.10.0.0
+
+Reading data...
+Starting Cplex...
+Space for names approximately 0.01 Mb
+Use option 'names no' to turn use of names off
+Version identifier: 12.10.0.0 | 2019-11-26 | 843d4de2ae
+CPXPARAM_Advance                                 2
+CPXPARAM_Threads                                 1
+CPXPARAM_Parallel                                1
+CPXPARAM_Simplex_Limits_Iterations               2000000000
+CPXPARAM_TimeLimit                               1000
+CPXPARAM_Tune_TimeLimit                          200
+Tried aggregator 1 time.
+LP Presolve eliminated 69 rows and 23 columns.
+Aggregator did 7 substitutions.
+Reduced LP has 16 rows, 17 columns, and 40 nonzeros.
+Presolve time = 0.00 sec. (0.05 ticks)
+
+Iteration log . . .
+Iteration:     1   Scaled dual infeas =          6784.000000
+Iteration:    24   Dual objective     =      27896765.359240
+LP status(1): optimal
+Cplex Time: 0.00sec (det. 0.20 ticks)
+
+Optimal solution found.
+Objective :    24215104.410895
+
+--- Restarting execution
+--- July18_Marketpricing_Updated.gms(297) 2 Mb
+--- Reading solution for model Model1
+--- Executing after solve: elapsed 0:00:14.263
+--- July18_Marketpricing_Updated.gms(287) 3 Mb
+--- Generating LP model Model1
+--- July18_Marketpricing_Updated.gms(297) 3 Mb
+--- LOOPS PriceScen = PriceScen2
+---       Offset = H4
+---       tot_vol = V2
+---       Nu_SteadyDays = case9
+---   92 rows  47 columns  167 non-zeroes
+--- Executing CPLEX: elapsed 0:00:14.272
+
+IBM ILOG CPLEX   30.3.0 rc5da09e Released Mar 06, 2020 WEI x86 64bit/MS Window
+--- GAMS/Cplex Link licensed for continuous and discrete problems.
+Cplex 12.10.0.0
+
+Reading data...
+Starting Cplex...
+Space for names approximately 0.01 Mb
+Use option 'names no' to turn use of names off
+Version identifier: 12.10.0.0 | 2019-11-26 | 843d4de2ae
+CPXPARAM_Advance                                 2
+CPXPARAM_Threads                                 1
+CPXPARAM_Parallel                                1
+CPXPARAM_Simplex_Limits_Iterations               2000000000
+CPXPARAM_TimeLimit                               1000
+CPXPARAM_Tune_TimeLimit                          200
+Tried aggregator 1 time.
+LP Presolve eliminated 71 rows and 25 columns.
+Aggregator did 7 substitutions.
+Reduced LP has 14 rows, 15 columns, and 35 nonzeros.
+Presolve time = 0.00 sec. (0.05 ticks)
+
+Iteration log . . .
+Iteration:     1   Scaled dual infeas =          6912.000000
+Iteration:    19   Dual objective     =      25289798.154005
+LP status(1): optimal
+Cplex Time: 0.00sec (det. 0.19 ticks)
+
+Optimal solution found.
+Objective :    23915467.939439
+
+--- Restarting execution
+--- July18_Marketpricing_Updated.gms(297) 2 Mb
+--- Reading solution for model Model1
+--- Executing after solve: elapsed 0:00:14.515
+--- July18_Marketpricing_Updated.gms(287) 3 Mb
+--- Generating LP model Model1
+--- July18_Marketpricing_Updated.gms(297) 3 Mb
+--- LOOPS PriceScen = PriceScen2
+---       Offset = H4
+---       tot_vol = V2
+---       Nu_SteadyDays = case10
+---   92 rows  47 columns  167 non-zeroes
+--- Executing CPLEX: elapsed 0:00:14.525
+
+IBM ILOG CPLEX   30.3.0 rc5da09e Released Mar 06, 2020 WEI x86 64bit/MS Window
+--- GAMS/Cplex Link licensed for continuous and discrete problems.
+Cplex 12.10.0.0
+
+Reading data...
+Starting Cplex...
+Space for names approximately 0.01 Mb
+Use option 'names no' to turn use of names off
+Version identifier: 12.10.0.0 | 2019-11-26 | 843d4de2ae
+CPXPARAM_Advance                                 2
+CPXPARAM_Threads                                 1
+CPXPARAM_Parallel                                1
+CPXPARAM_Simplex_Limits_Iterations               2000000000
+CPXPARAM_TimeLimit                               1000
+CPXPARAM_Tune_TimeLimit                          200
+Tried aggregator 1 time.
+LP Presolve eliminated 73 rows and 27 columns.
+Aggregator did 7 substitutions.
+Reduced LP has 12 rows, 13 columns, and 30 nonzeros.
+Presolve time = 0.00 sec. (0.05 ticks)
+
+Iteration log . . .
+Iteration:     1   Scaled dual infeas =          7168.000000
+Iteration:    17   Dual objective     =      24332381.217802
+LP status(1): optimal
+Cplex Time: 0.00sec (det. 0.19 ticks)
+
+Optimal solution found.
+Objective :    23534641.042870
+
+--- Restarting execution
+--- July18_Marketpricing_Updated.gms(297) 2 Mb
+--- Reading solution for model Model1
+--- Executing after solve: elapsed 0:00:14.739
+--- July18_Marketpricing_Updated.gms(287) 3 Mb
+--- Generating LP model Model1
+--- July18_Marketpricing_Updated.gms(297) 3 Mb
+--- LOOPS PriceScen = PriceScen2
+---       Offset = H4
+---       tot_vol = V2
+---       Nu_SteadyDays = case11
+---   92 rows  47 columns  167 non-zeroes
+--- Executing CPLEX: elapsed 0:00:14.749
+
+IBM ILOG CPLEX   30.3.0 rc5da09e Released Mar 06, 2020 WEI x86 64bit/MS Window
+--- GAMS/Cplex Link licensed for continuous and discrete problems.
+Cplex 12.10.0.0
+
+Reading data...
+Starting Cplex...
+Space for names approximately 0.01 Mb
+Use option 'names no' to turn use of names off
+Version identifier: 12.10.0.0 | 2019-11-26 | 843d4de2ae
+CPXPARAM_Advance                                 2
+CPXPARAM_Threads                                 1
+CPXPARAM_Parallel                                1
+CPXPARAM_Simplex_Limits_Iterations               2000000000
+CPXPARAM_TimeLimit                               1000
+CPXPARAM_Tune_TimeLimit                          200
+Tried aggregator 1 time.
+LP Presolve eliminated 75 rows and 29 columns.
+Aggregator did 7 substitutions.
+Reduced LP has 10 rows, 11 columns, and 25 nonzeros.
+Presolve time = 0.00 sec. (0.05 ticks)
+
+Iteration log . . .
+Iteration:     1   Scaled dual infeas =          7424.000000
+Iteration:    14   Dual objective     =      32193684.860586
+LP status(1): optimal
+Cplex Time: 0.00sec (det. 0.18 ticks)
+
+Optimal solution found.
+Objective :    23024822.675996
+
+--- Restarting execution
+--- July18_Marketpricing_Updated.gms(297) 2 Mb
+--- Reading solution for model Model1
+--- Executing after solve: elapsed 0:00:14.983
+--- July18_Marketpricing_Updated.gms(287) 3 Mb
+--- Generating LP model Model1
+--- July18_Marketpricing_Updated.gms(297) 3 Mb
+--- LOOPS PriceScen = PriceScen2
+---       Offset = H4
+---       tot_vol = V2
+---       Nu_SteadyDays = case12
+---   92 rows  47 columns  167 non-zeroes
+--- Executing CPLEX: elapsed 0:00:14.991
+
+IBM ILOG CPLEX   30.3.0 rc5da09e Released Mar 06, 2020 WEI x86 64bit/MS Window
+--- GAMS/Cplex Link licensed for continuous and discrete problems.
+Cplex 12.10.0.0
+
+Reading data...
+Starting Cplex...
+Space for names approximately 0.01 Mb
+Use option 'names no' to turn use of names off
+Version identifier: 12.10.0.0 | 2019-11-26 | 843d4de2ae
+CPXPARAM_Advance                                 2
+CPXPARAM_Threads                                 1
+CPXPARAM_Parallel                                1
+CPXPARAM_Simplex_Limits_Iterations               2000000000
+CPXPARAM_TimeLimit                               1000
+CPXPARAM_Tune_TimeLimit                          200
+Tried aggregator 1 time.
+LP Presolve eliminated 79 rows and 33 columns.
+Aggregator did 9 substitutions.
+Reduced LP has 4 rows, 5 columns, and 10 nonzeros.
+Presolve time = 0.01 sec. (0.05 ticks)
+
+Iteration log . . .
+Iteration:     1   Scaled dual infeas =          4352.000000
+Iteration:     6   Dual objective     =      22599200.335511
+LP status(1): optimal
+Cplex Time: 0.01sec (det. 0.16 ticks)
+
+Optimal solution found.
+Objective :    22599200.335511
+
+--- Restarting execution
+--- July18_Marketpricing_Updated.gms(297) 2 Mb
+--- Reading solution for model Model1
+--- Executing after solve: elapsed 0:00:15.214
+--- July18_Marketpricing_Updated.gms(287) 3 Mb
+--- Generating LP model Model1
+--- July18_Marketpricing_Updated.gms(297) 3 Mb
+--- LOOPS PriceScen = PriceScen2
+---       Offset = H4
+---       tot_vol = V2
+---       Nu_SteadyDays = case13
+---   83 rows  45 columns  149 non-zeroes
+--- Executing CPLEX: elapsed 0:00:15.222
+
+IBM ILOG CPLEX   30.3.0 rc5da09e Released Mar 06, 2020 WEI x86 64bit/MS Window
+--- GAMS/Cplex Link licensed for continuous and discrete problems.
+Cplex 12.10.0.0
+
+Reading data...
+Starting Cplex...
+Space for names approximately 0.01 Mb
+Use option 'names no' to turn use of names off
+Version identifier: 12.10.0.0 | 2019-11-26 | 843d4de2ae
+CPXPARAM_Advance                                 2
+CPXPARAM_Threads                                 1
+CPXPARAM_Parallel                                1
+CPXPARAM_Simplex_Limits_Iterations               2000000000
+CPXPARAM_TimeLimit                               1000
+CPXPARAM_Tune_TimeLimit                          200
+Tried aggregator 1 time.
+LP Presolve eliminated 78 rows and 40 columns.
+Aggregator did 5 substitutions.
+All rows and columns eliminated.
+Presolve time = 0.00 sec. (0.04 ticks)
+LP status(1): optimal
+Cplex Time: 0.00sec (det. 0.11 ticks)
+
+Optimal solution found.
+Objective :    22161350.989776
+
+--- Restarting execution
+--- July18_Marketpricing_Updated.gms(297) 2 Mb
+--- Reading solution for model Model1
+--- Executing after solve: elapsed 0:00:15.398
+--- July18_Marketpricing_Updated.gms(287) 3 Mb
+--- Generating LP model Model1
+--- July18_Marketpricing_Updated.gms(297) 3 Mb
+--- LOOPS PriceScen = PriceScen2
+---       Offset = H4
+---       tot_vol = V3
+---       Nu_SteadyDays = case1
+---   85 rows  45 columns  153 non-zeroes
+--- Executing CPLEX: elapsed 0:00:15.408
+
+IBM ILOG CPLEX   30.3.0 rc5da09e Released Mar 06, 2020 WEI x86 64bit/MS Window
+--- GAMS/Cplex Link licensed for continuous and discrete problems.
+Cplex 12.10.0.0
+
+Reading data...
+Starting Cplex...
+Space for names approximately 0.01 Mb
+Use option 'names no' to turn use of names off
+Version identifier: 12.10.0.0 | 2019-11-26 | 843d4de2ae
+CPXPARAM_Advance                                 2
+CPXPARAM_Threads                                 1
+CPXPARAM_Parallel                                1
+CPXPARAM_Simplex_Limits_Iterations               2000000000
+CPXPARAM_TimeLimit                               1000
+CPXPARAM_Tune_TimeLimit                          200
+Tried aggregator 1 time.
+LP Presolve eliminated 70 rows and 29 columns.
+Aggregator did 5 substitutions.
+Reduced LP has 10 rows, 11 columns, and 25 nonzeros.
+Presolve time = 0.00 sec. (0.05 ticks)
+
+Iteration log . . .
+Iteration:     1   Scaled dual infeas =          3712.000000
+Iteration:    16   Dual objective     =      30653393.745157
+LP status(1): optimal
+Cplex Time: 0.00sec (det. 0.17 ticks)
+
+Optimal solution found.
+Objective :    28086128.547974
+
+--- Restarting execution
+--- July18_Marketpricing_Updated.gms(297) 2 Mb
+--- Reading solution for model Model1
+--- Executing after solve: elapsed 0:00:15.583
+--- July18_Marketpricing_Updated.gms(287) 3 Mb
+--- Generating LP model Model1
+--- July18_Marketpricing_Updated.gms(297) 3 Mb
+--- LOOPS PriceScen = PriceScen2
+---       Offset = H4
+---       tot_vol = V3
+---       Nu_SteadyDays = case2
+---   96 rows  47 columns  175 non-zeroes
+--- Executing CPLEX: elapsed 0:00:15.591
+
+IBM ILOG CPLEX   30.3.0 rc5da09e Released Mar 06, 2020 WEI x86 64bit/MS Window
+--- GAMS/Cplex Link licensed for continuous and discrete problems.
+Cplex 12.10.0.0
+
+Reading data...
+Starting Cplex...
+Space for names approximately 0.01 Mb
+Use option 'names no' to turn use of names off
+Version identifier: 12.10.0.0 | 2019-11-26 | 843d4de2ae
+CPXPARAM_Advance                                 2
+CPXPARAM_Threads                                 1
+CPXPARAM_Parallel                                1
+CPXPARAM_Simplex_Limits_Iterations               2000000000
+CPXPARAM_TimeLimit                               1000
+CPXPARAM_Tune_TimeLimit                          200
+Tried aggregator 1 time.
+LP Presolve eliminated 75 rows and 25 columns.
+Aggregator did 7 substitutions.
+Reduced LP has 14 rows, 15 columns, and 35 nonzeros.
+Presolve time = 0.00 sec. (0.05 ticks)
+
+Iteration log . . .
+Iteration:     1   Scaled dual infeas =          3872.000000
+Iteration:    20   Dual objective     =      28193583.139395
+LP status(1): optimal
+Cplex Time: 0.00sec (det. 0.21 ticks)
+
+Optimal solution found.
+Objective :    28094863.317192
+
+--- Restarting execution
+--- July18_Marketpricing_Updated.gms(297) 2 Mb
+--- Reading solution for model Model1
+--- Executing after solve: elapsed 0:00:15.833
+--- July18_Marketpricing_Updated.gms(287) 3 Mb
+--- Generating LP model Model1
+--- July18_Marketpricing_Updated.gms(297) 3 Mb
+--- LOOPS PriceScen = PriceScen2
+---       Offset = H4
+---       tot_vol = V3
+---       Nu_SteadyDays = case3
+---   96 rows  47 columns  175 non-zeroes
+--- Executing CPLEX: elapsed 0:00:15.841
+
+IBM ILOG CPLEX   30.3.0 rc5da09e Released Mar 06, 2020 WEI x86 64bit/MS Window
+--- GAMS/Cplex Link licensed for continuous and discrete problems.
+Cplex 12.10.0.0
+
+Reading data...
+Starting Cplex...
+Space for names approximately 0.01 Mb
+Use option 'names no' to turn use of names off
+Version identifier: 12.10.0.0 | 2019-11-26 | 843d4de2ae
+CPXPARAM_Advance                                 2
+CPXPARAM_Threads                                 1
+CPXPARAM_Parallel                                1
+CPXPARAM_Simplex_Limits_Iterations               2000000000
+CPXPARAM_TimeLimit                               1000
+CPXPARAM_Tune_TimeLimit                          200
+Tried aggregator 1 time.
+LP Presolve eliminated 75 rows and 25 columns.
+Aggregator did 7 substitutions.
+Reduced LP has 14 rows, 15 columns, and 35 nonzeros.
+Presolve time = 0.00 sec. (0.05 ticks)
+
+Iteration log . . .
+Iteration:     1   Scaled dual infeas =          4032.000000
+Iteration:    17   Dual objective     =      28570591.863719
+LP status(1): optimal
+Cplex Time: 0.02sec (det. 0.20 ticks)
+
+Optimal solution found.
+Objective :    28108143.401844
+
+--- Restarting execution
+--- July18_Marketpricing_Updated.gms(297) 2 Mb
+--- Reading solution for model Model1
+--- Executing after solve: elapsed 0:00:16.071
+--- July18_Marketpricing_Updated.gms(287) 3 Mb
+--- Generating LP model Model1
+--- July18_Marketpricing_Updated.gms(297) 3 Mb
+--- LOOPS PriceScen = PriceScen2
+---       Offset = H4
+---       tot_vol = V3
+---       Nu_SteadyDays = case4
+---   85 rows  45 columns  153 non-zeroes
+--- Executing CPLEX: elapsed 0:00:16.080
+
+IBM ILOG CPLEX   30.3.0 rc5da09e Released Mar 06, 2020 WEI x86 64bit/MS Window
+--- GAMS/Cplex Link licensed for continuous and discrete problems.
+Cplex 12.10.0.0
+
+Reading data...
+Starting Cplex...
+Space for names approximately 0.01 Mb
+Use option 'names no' to turn use of names off
+Version identifier: 12.10.0.0 | 2019-11-26 | 843d4de2ae
+CPXPARAM_Advance                                 2
+CPXPARAM_Threads                                 1
+CPXPARAM_Parallel                                1
+CPXPARAM_Simplex_Limits_Iterations               2000000000
+CPXPARAM_TimeLimit                               1000
+CPXPARAM_Tune_TimeLimit                          200
+Tried aggregator 1 time.
+LP Presolve eliminated 68 rows and 27 columns.
+Aggregator did 5 substitutions.
+Reduced LP has 12 rows, 13 columns, and 30 nonzeros.
+Presolve time = 0.00 sec. (0.05 ticks)
+
+Iteration log . . .
+Iteration:     1   Scaled dual infeas =          4224.000000
+Iteration:    17   Dual objective     =      28299706.485520
+LP status(1): optimal
+Cplex Time: 0.00sec (det. 0.17 ticks)
+
+Optimal solution found.
+Objective :    28147545.529882
+
+--- Restarting execution
+--- July18_Marketpricing_Updated.gms(297) 2 Mb
+--- Reading solution for model Model1
+--- Executing after solve: elapsed 0:00:16.333
+--- July18_Marketpricing_Updated.gms(287) 3 Mb
+--- Generating LP model Model1
+--- July18_Marketpricing_Updated.gms(297) 3 Mb
+--- LOOPS PriceScen = PriceScen2
+---       Offset = H4
+---       tot_vol = V3
+---       Nu_SteadyDays = case5
+---   94 rows  47 columns  171 non-zeroes
+--- Executing CPLEX: elapsed 0:00:16.341
+
+IBM ILOG CPLEX   30.3.0 rc5da09e Released Mar 06, 2020 WEI x86 64bit/MS Window
+--- GAMS/Cplex Link licensed for continuous and discrete problems.
+Cplex 12.10.0.0
+
+Reading data...
+Starting Cplex...
+Space for names approximately 0.01 Mb
+Use option 'names no' to turn use of names off
+Version identifier: 12.10.0.0 | 2019-11-26 | 843d4de2ae
+CPXPARAM_Advance                                 2
+CPXPARAM_Threads                                 1
+CPXPARAM_Parallel                                1
+CPXPARAM_Simplex_Limits_Iterations               2000000000
+CPXPARAM_TimeLimit                               1000
+CPXPARAM_Tune_TimeLimit                          200
+Tried aggregator 1 time.
+LP Presolve eliminated 71 rows and 23 columns.
+Aggregator did 7 substitutions.
+Reduced LP has 16 rows, 17 columns, and 40 nonzeros.
+Presolve time = 0.00 sec. (0.05 ticks)
+
+Iteration log . . .
+Iteration:     1   Scaled dual infeas =          4480.000000
+Iteration:    24   Dual objective     =      29117722.725629
+LP status(1): optimal
+Cplex Time: 0.00sec (det. 0.21 ticks)
+
+Optimal solution found.
+Objective :    28062080.677009
+
+--- Restarting execution
+--- July18_Marketpricing_Updated.gms(297) 2 Mb
+--- Reading solution for model Model1
+--- Executing after solve: elapsed 0:00:16.572
+--- July18_Marketpricing_Updated.gms(287) 3 Mb
+--- Generating LP model Model1
+--- July18_Marketpricing_Updated.gms(297) 3 Mb
+--- LOOPS PriceScen = PriceScen2
+---       Offset = H4
+---       tot_vol = V3
+---       Nu_SteadyDays = case6
+---   83 rows  45 columns  149 non-zeroes
+--- Executing CPLEX: elapsed 0:00:16.582
+
+IBM ILOG CPLEX   30.3.0 rc5da09e Released Mar 06, 2020 WEI x86 64bit/MS Window
+--- GAMS/Cplex Link licensed for continuous and discrete problems.
+Cplex 12.10.0.0
+
+Reading data...
+Starting Cplex...
+Space for names approximately 0.01 Mb
+Use option 'names no' to turn use of names off
+Version identifier: 12.10.0.0 | 2019-11-26 | 843d4de2ae
+CPXPARAM_Advance                                 2
+CPXPARAM_Threads                                 1
+CPXPARAM_Parallel                                1
+CPXPARAM_Simplex_Limits_Iterations               2000000000
+CPXPARAM_TimeLimit                               1000
+CPXPARAM_Tune_TimeLimit                          200
+Tried aggregator 1 time.
+LP Presolve eliminated 66 rows and 27 columns.
+Aggregator did 5 substitutions.
+Reduced LP has 12 rows, 13 columns, and 30 nonzeros.
+Presolve time = 0.00 sec. (0.05 ticks)
+
+Iteration log . . .
+Iteration:     1   Scaled dual infeas =          6528.000000
+Iteration:    17   Dual objective     =      29336788.621897
+LP status(1): optimal
+Cplex Time: 0.00sec (det. 0.17 ticks)
+
+Optimal solution found.
+Objective :    27981491.412506
+
+--- Restarting execution
+--- July18_Marketpricing_Updated.gms(297) 2 Mb
+--- Reading solution for model Model1
+--- Executing after solve: elapsed 0:00:16.829
+--- July18_Marketpricing_Updated.gms(287) 3 Mb
+--- Generating LP model Model1
+--- July18_Marketpricing_Updated.gms(297) 3 Mb
+--- LOOPS PriceScen = PriceScen2
+---       Offset = H4
+---       tot_vol = V3
+---       Nu_SteadyDays = case7
+---   92 rows  47 columns  167 non-zeroes
+--- Executing CPLEX: elapsed 0:00:16.837
+
+IBM ILOG CPLEX   30.3.0 rc5da09e Released Mar 06, 2020 WEI x86 64bit/MS Window
+--- GAMS/Cplex Link licensed for continuous and discrete problems.
+Cplex 12.10.0.0
+
+Reading data...
+Starting Cplex...
+Space for names approximately 0.01 Mb
+Use option 'names no' to turn use of names off
+Version identifier: 12.10.0.0 | 2019-11-26 | 843d4de2ae
+CPXPARAM_Advance                                 2
+CPXPARAM_Threads                                 1
+CPXPARAM_Parallel                                1
+CPXPARAM_Simplex_Limits_Iterations               2000000000
+CPXPARAM_TimeLimit                               1000
+CPXPARAM_Tune_TimeLimit                          200
+Tried aggregator 1 time.
+LP Presolve eliminated 69 rows and 23 columns.
+Aggregator did 7 substitutions.
+Reduced LP has 16 rows, 17 columns, and 40 nonzeros.
+Presolve time = 0.00 sec. (0.05 ticks)
+
+Iteration log . . .
+Iteration:     1   Scaled dual infeas =          6720.000000
+Iteration:    26   Dual objective     =      27971526.296506
+LP status(1): optimal
+Cplex Time: 0.00sec (det. 0.20 ticks)
+
+Optimal solution found.
+Objective :    27850413.996397
+
+--- Restarting execution
+--- July18_Marketpricing_Updated.gms(297) 2 Mb
+--- Reading solution for model Model1
+--- Executing after solve: elapsed 0:00:17.074
+--- July18_Marketpricing_Updated.gms(287) 3 Mb
+--- Generating LP model Model1
+--- July18_Marketpricing_Updated.gms(297) 3 Mb
+--- LOOPS PriceScen = PriceScen2
+---       Offset = H4
+---       tot_vol = V3
+---       Nu_SteadyDays = case8
+---   92 rows  47 columns  167 non-zeroes
+--- Executing CPLEX: elapsed 0:00:17.083
+
+IBM ILOG CPLEX   30.3.0 rc5da09e Released Mar 06, 2020 WEI x86 64bit/MS Window
+--- GAMS/Cplex Link licensed for continuous and discrete problems.
+Cplex 12.10.0.0
+
+Reading data...
+Starting Cplex...
+Space for names approximately 0.01 Mb
+Use option 'names no' to turn use of names off
+Version identifier: 12.10.0.0 | 2019-11-26 | 843d4de2ae
+CPXPARAM_Advance                                 2
+CPXPARAM_Threads                                 1
+CPXPARAM_Parallel                                1
+CPXPARAM_Simplex_Limits_Iterations               2000000000
+CPXPARAM_TimeLimit                               1000
+CPXPARAM_Tune_TimeLimit                          200
+Tried aggregator 1 time.
+LP Presolve eliminated 69 rows and 23 columns.
+Aggregator did 7 substitutions.
+Reduced LP has 16 rows, 17 columns, and 40 nonzeros.
+Presolve time = 0.00 sec. (0.05 ticks)
+
+Iteration log . . .
+Iteration:     1   Scaled dual infeas =          6804.552483
+Iteration:    23   Dual objective     =      30587499.292421
+LP status(1): optimal
+Cplex Time: 0.00sec (det. 0.20 ticks)
+
+Optimal solution found.
+Objective :    27719336.580289
+
+--- Restarting execution
+--- July18_Marketpricing_Updated.gms(297) 2 Mb
+--- Reading solution for model Model1
+--- Executing after solve: elapsed 0:00:17.319
+--- July18_Marketpricing_Updated.gms(287) 3 Mb
+--- Generating LP model Model1
+--- July18_Marketpricing_Updated.gms(297) 3 Mb
+--- LOOPS PriceScen = PriceScen2
+---       Offset = H4
+---       tot_vol = V3
+---       Nu_SteadyDays = case9
+---   92 rows  47 columns  167 non-zeroes
+--- Executing CPLEX: elapsed 0:00:17.328
+
+IBM ILOG CPLEX   30.3.0 rc5da09e Released Mar 06, 2020 WEI x86 64bit/MS Window
+--- GAMS/Cplex Link licensed for continuous and discrete problems.
+Cplex 12.10.0.0
+
+Reading data...
+Starting Cplex...
+Space for names approximately 0.01 Mb
+Use option 'names no' to turn use of names off
+Version identifier: 12.10.0.0 | 2019-11-26 | 843d4de2ae
+CPXPARAM_Advance                                 2
+CPXPARAM_Threads                                 1
+CPXPARAM_Parallel                                1
+CPXPARAM_Simplex_Limits_Iterations               2000000000
+CPXPARAM_TimeLimit                               1000
+CPXPARAM_Tune_TimeLimit                          200
+Tried aggregator 1 time.
+LP Presolve eliminated 69 rows and 23 columns.
+Aggregator did 7 substitutions.
+Reduced LP has 16 rows, 17 columns, and 40 nonzeros.
+Presolve time = 0.00 sec. (0.05 ticks)
+
+Iteration log . . .
+Iteration:     1   Scaled dual infeas =          7558.858540
+Iteration:    23   Dual objective     =      27789528.021084
+LP status(1): optimal
+Cplex Time: 0.00sec (det. 0.20 ticks)
+
+Optimal solution found.
+Objective :    27457181.748071
+
+--- Restarting execution
+--- July18_Marketpricing_Updated.gms(297) 2 Mb
+--- Reading solution for model Model1
+--- Executing after solve: elapsed 0:00:17.559
+--- July18_Marketpricing_Updated.gms(287) 3 Mb
+--- Generating LP model Model1
+--- July18_Marketpricing_Updated.gms(297) 3 Mb
+--- LOOPS PriceScen = PriceScen2
+---       Offset = H4
+---       tot_vol = V3
+---       Nu_SteadyDays = case10
+---   92 rows  47 columns  167 non-zeroes
+--- Executing CPLEX: elapsed 0:00:17.568
+
+IBM ILOG CPLEX   30.3.0 rc5da09e Released Mar 06, 2020 WEI x86 64bit/MS Window
+--- GAMS/Cplex Link licensed for continuous and discrete problems.
+Cplex 12.10.0.0
+
+Reading data...
+Starting Cplex...
+Space for names approximately 0.01 Mb
+Use option 'names no' to turn use of names off
+Version identifier: 12.10.0.0 | 2019-11-26 | 843d4de2ae
+CPXPARAM_Advance                                 2
+CPXPARAM_Threads                                 1
+CPXPARAM_Parallel                                1
+CPXPARAM_Simplex_Limits_Iterations               2000000000
+CPXPARAM_TimeLimit                               1000
+CPXPARAM_Tune_TimeLimit                          200
+Tried aggregator 1 time.
+LP Presolve eliminated 73 rows and 27 columns.
+Aggregator did 7 substitutions.
+Reduced LP has 12 rows, 13 columns, and 30 nonzeros.
+Presolve time = 0.00 sec. (0.05 ticks)
+
+Iteration log . . .
+Iteration:     1   Scaled dual infeas =          6912.000000
+Iteration:    17   Dual objective     =      27303648.746685
+LP status(1): optimal
+Cplex Time: 0.00sec (det. 0.19 ticks)
+
+Optimal solution found.
+Objective :    27104299.914889
+
+--- Restarting execution
+--- July18_Marketpricing_Updated.gms(297) 2 Mb
+--- Reading solution for model Model1
+--- Executing after solve: elapsed 0:00:17.795
+--- July18_Marketpricing_Updated.gms(287) 3 Mb
+--- Generating LP model Model1
+--- July18_Marketpricing_Updated.gms(297) 3 Mb
+--- LOOPS PriceScen = PriceScen2
+---       Offset = H4
+---       tot_vol = V3
+---       Nu_SteadyDays = case11
+---   92 rows  47 columns  167 non-zeroes
+--- Executing CPLEX: elapsed 0:00:17.803
+
+IBM ILOG CPLEX   30.3.0 rc5da09e Released Mar 06, 2020 WEI x86 64bit/MS Window
+--- GAMS/Cplex Link licensed for continuous and discrete problems.
+Cplex 12.10.0.0
+
+Reading data...
+Starting Cplex...
+Space for names approximately 0.01 Mb
+Use option 'names no' to turn use of names off
+Version identifier: 12.10.0.0 | 2019-11-26 | 843d4de2ae
+CPXPARAM_Advance                                 2
+CPXPARAM_Threads                                 1
+CPXPARAM_Parallel                                1
+CPXPARAM_Simplex_Limits_Iterations               2000000000
+CPXPARAM_TimeLimit                               1000
+CPXPARAM_Tune_TimeLimit                          200
+Tried aggregator 1 time.
+LP Presolve eliminated 75 rows and 29 columns.
+Aggregator did 7 substitutions.
+Reduced LP has 10 rows, 11 columns, and 25 nonzeros.
+Presolve time = 0.00 sec. (0.05 ticks)
+
+Iteration log . . .
+Iteration:     1   Scaled dual infeas =          7424.000000
+Iteration:    14   Dual objective     =      37257965.001208
+LP status(1): optimal
+Cplex Time: 0.00sec (det. 0.18 ticks)
+
+Optimal solution found.
+Objective :    26677097.621173
+
+--- Restarting execution
+--- July18_Marketpricing_Updated.gms(297) 2 Mb
+--- Reading solution for model Model1
+--- Executing after solve: elapsed 0:00:18.025
+--- July18_Marketpricing_Updated.gms(287) 3 Mb
+--- Generating LP model Model1
+--- July18_Marketpricing_Updated.gms(297) 3 Mb
+--- LOOPS PriceScen = PriceScen2
+---       Offset = H4
+---       tot_vol = V3
+---       Nu_SteadyDays = case12
+---   92 rows  47 columns  167 non-zeroes
+--- Executing CPLEX: elapsed 0:00:18.034
+
+IBM ILOG CPLEX   30.3.0 rc5da09e Released Mar 06, 2020 WEI x86 64bit/MS Window
+--- GAMS/Cplex Link licensed for continuous and discrete problems.
+Cplex 12.10.0.0
+
+Reading data...
+Starting Cplex...
+Space for names approximately 0.01 Mb
+Use option 'names no' to turn use of names off
+Version identifier: 12.10.0.0 | 2019-11-26 | 843d4de2ae
+CPXPARAM_Advance                                 2
+CPXPARAM_Threads                                 1
+CPXPARAM_Parallel                                1
+CPXPARAM_Simplex_Limits_Iterations               2000000000
+CPXPARAM_TimeLimit                               1000
+CPXPARAM_Tune_TimeLimit                          200
+Tried aggregator 1 time.
+LP Presolve eliminated 79 rows and 33 columns.
+Aggregator did 9 substitutions.
+Reduced LP has 4 rows, 5 columns, and 10 nonzeros.
+Presolve time = 0.00 sec. (0.05 ticks)
+
+Iteration log . . .
+Iteration:     1   Scaled dual infeas =          4352.000000
+Iteration:     6   Dual objective     =      26313692.323436
+LP status(1): optimal
+Cplex Time: 0.00sec (det. 0.16 ticks)
+
+Optimal solution found.
+Objective :    26313692.323436
+
+--- Restarting execution
+--- July18_Marketpricing_Updated.gms(297) 2 Mb
+--- Reading solution for model Model1
+--- Executing after solve: elapsed 0:00:18.259
+--- July18_Marketpricing_Updated.gms(287) 3 Mb
+--- Generating LP model Model1
+--- July18_Marketpricing_Updated.gms(297) 3 Mb
+--- LOOPS PriceScen = PriceScen2
+---       Offset = H4
+---       tot_vol = V3
+---       Nu_SteadyDays = case13
+---   83 rows  45 columns  149 non-zeroes
+--- Executing CPLEX: elapsed 0:00:18.269
+
+IBM ILOG CPLEX   30.3.0 rc5da09e Released Mar 06, 2020 WEI x86 64bit/MS Window
+--- GAMS/Cplex Link licensed for continuous and discrete problems.
+Cplex 12.10.0.0
+
+Reading data...
+Starting Cplex...
+Space for names approximately 0.01 Mb
+Use option 'names no' to turn use of names off
+Version identifier: 12.10.0.0 | 2019-11-26 | 843d4de2ae
+CPXPARAM_Advance                                 2
+CPXPARAM_Threads                                 1
+CPXPARAM_Parallel                                1
+CPXPARAM_Simplex_Limits_Iterations               2000000000
+CPXPARAM_TimeLimit                               1000
+CPXPARAM_Tune_TimeLimit                          200
+Tried aggregator 1 time.
+LP Presolve eliminated 78 rows and 40 columns.
+Aggregator did 5 substitutions.
+All rows and columns eliminated.
+Presolve time = 0.00 sec. (0.04 ticks)
+LP status(1): optimal
+Cplex Time: 0.00sec (det. 0.11 ticks)
+
+Optimal solution found.
+Objective :    25932841.816864
+
+--- Restarting execution
+--- July18_Marketpricing_Updated.gms(297) 2 Mb
+--- Reading solution for model Model1
+--- Executing after solve: elapsed 0:00:18.445
+--- July18_Marketpricing_Updated.gms(346) 3 Mb
+--- Generating LP model Model0
+--- July18_Marketpricing_Updated.gms(355) 3 Mb
+--- LOOPS PriceScen = PriceScen1
+---       Offset = H4
+---       tot_vol = V1
+---   61 rows  27 columns  111 non-zeroes
+--- Executing CPLEX: elapsed 0:00:18.454
+
+IBM ILOG CPLEX   30.3.0 rc5da09e Released Mar 06, 2020 WEI x86 64bit/MS Window
+--- GAMS/Cplex Link licensed for continuous and discrete problems.
+Cplex 12.10.0.0
+
+Reading data...
+Starting Cplex...
+Space for names approximately 0.00 Mb
+Use option 'names no' to turn use of names off
+Version identifier: 12.10.0.0 | 2019-11-26 | 843d4de2ae
+CPXPARAM_Advance                                 0
+CPXPARAM_Threads                                 1
+CPXPARAM_Parallel                                1
+CPXPARAM_Simplex_Limits_Iterations               2000000000
+CPXPARAM_TimeLimit                               1000
+CPXPARAM_Tune_TimeLimit                          200
+Tried aggregator 1 time.
+LP Presolve eliminated 56 rows and 22 columns.
+Aggregator did 5 substitutions.
+All rows and columns eliminated.
+Presolve time = 0.00 sec. (0.03 ticks)
+LP status(1): optimal
+Cplex Time: 0.00sec (det. 0.05 ticks)
+
+Optimal solution found.
+Objective :    21881741.376708
+
+--- Restarting execution
+--- July18_Marketpricing_Updated.gms(355) 2 Mb
+--- Reading solution for model Model0
+--- Executing after solve: elapsed 0:00:18.623
+--- July18_Marketpricing_Updated.gms(346) 3 Mb
+--- Generating LP model Model0
+--- July18_Marketpricing_Updated.gms(355) 3 Mb
+--- LOOPS PriceScen = PriceScen1
+---       Offset = H4
+---       tot_vol = V2
+---   61 rows  27 columns  111 non-zeroes
+--- Executing CPLEX: elapsed 0:00:18.633
+
+IBM ILOG CPLEX   30.3.0 rc5da09e Released Mar 06, 2020 WEI x86 64bit/MS Window
+--- GAMS/Cplex Link licensed for continuous and discrete problems.
+Cplex 12.10.0.0
+
+Reading data...
+Starting Cplex...
+Space for names approximately 0.00 Mb
+Use option 'names no' to turn use of names off
+Version identifier: 12.10.0.0 | 2019-11-26 | 843d4de2ae
+CPXPARAM_Advance                                 0
+CPXPARAM_Threads                                 1
+CPXPARAM_Parallel                                1
+CPXPARAM_Simplex_Limits_Iterations               2000000000
+CPXPARAM_TimeLimit                               1000
+CPXPARAM_Tune_TimeLimit                          200
+Tried aggregator 1 time.
+LP Presolve eliminated 56 rows and 22 columns.
+Aggregator did 5 substitutions.
+All rows and columns eliminated.
+Presolve time = 0.00 sec. (0.03 ticks)
+LP status(1): optimal
+Cplex Time: 0.00sec (det. 0.05 ticks)
+
+Optimal solution found.
+Objective :    25324815.156767
+
+--- Restarting execution
+--- July18_Marketpricing_Updated.gms(355) 2 Mb
+--- Reading solution for model Model0
+--- Executing after solve: elapsed 0:00:18.815
+--- July18_Marketpricing_Updated.gms(346) 3 Mb
+--- Generating LP model Model0
+--- July18_Marketpricing_Updated.gms(355) 3 Mb
+--- LOOPS PriceScen = PriceScen1
+---       Offset = H4
+---       tot_vol = V3
+---   61 rows  27 columns  111 non-zeroes
+--- Executing CPLEX: elapsed 0:00:18.836
+
+IBM ILOG CPLEX   30.3.0 rc5da09e Released Mar 06, 2020 WEI x86 64bit/MS Window
+--- GAMS/Cplex Link licensed for continuous and discrete problems.
+Cplex 12.10.0.0
+
+Reading data...
+Starting Cplex...
+Space for names approximately 0.00 Mb
+Use option 'names no' to turn use of names off
+Version identifier: 12.10.0.0 | 2019-11-26 | 843d4de2ae
+CPXPARAM_Advance                                 0
+CPXPARAM_Threads                                 1
+CPXPARAM_Parallel                                1
+CPXPARAM_Simplex_Limits_Iterations               2000000000
+CPXPARAM_TimeLimit                               1000
+CPXPARAM_Tune_TimeLimit                          200
+Tried aggregator 1 time.
+LP Presolve eliminated 56 rows and 22 columns.
+Aggregator did 5 substitutions.
+All rows and columns eliminated.
+Presolve time = 0.00 sec. (0.03 ticks)
+LP status(1): optimal
+Cplex Time: 0.00sec (det. 0.05 ticks)
+
+Optimal solution found.
+Objective :    28725861.398858
+
+--- Restarting execution
+--- July18_Marketpricing_Updated.gms(355) 2 Mb
+--- Reading solution for model Model0
+--- Executing after solve: elapsed 0:00:19.006
+--- July18_Marketpricing_Updated.gms(346) 3 Mb
+--- Generating LP model Model0
+--- July18_Marketpricing_Updated.gms(355) 3 Mb
+--- LOOPS PriceScen = PriceScen2
+---       Offset = H4
+---       tot_vol = V1
+---   61 rows  27 columns  111 non-zeroes
+--- Executing CPLEX: elapsed 0:00:19.015
+
+IBM ILOG CPLEX   30.3.0 rc5da09e Released Mar 06, 2020 WEI x86 64bit/MS Window
+--- GAMS/Cplex Link licensed for continuous and discrete problems.
+Cplex 12.10.0.0
+
+Reading data...
+Starting Cplex...
+Space for names approximately 0.00 Mb
+Use option 'names no' to turn use of names off
+Version identifier: 12.10.0.0 | 2019-11-26 | 843d4de2ae
+CPXPARAM_Advance                                 0
+CPXPARAM_Threads                                 1
+CPXPARAM_Parallel                                1
+CPXPARAM_Simplex_Limits_Iterations               2000000000
+CPXPARAM_TimeLimit                               1000
+CPXPARAM_Tune_TimeLimit                          200
+Tried aggregator 1 time.
+LP Presolve eliminated 56 rows and 22 columns.
+Aggregator did 5 substitutions.
+All rows and columns eliminated.
+Presolve time = 0.00 sec. (0.03 ticks)
+LP status(1): optimal
+Cplex Time: 0.00sec (det. 0.05 ticks)
+
+Optimal solution found.
+Objective :    21881741.376708
+
+--- Restarting execution
+--- July18_Marketpricing_Updated.gms(355) 2 Mb
+--- Reading solution for model Model0
+--- Executing after solve: elapsed 0:00:19.201
+--- July18_Marketpricing_Updated.gms(346) 3 Mb
+--- Generating LP model Model0
+--- July18_Marketpricing_Updated.gms(355) 3 Mb
+--- LOOPS PriceScen = PriceScen2
+---       Offset = H4
+---       tot_vol = V2
+---   61 rows  27 columns  111 non-zeroes
+--- Executing CPLEX: elapsed 0:00:19.221
+
+IBM ILOG CPLEX   30.3.0 rc5da09e Released Mar 06, 2020 WEI x86 64bit/MS Window
+--- GAMS/Cplex Link licensed for continuous and discrete problems.
+Cplex 12.10.0.0
+
+Reading data...
+Starting Cplex...
+Space for names approximately 0.00 Mb
+Use option 'names no' to turn use of names off
+Version identifier: 12.10.0.0 | 2019-11-26 | 843d4de2ae
+CPXPARAM_Advance                                 0
+CPXPARAM_Threads                                 1
+CPXPARAM_Parallel                                1
+CPXPARAM_Simplex_Limits_Iterations               2000000000
+CPXPARAM_TimeLimit                               1000
+CPXPARAM_Tune_TimeLimit                          200
+Tried aggregator 1 time.
+LP Presolve eliminated 56 rows and 22 columns.
+Aggregator did 5 substitutions.
+All rows and columns eliminated.
+Presolve time = 0.00 sec. (0.03 ticks)
+LP status(1): optimal
+Cplex Time: 0.00sec (det. 0.05 ticks)
+
+Optimal solution found.
+Objective :    25324815.156767
+
+--- Restarting execution
+--- July18_Marketpricing_Updated.gms(355) 2 Mb
+--- Reading solution for model Model0
+--- Executing after solve: elapsed 0:00:19.391
+--- July18_Marketpricing_Updated.gms(346) 3 Mb
+--- Generating LP model Model0
+--- July18_Marketpricing_Updated.gms(355) 3 Mb
+--- LOOPS PriceScen = PriceScen2
+---       Offset = H4
+---       tot_vol = V3
+---   61 rows  27 columns  111 non-zeroes
+--- Executing CPLEX: elapsed 0:00:19.399
+
+IBM ILOG CPLEX   30.3.0 rc5da09e Released Mar 06, 2020 WEI x86 64bit/MS Window
+--- GAMS/Cplex Link licensed for continuous and discrete problems.
+Cplex 12.10.0.0
+
+Reading data...
+Starting Cplex...
+Space for names approximately 0.00 Mb
+Use option 'names no' to turn use of names off
+Version identifier: 12.10.0.0 | 2019-11-26 | 843d4de2ae
+CPXPARAM_Advance                                 0
+CPXPARAM_Threads                                 1
+CPXPARAM_Parallel                                1
+CPXPARAM_Simplex_Limits_Iterations               2000000000
+CPXPARAM_TimeLimit                               1000
+CPXPARAM_Tune_TimeLimit                          200
+Tried aggregator 1 time.
+LP Presolve eliminated 56 rows and 22 columns.
+Aggregator did 5 substitutions.
+All rows and columns eliminated.
+Presolve time = 0.00 sec. (0.03 ticks)
+LP status(1): optimal
+Cplex Time: 0.00sec (det. 0.05 ticks)
+
+Optimal solution found.
+Objective :    28725861.398858
+
+--- Restarting execution
+--- July18_Marketpricing_Updated.gms(355) 2 Mb
+--- Reading solution for model Model0
+--- Executing after solve: elapsed 0:00:19.576
+--- July18_Marketpricing_Updated.gms(384) 3 Mb
+--- GDX File C:\Users\Mooz\Documents\GitHub\GCD_BugFlowExperiment\Models\July 2018\Market-Contract Price Model\Pricing_Model_Updated.gdx
+--- July18_Marketpricing_Updated.gms(386) 3 Mb
+GDX2XLS          30.3.0 rc5da09e Released Mar 06, 2020 WEI x86 64bit/MS Window
+Output file: C:\Users\Mooz\Documents\GitHub\GCD_BugFlowExperiment\Models\July 2018\Market-Contract Price Model\Pricing_Model_Updated.xlsx
+(Created backup file)
+*** Status: Normal completion
+--- Job July18_Marketpricing_Updated.gms Stop 11/25/24 02:08:00 elapsed 0:00:25.882

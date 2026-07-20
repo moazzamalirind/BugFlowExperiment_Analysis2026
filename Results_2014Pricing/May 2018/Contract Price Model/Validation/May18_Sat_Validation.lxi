@@ -1,0 +1,44 @@
+B 3 C o m p i l a t i o n
+B 272 Equation Listing    SOLVE Model1 Using LP From line 158
+D 275 EQ1_ResMassBal
+D 282 EQ2_reqpowerstorage
+D 288 EQ3_maxstor
+D 293 EQ4_MaxR
+D 305 EQ5_MinR
+D 323 EQ6_Rel_Range
+D 336 EQ7_RelVolume
+D 348 EQ8_OffPeak_Release
+D 361 EQ9_EnergyGen_Max
+D 377 EQ10_EnergyGen
+D 395 EQ11_EnergyRevenue
+D 406 EQ12_Simulation
+B 425 Column Listing      SOLVE Model1 Using LP From line 158
+E 428 ObjectiveVal
+E 435 storage
+E 444 Released_vol
+E 452 Release
+E 490 Energy_Gen
+B 514 Model Statistics    SOLVE Model1 Using LP From line 158
+B 527 Solution Report     SOLVE Model1 Using LP From line 158
+F 559 EQ1_ResMassBal
+F 560 EQ2_reqpowerstorage
+F 561 EQ3_maxstor
+F 568 EQ4_MaxR
+F 580 EQ5_MinR
+F 592 EQ6_Rel_Range
+F 603 EQ7_RelVolume
+F 607 EQ8_OffPeak_Release
+F 616 EQ9_EnergyGen_Max
+F 628 EQ10_EnergyGen
+F 642 EQ11_EnergyRevenue
+F 646 EQ12_Simulation
+G 660 ObjectiveVal
+G 661 storage
+G 662 Released_vol
+G 668 Release
+G 680 Energy_Gen
+B 698 E x e c u t i o n
+I 700 FStore
+I 702 XStore
+I 712 RStore
+I 723 Sstore

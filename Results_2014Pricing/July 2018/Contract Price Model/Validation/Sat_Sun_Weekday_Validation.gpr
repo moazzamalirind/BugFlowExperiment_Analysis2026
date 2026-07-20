@@ -1,0 +1,151 @@
+[PROJECT]
+
+[GDXDISP: XStore Par 1]
+PlaneDim=0
+RowDim=1
+Squeeze=1
+SqTrail0=0
+Order=1
+Decim=7
+PlaneRownr=-1
+
+[RP:MARCH2018_VALIDATION(HOURLY)]
+1=
+
+[GDXDISP: FStore Par 0]
+PlaneDim=0
+RowDim=0
+Squeeze=1
+SqTrail0=0
+Order=
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: Convert Par 0]
+PlaneDim=0
+RowDim=0
+Squeeze=1
+SqTrail0=0
+Order=
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: FStore Par 3]
+PlaneDim=0
+RowDim=3
+Squeeze=1
+SqTrail0=0
+Order=1,2,3
+Decim=7
+PlaneRownr=-1
+
+[RP:JUNE18_SAT_SUN-WEEKDAY_MODEL]
+1=
+
+[GDXDISP: XStore Par 2]
+PlaneDim=0
+RowDim=2
+Squeeze=1
+SqTrail0=0
+Order=1,2
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: Release Var 2]
+PlaneDim=0
+RowDim=2
+Squeeze=1
+SqTrail0=0
+Order=1,2,3
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: RStore Par 2]
+PlaneDim=0
+RowDim=2
+Squeeze=1
+SqTrail0=0
+Order=1,2
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: Sstore Par 0]
+PlaneDim=0
+RowDim=0
+Squeeze=1
+SqTrail0=0
+Order=
+Decim=7
+PlaneRownr=-1
+
+[RP:MARCH18_SAT_VALIDATION]
+1=
+
+[RP:MAY18_SAT_VALIDATION]
+1=
+
+[RP:JULY2018_VALIDATION(2PERIODS)]
+1=
+
+[RP:JULY18_SAT_VALIDATION]
+1=
+
+[GDXDISP: ReleaseVol Var 2]
+PlaneDim=0
+RowDim=2
+Squeeze=1
+SqTrail0=0
+Order=1,2,3
+Decim=7
+PlaneRownr=-1
+
+[MRUFILES]
+1=E:\Class project\GCD_BugFlowExperiment\July 2018\Weekend-Weekday Model\Validation\July2018_validation(2periods).gms
+2=E:\Class project\GCD_BugFlowExperiment\May 2018\Weekend-Weekday\Validation\Valid_May2018(Hourly).gdx
+3=E:\Class project\GCD_BugFlowExperiment\May 2018\Saturday_Sunday_Weekday\Validation\Valid_SatModel_May.gdx
+4=E:\Class project\GCD_BugFlowExperiment\May 2018\Saturday_Sunday_Weekday\Validation\May18_Sat_Validation.lst
+5=E:\Class project\GCD_BugFlowExperiment\May 2018\Saturday_Sunday_Weekday\Validation\May18_Sat_Validation.gms
+6=E:\Class project\GCD_BugFlowExperiment\April 2018\Saturday_Sunday_Weekday\Validation\Valid_SatModel_April.gdx
+7=E:\Class project\GCD_BugFlowExperiment\Meeting_4_1_2021\Saturday-Sunday-Weekday\June18_Sat_Sun-Weekday_Model.gms
+8=E:\Class project\GCD_BugFlowExperiment\March 2018\Weekend-Weekday\Validation\Validation_March2018(Hourly).gdx
+9=E:\Class project\GCD_BugFlowExperiment\March 2018\Weekend-Weekday\Validation\March2018_Validation(Hourly).gms
+
+[OPENWINDOW_1]
+FILE0=E:\Class project\GCD_BugFlowExperiment\July 2018\Saturday_Sunday_Weekday\Validation\July18_Sat_Validation.gms
+FILE1=E:\Class project\GCD_BugFlowExperiment\July 2018\Saturday_Sunday_Weekday\Validation\July18_Sat_Validation.lst
+FILE2=E:\Class project\GCD_BugFlowExperiment\July 2018\Saturday_Sunday_Weekday\Validation\Valid_SatModel_July.gdx
+FILE3=E:\Class project\GCD_BugFlowExperiment\July 2018\Weekend-Weekday Model\Validation\Valid_July2018(2Periods).gdx
+FILE4=E:\Class project\GCD_BugFlowExperiment\July 2018\Weekend-Weekday Model\Validation\Valid_July2018(Hourly).gdx
+FILE5=E:\Class project\GCD_BugFlowExperiment\July 2018\Weekend-Weekday Model\Validation\Valid_July2018(2Periods).gdx
+MAXIM=0
+TOP=0
+LEFT=50
+HEIGHT=691
+WIDTH=1062
+
+[GDXDISP: Released_vol Var 0]
+PlaneDim=0
+RowDim=0
+Squeeze=1
+SqTrail0=0
+Order=1
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: TotMonth_volume Var 0]
+PlaneDim=0
+RowDim=0
+Squeeze=1
+SqTrail0=0
+Order=1
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: Vol_monthlyrelease Var 0]
+PlaneDim=0
+RowDim=0
+Squeeze=1
+SqTrail0=0
+Order=1
+Decim=7
+PlaneRownr=-1

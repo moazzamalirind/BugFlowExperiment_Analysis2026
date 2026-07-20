@@ -1,0 +1,739 @@
+GAMS 33.2.0  r4f23b21 Released Dec  1, 2020 WEX-WEI x86 64bit/MS Windows - 04/06/21 16:25:08 Page 1
+G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
+C o m p i l a t i o n
+
+
+      Title Optimization model for Glen Canyon Dam releases to favor Bugs popula
+      tion. ( Saturday-Sunday-Weekday model Validation  July 2018)
+       
+      ###################################
+      Created By: Moazzam Ali Rind
+      Email: moazzamalirind@gmail.com
+       
+      Created : 4/6/2020
+       
+      Description: This model was developed to qaunitfy the trade-off between nu
+      mber of steady low flow days and hydropower revenue objectives.
+                  The model has 2 periods per day (i.e. pHigh and plow) and runs
+       for a month. we have used linear programming to solve the problem.
+                  All the structural and operational constraints applied here ar
+      e uptodate.
+       
+      ######################################
+  16   
+  17  ****Model code
+  18   
+  19  Set
+  20            d                             Types of Days involved in the mode
+      l/Sunday, Saturday, Weekday/
+  21            p                             Periods during a day /pLow "Low fl
+      ow period",pHigh "High flow period"/
+  22            modpar                        Saving model status for each of th
+      e scenario solution/ ModStat "Model Status", SolStat "Solve Status"/
+  23  ;
+  24   
+  25   
+  26  *======================================
+  27  Parameters
+  28  *======================================
+  29   
+  30  Initstorage                           Initial reservoir storage (e.g Stora
+      ge in Powell on 1st April2018) (acre-ft)/12711184/
+  31  * Storage data for lake Powell can be found at: http://lakepowell.water-da
+      ta.com/index2.php
+  32   
+  33  Inflow                                Average monthly Inflow to reservoir 
+      (cfs) /4096.64/
+  34  *Inflow data can be found at: http://lakepowell.water-data.com/index2.php
+  35   
+  36  maxstorage                            Maximumn Reservoir capacity (acre-ft
+      )/25000000/
+  37  minstorage                            Minimum reservoir storage to maintai
+      n hydropower level(acre-ft)/8950000/
+  38  maxRel                                Maximum release in a day d at any ti
+      meperiod p(cfs) /31500/
+  39  minRel                                Minimum release in a day d at any ti
+      meperiod p(cfs)/8000/
+  40  evap                                  Evaporation (ac-ft per Month) /52608
+      /
+  41  *The evaporation data can be found at: https://www.usbr.gov/rsvrWater/Hist
+      oricalApp.html
+  42   
+  43  Duration(p)                           Duration of period (hours)
+  44  TotMonth_volume                       To represent total monthly volume (a
+      cre-ft)
+  45   
+  46  FStore                                Storing objective function values ($
+      $)
+  47   
+  48  XStore(d,p)                          Store Energy Generated during differe
+      nt periods on types of days (MWh)
+  49  RStore(d,p)                          Store Release values during different
+       types of days (cfs)
+  50  Sstore                               Store Storage Values over different c
+      ases(ac-ft)
+  51   
+  52  ModelResults(modpar)                 Store solution status of the scenario
+      s i.e. whether the solution found is optimal or not?
+  53   
+  54  Num_Days(d)                          Number of days for each day type/Sund
+      ay 5, Saturday 4, Weekday 22/
+  55  ;
+  56   
+  57  Duration("pLow")= 8;
+  58  * low period weightage in a day(08 Hours or 8 by 24 i.e:0.33 of day)
+  59   
+  60  Duration("pHigh")= 16;
+  61  *  High period weightage in a day( 16 Hours or 16 by 24 i.e:0.67 of day)
+  62   
+  63  Table Observed_Rel(d,p)"Releases (cfs) observed during July 2018"
+  64                  pLow      pHigh
+  65  Sunday        12150.69   11398.13
+  66  Saturday      12150.69   11401.17
+  67  Weekday       12497.16   16750.14 ;
+  68   
+  69   
+  70  Table Energy_Rate(d,p)"Price of MegaWatt hour during different days and wi
+      thin period p ($ per MWh)"
+  71                pLow        pHigh
+  72  Sunday       46.55        46.55
+  73  Saturday     46.55        63.31
+  74  Weekday      46.55        80.08 ;
+  75   
+  76   
+  77   
+  78  *===============================================
+  79  SCALAR
+  80  Convert                        Conversion factor from cfs to ac-ft per hou
+      r (0.0014*60)/0.083/
+  81  Daily_RelRange                 Allowable daily release range (cfs)/8000/
+  82  Totaldays                      Number of days in the month /31/
+  83  Saturdays                      number of saturdays/4/
+  84  Sundays                        number of Sundays/5/
+  85  Weekdays                       number of weekdays /22/
+  86   
+  87  *===============================================
+  88  VARIABLES
+  89   
+  90  ObjectiveVal                   Objective functions value ($)
+  91  storage                        Reservoir storage at the end of the month (
+      acre-ft)
+  92  Released_vol                   Total water released during the month (ac-f
+      t)
+  93   
+  94  Positive Variables
+  95  Release(d,p)       Reservoir release on different day types and flow patte
+      rns durinng period p (cfs)
+  96  Energy_Gen(d,p)    Hydropower Generated within each timestep during differ
+      ent day types(MWh)
+  97  ;
+  98  *===============================================
+  99   
+ 100  EQUATIONS
+ 101   
+ 102  *Constraints
+ 103  EQ1_ResMassBal                       Reservoir mass balance (acre-ft)
+ 104  EQ2_reqpowerstorage                  The minimum storage required for hydr
+      opower generation(power pool storage) (acre-ft)
+ 105  EQ3_maxstor                          Reservoir Max storage (acre-ft)
+ 106  EQ4_MaxR(d,p)                        Max Release for any day type during a
+      ny period p(cfs)
+ 107  EQ5_MinR(d,p)                        Min Release for any day type with flo
+      ws during any period p  (cfs)
+ 108  EQ6_Rel_Range(d)                     Constraining the daily release range 
+      but it will not work (cfs per day)
+ 109  EQ7_RelVolume                        Total volume from different types of 
+      day in the month (ac-ft)
+ 110  EQ8_OffPeak_Release(d)               To make Off-peak period release durin
+      g Saturday and Sunday equal (cfs)
+ 111  EQ9_EnergyGen_Max(d,p)               Maximum Energy Generation Limit of th
+      e Glen Caynon Dam(MWh)
+ 112  EQ10_EnergyGen(d,p)                  Energy generated in each period p dur
+      ing different day types (MWh)
+ 113  *Objective Functions
+ 114  EQ11_EnergyRevenue                   Total monthly Hydropower Revenue gene
+      rated($)
+ 115  EQ12_Simulation(d,p)                 Making releases equal to observed hyd
+      rograph releases (simulation)
+ 116  ;
+ 117   
+ 118  *-------------------------------------------------------------------------
+      -----*
+ 119   
+ 120  *Mass Balance Equation
+ 121  EQ1_ResMassBal..                               storage =e= Initstorage + (
+      Inflow*Convert*sum(p,Duration(p))*Totaldays)- Released_vol - evap;
+ 122  *                                                                         
+       CFS * conversion factor from cfs to ac-ft/hr and multiplied by 24 (total 
+      duration in a day) then multiplied by total day in the month
+ 123  *Physical Constraints
+ 124  EQ2_reqpowerstorage..                          storage =g= minstorage;
+ 125  EQ3_maxstor..                                  storage =l= maxstorage;
+ 126   
+ 127  EQ4_MaxR(d,p)..                                Release(d,p)=l= maxRel;
+ 128   
+ 129  EQ5_MinR(d,p)..                                Release(d,p)=g= minRel;
+ 130   
+ 131  EQ6_Rel_Range(d)..                             Release(d,"pHigh")- Release
+      (d,"pLow")=l=Daily_RelRange;
+ 132   
+ 133  EQ7_RelVolume..                               Released_vol=e= sum(d,sum(p,
+       Release(d,p)*Convert*Duration(p))*Num_Days(d));
+ 134   
+ 135  *Managerial Constraints
+ 136  EQ8_OffPeak_Release(d)..                    Release("Saturday","pLow") =e=
+       Release("Sunday","pLow");
+ 137  *This equation makes off-peak saturday equals to Sunday off-peak sunday...
+ 138   
+ 139  EQ9_EnergyGen_Max(d,p)..                                          Energy_G
+      en(d,p)=l= 1320*Duration(p);
+ 140  *Maximum Energy Generation capacity of GCD (MWH).. Source https://www.usbr
+      .gov/uc/rm/crsp/gc
+ 141  EQ10_EnergyGen(d,p)..                                              Energy_
+      Gen(d,p)=e= Release(d,p)*Duration(p)*0.03715;
+ 142  * Energy generation formula used in WAPA Execl model..
+ 143   
+ 144  EQ11_EnergyRevenue..                                                Object
+      iveVal=e= sum(d,sum(p,Energy_Gen(d,p)*Energy_Rate(d,p))*Num_Days(d));
+ 145  *-------------------------------------------------------------------------
+      -----*
+ 146  *Simulation part
+ 147  EQ12_Simulation(d,p)..                                                   R
+      elease(d,p)=e=Observed_Rel(d,p);
+ 148   
+ 149  *_________________________________________________________________________
+      _________
+ 150   
+ 151   
+ 152  MODEL Model1 Find value of hydropower revenue using LP/ALL/;
+ 153  *This model is for all cases of steady flow days
+ 154   
+ 155  *Select the linear solver to be used
+ 156  option LP= CPLEX;
+ 157   
+ 158  Solve Model1 using LP MAXIMIZE ObjectiveVal;
+ 159   
+ 160  *-------------------------------------------------------------------------
+      ---------------------------------------------
+ 161  *-------------------------------------------------------------------------
+      ---------------------------------------------
+ 162  * All the following lines of code are saving values for different paramete
+      rs
+ 163   
+ 164     FStore= ObjectiveVal.L;
+ 165   
+ 166  * XStore store the energy generated (Mwh/day) during different types of da
+      ys
+ 167  *XStore(d)= sum (p,Energy_Gen.L(d,p))+ EPS;
+ 168     XStore(d,p) = Energy_Gen.L(d,p)+ EPS;
+ 169   
+ 170  * RStore store the reservoir releases (cfs) during different types of days
+       and scenarios.
+ 171     RStore(d,p)= Release.L(d,p)+ EPS;
+ 172   
+ 173  *Sstore store the end of month reservoir storage (ac-ft)
+ 174     Sstore = storage.L;
+ 175   
+ 176  *Saving the model status for different scenarios.
+ 177     ModelResults("SolStat")= Model1.solvestat;
+ 178     ModelResults("ModStat")= Model1.modelstat;
+ 179   
+ 180     option clear=ObjectiveVal,clear=Release,clear=Energy_Gen;
+ 181   
+ 182   
+ 183  DISPLAY FStore,XStore,RStore,Sstore;
+ 184   
+ 185  *-------------------------------------------------------------------------
+      -----*
+ 186   
+ 187  *Following part of code creates gdx and excel output file..
+ 188   
+ 189  * Dump all input data and results to a GAMS gdx file
+ 190  Execute_Unload "Valid_SatModel_July.gdx";
+ 191  * Dump the gdx file to an Excel workbook
+ 192  Execute "gdx2xls Valid_SatModel_July.gdx"
+ 193   
+ 194   
+ 195   
+ 196   
+ 197   
+ 198   
+ 199   
+ 200   
+ 201   
+ 202   
+ 203   
+
+
+COMPILATION TIME     =        0.000 SECONDS      3 MB  33.2.0 r4f23b21 WEX-WEI
+GAMS 33.2.0  r4f23b21 Released Dec  1, 2020 WEX-WEI x86 64bit/MS Windows - 04/06/21 16:25:08 Page 2
+G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
+Equation Listing    SOLVE Model1 Using LP From line 158
+
+
+---- EQ1_ResMassBal  =E=  Reservoir mass balance (acre-ft)
+
+EQ1_ResMassBal..  storage + Released_vol =E= 12911551.71328 ;
+     
+      (LHS = 0, INFES = 12911551.71328 ****)
+     
+
+---- EQ2_reqpowerstorage  =G=  The minimum storage required for hydropower gener
+                               ation(power pool storage) (acre-ft)
+
+EQ2_reqpowerstorage..  storage =G= 8950000 ; (LHS = 0, INFES = 8950000 ****)
+     
+
+---- EQ3_maxstor  =L=  Reservoir Max storage (acre-ft)
+
+EQ3_maxstor..  storage =L= 25000000 ; (LHS = 0)
+     
+
+---- EQ4_MaxR  =L=  Max Release for any day type during any period p(cfs)
+
+EQ4_MaxR(Sunday,pLow)..  Release(Sunday,pLow) =L= 31500 ; (LHS = 0)
+     
+EQ4_MaxR(Sunday,pHigh)..  Release(Sunday,pHigh) =L= 31500 ; (LHS = 0)
+     
+EQ4_MaxR(Saturday,pLow)..  Release(Saturday,pLow) =L= 31500 ; (LHS = 0)
+     
+REMAINING 3 ENTRIES SKIPPED
+
+
+---- EQ5_MinR  =G=  Min Release for any day type with flows during any period p 
+                    (cfs)
+
+EQ5_MinR(Sunday,pLow)..  Release(Sunday,pLow) =G= 8000 ;
+     
+      (LHS = 0, INFES = 8000 ****)
+     
+EQ5_MinR(Sunday,pHigh)..  Release(Sunday,pHigh) =G= 8000 ;
+     
+      (LHS = 0, INFES = 8000 ****)
+     
+EQ5_MinR(Saturday,pLow)..  Release(Saturday,pLow) =G= 8000 ;
+     
+      (LHS = 0, INFES = 8000 ****)
+     
+REMAINING 3 ENTRIES SKIPPED
+
+
+---- EQ6_Rel_Range  =L=  Constraining the daily release range but it will not wo
+                         rk (cfs per day)
+
+EQ6_Rel_Range(Sunday)..  - Release(Sunday,pLow) + Release(Sunday,pHigh) =L= 8000
+      ; (LHS = 0)
+     
+EQ6_Rel_Range(Saturday)..  - Release(Saturday,pLow) + Release(Saturday,pHigh)
+      =L= 8000 ; (LHS = 0)
+     
+EQ6_Rel_Range(Weekday)..  - Release(Weekday,pLow) + Release(Weekday,pHigh) =L= 
+     8000 ; (LHS = 0)
+     
+
+---- EQ7_RelVolume  =E=  Total volume from different types of day in the month (
+                         ac-ft)
+
+EQ7_RelVolume..  Released_vol - 3.32*Release(Sunday,pLow)
+     
+      - 6.64*Release(Sunday,pHigh) - 2.656*Release(Saturday,pLow)
+     
+      - 5.312*Release(Saturday,pHigh) - 14.608*Release(Weekday,pLow)
+     
+      - 29.216*Release(Weekday,pHigh) =E= 0 ; (LHS = 0)
+     
+
+---- EQ8_OffPeak_Release  =E=  To make Off-peak period release during Saturday a
+                               nd Sunday equal (cfs)
+
+EQ8_OffPeak_Release(Sunday)..  - Release(Sunday,pLow) + Release(Saturday,pLow)
+      =E= 0 ; (LHS = 0)
+     
+EQ8_OffPeak_Release(Saturday)..  - Release(Sunday,pLow) + Release(Saturday,pLow)
+      =E= 0 ; (LHS = 0)
+     
+EQ8_OffPeak_Release(Weekday)..  - Release(Sunday,pLow) + Release(Saturday,pLow)
+      =E= 0 ; (LHS = 0)
+     
+
+---- EQ9_EnergyGen_Max  =L=  Maximum Energy Generation Limit of the Glen Caynon 
+                             Dam(MWh)
+
+EQ9_EnergyGen_Max(Sunday,pLow)..  Energy_Gen(Sunday,pLow) =L= 10560 ; (LHS = 0)
+     
+EQ9_EnergyGen_Max(Sunday,pHigh)..  Energy_Gen(Sunday,pHigh) =L= 21120 ;
+     
+      (LHS = 0)
+     
+EQ9_EnergyGen_Max(Saturday,pLow)..  Energy_Gen(Saturday,pLow) =L= 10560 ;
+     
+      (LHS = 0)
+     
+REMAINING 3 ENTRIES SKIPPED
+
+
+---- EQ10_EnergyGen  =E=  Energy generated in each period p during different day
+                          types (MWh)
+
+EQ10_EnergyGen(Sunday,pLow)..  - 0.2972*Release(Sunday,pLow)
+     
+      + Energy_Gen(Sunday,pLow) =E= 0 ; (LHS = 0)
+     
+EQ10_EnergyGen(Sunday,pHigh)..  - 0.5944*Release(Sunday,pHigh)
+     
+      + Energy_Gen(Sunday,pHigh) =E= 0 ; (LHS = 0)
+     
+EQ10_EnergyGen(Saturday,pLow)..  - 0.2972*Release(Saturday,pLow)
+     
+      + Energy_Gen(Saturday,pLow) =E= 0 ; (LHS = 0)
+     
+REMAINING 3 ENTRIES SKIPPED
+
+
+---- EQ11_EnergyRevenue  =E=  Total monthly Hydropower Revenue generated($)
+
+EQ11_EnergyRevenue..  ObjectiveVal - 232.75*Energy_Gen(Sunday,pLow)
+     
+      - 232.75*Energy_Gen(Sunday,pHigh) - 186.2*Energy_Gen(Saturday,pLow)
+     
+      - 253.24*Energy_Gen(Saturday,pHigh) - 1024.1*Energy_Gen(Weekday,pLow)
+     
+      - 1761.76*Energy_Gen(Weekday,pHigh) =E= 0 ; (LHS = 0)
+     
+
+---- EQ12_Simulation  =E=  Making releases equal to observed hydrograph releases
+                           (simulation)
+
+EQ12_Simulation(Sunday,pLow)..  Release(Sunday,pLow) =E= 12150.69 ;
+     
+      (LHS = 0, INFES = 12150.69 ****)
+     
+EQ12_Simulation(Sunday,pHigh)..  Release(Sunday,pHigh) =E= 11398.13 ;
+     
+      (LHS = 0, INFES = 11398.13 ****)
+     
+EQ12_Simulation(Saturday,pLow)..  Release(Saturday,pLow) =E= 12150.69 ;
+     
+      (LHS = 0, INFES = 12150.69 ****)
+     
+REMAINING 3 ENTRIES SKIPPED
+
+GAMS 33.2.0  r4f23b21 Released Dec  1, 2020 WEX-WEI x86 64bit/MS Windows - 04/06/21 16:25:08 Page 3
+G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
+Column Listing      SOLVE Model1 Using LP From line 158
+
+
+---- ObjectiveVal  Objective functions value ($)
+
+ObjectiveVal
+                (.LO, .L, .UP, .M = -INF, 0, +INF, 0)
+        1       EQ11_EnergyRevenue
+
+
+---- storage  Reservoir storage at the end of the month (acre-ft)
+
+storage
+                (.LO, .L, .UP, .M = -INF, 0, +INF, 0)
+        1       EQ1_ResMassBal
+        1       EQ2_reqpowerstorage
+        1       EQ3_maxstor
+
+
+---- Released_vol  Total water released during the month (ac-ft)
+
+Released_vol
+                (.LO, .L, .UP, .M = -INF, 0, +INF, 0)
+        1       EQ1_ResMassBal
+        1       EQ7_RelVolume
+
+
+---- Release  Reservoir release on different day types and flow patterns durinng
+              period p (cfs)
+
+Release(Sunday,pLow)
+                (.LO, .L, .UP, .M = 0, 0, +INF, 0)
+        1       EQ4_MaxR(Sunday,pLow)
+        1       EQ5_MinR(Sunday,pLow)
+       -1       EQ6_Rel_Range(Sunday)
+       -3.32    EQ7_RelVolume
+       -1       EQ8_OffPeak_Release(Sunday)
+       -1       EQ8_OffPeak_Release(Saturday)
+       -1       EQ8_OffPeak_Release(Weekday)
+       -0.2972  EQ10_EnergyGen(Sunday,pLow)
+        1       EQ12_Simulation(Sunday,pLow)
+
+Release(Sunday,pHigh)
+                (.LO, .L, .UP, .M = 0, 0, +INF, 0)
+        1       EQ4_MaxR(Sunday,pHigh)
+        1       EQ5_MinR(Sunday,pHigh)
+        1       EQ6_Rel_Range(Sunday)
+       -6.64    EQ7_RelVolume
+       -0.5944  EQ10_EnergyGen(Sunday,pHigh)
+        1       EQ12_Simulation(Sunday,pHigh)
+
+Release(Saturday,pLow)
+                (.LO, .L, .UP, .M = 0, 0, +INF, 0)
+        1       EQ4_MaxR(Saturday,pLow)
+        1       EQ5_MinR(Saturday,pLow)
+       -1       EQ6_Rel_Range(Saturday)
+       -2.656   EQ7_RelVolume
+        1       EQ8_OffPeak_Release(Sunday)
+        1       EQ8_OffPeak_Release(Saturday)
+        1       EQ8_OffPeak_Release(Weekday)
+       -0.2972  EQ10_EnergyGen(Saturday,pLow)
+        1       EQ12_Simulation(Saturday,pLow)
+
+REMAINING 3 ENTRIES SKIPPED
+
+---- Energy_Gen  Hydropower Generated within each timestep during different day 
+                 types(MWh)
+
+Energy_Gen(Sunday,pLow)
+                (.LO, .L, .UP, .M = 0, 0, +INF, 0)
+        1       EQ9_EnergyGen_Max(Sunday,pLow)
+        1       EQ10_EnergyGen(Sunday,pLow)
+     -232.75    EQ11_EnergyRevenue
+
+Energy_Gen(Sunday,pHigh)
+                (.LO, .L, .UP, .M = 0, 0, +INF, 0)
+        1       EQ9_EnergyGen_Max(Sunday,pHigh)
+        1       EQ10_EnergyGen(Sunday,pHigh)
+     -232.75    EQ11_EnergyRevenue
+
+Energy_Gen(Saturday,pLow)
+                (.LO, .L, .UP, .M = 0, 0, +INF, 0)
+        1       EQ9_EnergyGen_Max(Saturday,pLow)
+        1       EQ10_EnergyGen(Saturday,pLow)
+     -186.2     EQ11_EnergyRevenue
+
+REMAINING 3 ENTRIES SKIPPED
+GAMS 33.2.0  r4f23b21 Released Dec  1, 2020 WEX-WEI x86 64bit/MS Windows - 04/06/21 16:25:08 Page 4
+G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
+Model Statistics    SOLVE Model1 Using LP From line 158
+
+
+MODEL STATISTICS
+
+BLOCKS OF EQUATIONS          12     SINGLE EQUATIONS           41
+BLOCKS OF VARIABLES           5     SINGLE VARIABLES           15
+NON ZERO ELEMENTS            66
+
+
+GENERATION TIME      =        0.016 SECONDS      4 MB  33.2.0 r4f23b21 WEX-WEI
+GAMS 33.2.0  r4f23b21 Released Dec  1, 2020 WEX-WEI x86 64bit/MS Windows - 04/06/21 16:25:08 Page 5
+G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
+Solution Report     SOLVE Model1 Using LP From line 158
+
+
+               S O L V E      S U M M A R Y
+
+     MODEL   Model1              OBJECTIVE  ObjectiveVal
+     TYPE    LP                  DIRECTION  MAXIMIZE
+     SOLVER  CPLEX               FROM LINE  158
+
+**** SOLVER STATUS     1 Normal Completion         
+**** MODEL STATUS      1 Optimal                   
+**** OBJECTIVE VALUE         26150218.0188
+
+ RESOURCE USAGE, LIMIT          0.016 10000000000.000
+ ITERATION COUNT, LIMIT         0    2147483647
+--- GAMS/Cplex licensed for continuous and discrete problems.
+--- GMO memory 0.50 Mb (peak 0.50 Mb)
+--- Dictionary memory 0.00 Mb
+--- Cplex 12.10.0.0 link memory 0.00 Mb (peak 0.00 Mb)
+--- Starting Cplex
+
+
+--- LP status (1): optimal.
+--- Cplex Time: 0.00sec (det. 0.03 ticks)
+
+
+Optimal solution found
+Objective:     26150218.018811
+
+
+                       LOWER     LEVEL     UPPER    MARGINAL
+
+---- EQU EQ1_ResMa~ 1.2912E+7 1.2912E+7 1.2912E+7      EPS       
+---- EQU EQ2_reqpo~ 8.9500E+6 1.2031E+7     +INF       .         
+---- EQU EQ3_maxst~     -INF  1.2031E+7 2.5000E+7      .         
+
+  EQ1_ResMassBal  Reservoir mass balance (acre-ft)
+  EQ2_reqpowerstorage  The minimum storage required for hydropower generation(po
+                       wer pool storage) (acre-ft)
+  EQ3_maxstor  Reservoir Max storage (acre-ft)
+
+---- EQU EQ4_MaxR  Max Release for any day type during any period p(cfs)
+
+                  LOWER     LEVEL     UPPER    MARGINAL
+
+Sunday  .pLow      -INF  12150.690 31500.000      .         
+Sunday  .pHigh     -INF  11398.130 31500.000      .         
+Saturday.pLow      -INF  12150.690 31500.000      .         
+Saturday.pHigh     -INF  11401.170 31500.000      .         
+Weekday .pLow      -INF  12497.160 31500.000      .         
+Weekday .pHigh     -INF  16750.140 31500.000      .         
+
+---- EQU EQ5_MinR  Min Release for any day type with flows during any period p  
+                   (cfs)
+
+                  LOWER     LEVEL     UPPER    MARGINAL
+
+Sunday  .pLow   8000.000 12150.690     +INF       .         
+Sunday  .pHigh  8000.000 11398.130     +INF       .         
+Saturday.pLow   8000.000 12150.690     +INF       .         
+Saturday.pHigh  8000.000 11401.170     +INF       .         
+Weekday .pLow   8000.000 12497.160     +INF       .         
+Weekday .pHigh  8000.000 16750.140     +INF       .         
+
+---- EQU EQ6_Rel_Range  Constraining the daily release range but it will not wor
+                        k (cfs per day)
+
+            LOWER     LEVEL     UPPER    MARGINAL
+
+Sunday       -INF   -752.560  8000.000      .         
+Saturday     -INF   -749.520  8000.000      .         
+Weekday      -INF   4252.980  8000.000      .         
+
+                       LOWER     LEVEL     UPPER    MARGINAL
+
+---- EQU EQ7_RelVo~      .         .         .         EPS       
+
+  EQ7_RelVolume  Total volume from different types of day in the month (ac-ft)
+
+---- EQU EQ8_OffPeak_Release  To make Off-peak period release during Saturday an
+                              d Sunday equal (cfs)
+
+            LOWER     LEVEL     UPPER    MARGINAL
+
+Sunday        .         .         .         .         
+Saturday      .         .         .         .         
+Weekday       .         .         .         .         
+
+---- EQU EQ9_EnergyGen_Max  Maximum Energy Generation Limit of the Glen Caynon D
+                            am(MWh)
+
+                  LOWER     LEVEL     UPPER    MARGINAL
+
+Sunday  .pLow      -INF   3611.185 10560.000      .         
+Sunday  .pHigh     -INF   6775.048 21120.000      .         
+Saturday.pLow      -INF   3611.185 10560.000      .         
+Saturday.pHigh     -INF   6776.855 21120.000      .         
+Weekday .pLow      -INF   3714.156 10560.000      .         
+Weekday .pHigh     -INF   9956.283 21120.000      .         
+
+---- EQU EQ10_EnergyGen  Energy generated in each period p during different day 
+                         types (MWh)
+
+                  LOWER     LEVEL     UPPER    MARGINAL
+
+Sunday  .pLow       .         .         .      232.750      
+Sunday  .pHigh      .         .         .      232.750      
+Saturday.pLow       .         .         .      186.200      
+Saturday.pHigh      .         .         .      253.240      
+Weekday .pLow       .         .         .     1024.100      
+Weekday .pHigh      .         .         .     1761.760      
+
+                       LOWER     LEVEL     UPPER    MARGINAL
+
+---- EQU EQ11_Ener~      .         .         .        1.000      
+
+  EQ11_EnergyRevenue  Total monthly Hydropower Revenue generated($)
+
+---- EQU EQ12_Simulation  Making releases equal to observed hydrograph releases 
+                          (simulation)
+
+                  LOWER     LEVEL     UPPER    MARGINAL
+
+Sunday  .pLow  12150.690 12150.690 12150.690    69.173      
+Sunday  .pHigh 11398.130 11398.130 11398.130   138.347      
+Saturday.pLow  12150.690 12150.690 12150.690    55.339      
+Saturday.pHigh 11401.170 11401.170 11401.170   150.526      
+Weekday .pLow  12497.160 12497.160 12497.160   304.363      
+Weekday .pHigh 16750.140 16750.140 16750.140  1047.190      
+
+                       LOWER     LEVEL     UPPER    MARGINAL
+
+---- VAR Objective~     -INF  2.6150E+7     +INF       .         
+---- VAR storage        -INF  1.2031E+7     +INF       .         
+---- VAR Released_~     -INF  8.8079E+5     +INF       .         
+
+  ObjectiveVal  Objective functions value ($)
+  storage  Reservoir storage at the end of the month (acre-ft)
+  Released_vol  Total water released during the month (ac-ft)
+
+---- VAR Release  Reservoir release on different day types and flow patterns dur
+                  inng period p (cfs)
+
+                  LOWER     LEVEL     UPPER    MARGINAL
+
+Sunday  .pLow       .    12150.690     +INF       .         
+Sunday  .pHigh      .    11398.130     +INF       .         
+Saturday.pLow       .    12150.690     +INF       .         
+Saturday.pHigh      .    11401.170     +INF       .         
+Weekday .pLow       .    12497.160     +INF       .         
+Weekday .pHigh      .    16750.140     +INF       .         
+
+---- VAR Energy_Gen  Hydropower Generated within each timestep during different 
+                     day types(MWh)
+
+                  LOWER     LEVEL     UPPER    MARGINAL
+
+Sunday  .pLow       .     3611.185     +INF       .         
+Sunday  .pHigh      .     6775.048     +INF       .         
+Saturday.pLow       .     3611.185     +INF       .         
+Saturday.pHigh      .     6776.855     +INF       .         
+Weekday .pLow       .     3714.156     +INF       .         
+Weekday .pHigh      .     9956.283     +INF       .         
+
+
+**** REPORT SUMMARY :        0     NONOPT
+                             0 INFEASIBLE
+                             0  UNBOUNDED
+GAMS 33.2.0  r4f23b21 Released Dec  1, 2020 WEX-WEI x86 64bit/MS Windows - 04/06/21 16:25:08 Page 6
+G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
+E x e c u t i o n
+
+
+----    183 PARAMETER FStore               =  2.615022E+7  Storing objective fun
+                                                           ction values ($$)
+
+----    183 PARAMETER XStore  Store Energy Generated during different periods on
+                              types of days (MWh)
+
+                pLow       pHigh
+
+Sunday      3611.185    6775.048
+Saturday    3611.185    6776.855
+Weekday     3714.156    9956.283
+
+
+----    183 PARAMETER RStore  Store Release values during different types of day
+                              s (cfs)
+
+                pLow       pHigh
+
+Sunday     12150.690   11398.130
+Saturday   12150.690   11401.170
+Weekday    12497.160   16750.140
+
+
+----    183 PARAMETER Sstore               =  1.203076E+7  Store Storage Values 
+                                                           over different cases(
+                                                           ac-ft)
+
+
+EXECUTION TIME       =        8.094 SECONDS      4 MB  33.2.0 r4f23b21 WEX-WEI
+
+
+USER: Small MUD - 5 User License                     G200622/0001AP-GEN
+      Utah State University, Utah Water Research Laboratory      DC7087
+      License for teaching and research at degree granting institutions
+
+
+**** FILE SUMMARY
+
+Input      E:\Class project\GCD_BugFlowExperiment\July 2018\Saturday_Sunday_Week
+           day\Validation\July18_Sat_Validation.gms
+Output     E:\Class project\GCD_BugFlowExperiment\July 2018\Saturday_Sunday_Week
+           day\Validation\July18_Sat_Validation.lst

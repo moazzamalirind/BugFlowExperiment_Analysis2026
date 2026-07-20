@@ -1,0 +1,103 @@
+[PROJECT]
+
+[RP:JUNE18_SAT_SUN-WEEKDAY_MODEL]
+1=
+
+[RP:MARCH18_SAT_VALIDATION]
+1=
+
+[GDXDISP: Energy_Rate Par 2]
+PlaneDim=0
+RowDim=2
+Squeeze=1
+SqTrail0=0
+Order=1,2
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: ModelResults Par 1]
+PlaneDim=0
+RowDim=1
+Squeeze=1
+SqTrail0=0
+Order=1
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: Convert Par 0]
+PlaneDim=0
+RowDim=0
+Squeeze=1
+SqTrail0=0
+Order=
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: ModelResults Par 4]
+PlaneDim=0
+RowDim=3
+Squeeze=1
+SqTrail0=0
+Order=1,2,4,3
+Decim=7
+PlaneRownr=-1
+
+[RP:APRIL18_SAT_VALIDATION]
+1=
+
+[RP:MARCH18_SAT_SUN-WEEKDAY_MODEL]
+1=
+
+[RP:APRIL18_SAT_SUN-WEEKDAY_MODEL]
+1=
+
+[RP:MAY18_SAT_VALIDATION]
+1=
+
+[RP:MAY18_SAT_SUN-WEEKDAY_MODEL]
+1=
+
+[RP:JULY18_SAT_VALIDATION]
+1=
+
+[GDXDISP: FStore Par 3]
+PlaneDim=0
+RowDim=2
+Squeeze=1
+SqTrail0=0
+Order=1,2,3
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: RStore Par 6]
+PlaneDim=0
+RowDim=5
+Squeeze=1
+SqTrail0=0
+Order=1,2,4,5,6,3
+Decim=7
+PlaneRownr=-1
+
+[RP:AUGUST18_SAT_SUN-WEEKDAY_MODEL]
+1=
+
+[RP:JULY18_SAT_SUN-WEEKDAY_MODEL]
+1=
+
+[OPENWINDOW_1]
+MAXIM=0
+TOP=3
+LEFT=0
+HEIGHT=908
+WIDTH=1170
+
+[MRUFILES]
+1=C:\Users\Mooz\Documents\GitHub\GCD_BugFlowExperiment\July 2018\Market-Contract Price Model\Pricing_Model.gdx
+2=C:\Users\Mooz\Documents\GitHub\GCD_BugFlowExperiment\July 2018\Contract Price Model\Sat-Sun-Weekday_July.gdx
+3=C:\Users\Mooz\Documents\GitHub\GCD_BugFlowExperiment\July 2018\Contract Price Model\July18_Sat_Sun-Weekday_Model.lst
+4=C:\Users\Mooz\Documents\GitHub\GCD_BugFlowExperiment\July 2018\Contract Price Model\July18_Sat_Sun-Weekday_Model.gms
+5=E:\GCD_BugFlowExperiment\July 2018\Saturday_Sunday_Weekday\Sat-Sun-Weekday_July.gdx
+6=E:\GCD_BugFlowExperiment\July 2018\Saturday_Sunday_Weekday\July18_Sat_Sun-Weekday_Model.lst
+7=E:\GCD_BugFlowExperiment\July 2018\Saturday_Sunday_Weekday\July18_Sat_Sun-Weekday_Model.gms
+8=E:\GCD_BugFlowExperiment\August 2018\Saturday_Sunday_Weekday\August18_Sat_Sun-Weekday_Model.gms
+9=E:\Class project\GCD_BugFlowExperiment\May 2018\Saturday_Sunday_Weekday\Sat-Sun-Weekday_May.gdx

@@ -1,0 +1,61 @@
+[PROJECT]
+
+[RP:MARCH2018_VALIDATION(2PERIODS)]
+1=
+
+[RP:MARCH18_SAT_SUN-WEEKDAY_MODEL]
+1=
+
+[GDXDISP: Avail_Water Var 0]
+PlaneDim=0
+RowDim=0
+Squeeze=1
+SqTrail0=0
+Order=1
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: ModelResults Par 4]
+PlaneDim=0
+RowDim=3
+Squeeze=1
+SqTrail0=0
+Order=1,2,4,3
+Decim=7
+PlaneRownr=-1
+
+[RP:MARCH2018_WKND]
+1=
+
+[RP:APRIL2018_VALIDATION(2PERIODS)]
+1=
+
+[OPENWINDOW_1]
+MAXIM=0
+TOP=9
+LEFT=6
+HEIGHT=706
+WIDTH=1130
+
+[RP:APRIL2018_WKND]
+1=
+
+[GDXDISP: FStore Par 3]
+PlaneDim=0
+RowDim=2
+Squeeze=1
+SqTrail0=0
+Order=1,2,3
+Decim=7
+PlaneRownr=-1
+
+[MRUFILES]
+1=E:\Class project\GCD_BugFlowExperiment\April 2018\Weekend-Weekday\April2018_Wknd.lst
+2=E:\Class project\GCD_BugFlowExperiment\April 2018\Weekend-Weekday\April2018_Wknd.gms
+3=E:\Class project\GCD_BugFlowExperiment\April 2018\Weekend-Weekday\April2018(Weekend).gdx
+4=E:\Class project\GCD_BugFlowExperiment\April 2018\Saturday_Sunday_Weekday\Sat-Sun-Weekday_April.gdx
+5=E:\Class project\GCD_BugFlowExperiment\April 2018\Weekend-Weekday\Validation\April2018_validation(2periods).gms
+6=E:\Class project\GCD_BugFlowExperiment\March 2018\Weekend-Weekday\March2018_Wknd.gms
+7=E:\Class project\GCD_BugFlowExperiment\March 2018\Weekend-Weekday\Validation\March2018_validation(2periods).gms
+8=E:\Class project\GCD_BugFlowExperiment\March 2018\Weekend-Weekday\Valid_March2018(Weekend).gdx
+9=E:\Class project\GCD_BugFlowExperiment\March 2018\Weekend-Weekday\March2018_Wknd.lst

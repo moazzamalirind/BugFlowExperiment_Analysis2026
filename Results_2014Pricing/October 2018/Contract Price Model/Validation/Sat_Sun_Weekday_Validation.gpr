@@ -1,0 +1,160 @@
+[PROJECT]
+
+[GDXDISP: XStore Par 1]
+PlaneDim=0
+RowDim=1
+Squeeze=1
+SqTrail0=0
+Order=1
+Decim=7
+PlaneRownr=-1
+
+[RP:MARCH2018_VALIDATION(HOURLY)]
+1=
+
+[GDXDISP: FStore Par 0]
+PlaneDim=0
+RowDim=0
+Squeeze=1
+SqTrail0=0
+Order=
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: Convert Par 0]
+PlaneDim=0
+RowDim=0
+Squeeze=1
+SqTrail0=0
+Order=
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: FStore Par 3]
+PlaneDim=0
+RowDim=3
+Squeeze=1
+SqTrail0=0
+Order=1,2,3
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: XStore Par 2]
+PlaneDim=0
+RowDim=2
+Squeeze=1
+SqTrail0=0
+Order=1,2
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: Release Var 2]
+PlaneDim=0
+RowDim=2
+Squeeze=1
+SqTrail0=0
+Order=1,2,3
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: RStore Par 2]
+PlaneDim=0
+RowDim=2
+Squeeze=1
+SqTrail0=0
+Order=1,2
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: Sstore Par 0]
+PlaneDim=0
+RowDim=0
+Squeeze=1
+SqTrail0=0
+Order=
+Decim=7
+PlaneRownr=-1
+
+[RP:MARCH18_SAT_VALIDATION]
+1=
+
+[RP:MAY18_SAT_VALIDATION]
+1=
+
+[RP:JULY18_SAT_VALIDATION]
+1=
+
+[RP:AUGUST18_SAT_VALIDATION]
+1=
+
+[GDXDISP: d Set 1]
+PlaneDim=0
+RowDim=1
+Squeeze=1
+SqTrail0=0
+Order=1
+Decim=7
+PlaneRownr=-1
+
+[RP:OCTOBER18_SAT_VALIDATION]
+1=
+
+[GDXDISP: ReleaseVol Var 2]
+PlaneDim=0
+RowDim=2
+Squeeze=1
+SqTrail0=0
+Order=1,2,3
+Decim=7
+PlaneRownr=-1
+
+[RP:OCTOBER2018_VALIDATION(2PERIODS)]
+1=
+
+[GDXDISP: TotMonth_volume Var 0]
+PlaneDim=0
+RowDim=0
+Squeeze=1
+SqTrail0=0
+Order=1
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: Vol_monthlyrelease Var 0]
+PlaneDim=0
+RowDim=0
+Squeeze=1
+SqTrail0=0
+Order=1
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: Released_vol Var 0]
+PlaneDim=0
+RowDim=0
+Squeeze=1
+SqTrail0=0
+Order=1
+Decim=7
+PlaneRownr=-1
+
+[OPENWINDOW_1]
+MAXIM=0
+TOP=0
+LEFT=50
+HEIGHT=691
+WIDTH=1062
+
+[RP:JUNE18_SAT_SUN-WEEKDAY_MODEL]
+1=
+
+[MRUFILES]
+1=E:\Class project\GCD_BugFlowExperiment\October 2018\Weekend_Weekday\Validation\Valid_October2018(2Periods).gdx
+2=E:\Class project\GCD_BugFlowExperiment\October 2018\Weekend_Weekday\Validation\ Valid_October2018(Hourly).gdx
+3=E:\Class project\GCD_BugFlowExperiment\October 2018\Saturday_Sunday_Weekday\Validation\Valid_SatModel_October.gdx
+4=E:\Class project\GCD_BugFlowExperiment\October 2018\Saturday_Sunday_Weekday\Validation\October18_Sat_Validation.lst
+5=E:\Class project\GCD_BugFlowExperiment\October 2018\Saturday_Sunday_Weekday\Validation\October18_Sat_Validation.gms
+6=C:\Users\moazz\Box\Saturday Model\June18_Sat_Sun-Weekday_Model.gms
+7=E:\Class project\GCD_BugFlowExperiment\October 2018\Weekend_Weekday\Validation\October2018_validation(2periods).gms
+8=E:\Class project\GCD_BugFlowExperiment\October 2018\Weekend_Weekday\Validation\Valid_October2018(Hourly).gdx
+9=E:\Class project\GCD_BugFlowExperiment\August 2018\Weekend-Weekday\Validation\Valid_August2018(Hourly).gdx
