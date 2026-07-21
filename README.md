@@ -91,8 +91,24 @@ File named "Hydrographs_Observed_Used.xlsx" contains obserevd releases at Lees F
 
 **c. Results_2014Pricing**
 
+This folder contains subfolders named by month, followed by “2018” (for example, April 2018 and August 2018). The “2018” designation indicates that the hydrologic conditions used in the analysis—including reservoir storage levels and observed releases—were obtained from 2018 data. The energy prices used in these simulations are from the 2014 pricing dataset.
+
+Each monthly subfolder contains three directories: Contract Price Model, Market-Contract Price Model, and Miscellaneous.
+For example, "April 2018/Contract Price Model" contains the GAMS code file April18_Sat_Sun-Weekday_Mode.gms and its corresponding output files, Sat-Sun-Weekday_April.gdx and Sat-Sun-Weekday_April.xlsx. Similar code and output files are provided for each month.
+The "April 2018/Market-Contract Price Model" folder likewise contains the relevant GAMS model code and associated output files for the market-contract pricing scenario.
+The "April 2018/Miscellaneous" folder contains code and results from an earlier version of the model that used only two day types: Weekday and Weekend. This version was used solely for model validation and was not included in the main analysis.
+
 **d. Results_2024Pricing**
 
+There are three main subfolders: Contract Price Model, Market Price Model, and Figures_Analysis.
+The Contract Price Model and Market Price Model folders each contain monthly subfolders corresponding to the months analyzed in this study. For example, "Contract Price Model/April" contains the GAMS model file "April18_Contract_2024.gms" and the associated output files "2024_Contract_April.gdx" and "2024_Contract_April.xlsx". The same folder structure and naming convention are used for the monthly analyses in the Market Price Model folder.
+The Figures_Analysis folder contains the Excel files used to generate the figures and tables presented in the main article and supplementary document.
+______________________________________________________________________________________________________________________________________________________________________________
+## Required Softwares
+1. General Algebraic Modeling System (GAMS), which can be freely downloaded from (https://www.gams.com/download/). We used GAMS version 30.3 and acquired license to run the model.
 
-
+2. Microsoft Excel. We used Office 2016 for this analysis.
+________________________________________________________________________________________________________________________________________________________
+## Directions to Reproduce Results
+The following instructions will help users reproduce the results in "5.pdf ([Documents/Final_Draft_JHI_2025.pdf](https://github.com/moazzamalirind/GCD_BugFlowExperiment/blob/recovery3/Documents/Final_Draft_JHI_2025.pdf)
 
