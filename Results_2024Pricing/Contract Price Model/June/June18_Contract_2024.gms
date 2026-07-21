@@ -1,12 +1,12 @@
 $ontext
-Title Optimization model for Glen Canyon Dam releases to favor Bugs population. (March 2018- contract price Model)
+Title Optimization model for Glen Canyon Dam releases to favor Bugs population. (June 2018)
 
 ###################################
 Created By: Moazzam Ali Rind
 Email: moazzamalirind@gmail.com
 
 Created : 12/16/2020
-Last updated: 5/16/2026
+Last updated: 7/7/2026
 
 Description: This model was developed to qaunitfy the trade-off between number of steady low flow days and hydropower revenue objectives.
             The model has 2 periods per day (i.e. pHigh and plow), three distinct day types(Sunday,Saturday, and Weekday) and runs for a month. we have used linear programming to solve the problem.
@@ -36,17 +36,17 @@ Alias (FlowPattern,FlowType);
 Parameters
 *======================================
 
-Initstorage                           Initial reservoir storage (e.g Storage in Powell on 1st March 2018) (acre-ft)/13335432/
+Initstorage                           Initial reservoir storage (e.g Storage in Powell on 1st August 2018) (acre-ft)/12899134/
 * Storage data for lake Powell can be found at: http://lakepowell.water-data.com/index2.php
 
-Inflow                                Average monthly Inflow to reservoir (cfs) /6424.4/
+Inflow                                Average monthly Inflow to reservoir (cfs) /10671/
 *Inflow data can be found at: http://lakepowell.water-data.com/index2.php
 
 maxstorage                            Maximumn Reservoir capacity (acre-ft)/25000000/
 minstorage                            Minimum reservoir storage to maintain hydropower level(acre-ft)/5892163/
 maxRel                                Maximum release in a day d at any timeperiod p(cfs) /32000/
 minRel                                Minimum release in a day d at any timeperiod p(cfs)/8000/
-evap                                  Evaporation (ac-ft per Month) /15931/
+evap                                  Evaporation (ac-ft per Month) /45291/
 *The evaporation data can be found at: https://www.usbr.gov/rsvrWater/HistoricalApp.html
 
 
@@ -89,28 +89,22 @@ Steady. Sunday            0       1        2       4      4        4      4     
 HydroPeak. Sunday         4       3        2       0      0        0      0       0       0       0         0         0
 Steady. Saturday          0       0        0       0      2        4      4       4       4       4         4         4
 HydroPeak. Saturday       4       4        4       4      2        0      0       0       0       0         0         0
-Steady. Weekday           0       0        0       0      0        0      1       2       7       12        17        23
-HydroPeak. Weekday        23      23       23      23     23       23     22      21      16      11        6         0     ;
+Steady. Weekday           0       0        0       0      0        0      1       2       7       12        17        22
+HydroPeak. Weekday        22      22       22      22     22       22     21      20      15      10        5         0     ;
+
 
 Table Energy_Rate(Days,p)"Price of MegaWatt hour during different days and within period p ($ per MWh)"
-              pLow        pHigh
-Sunday        23.4        46.2
-Saturday      23.4        46.2
-Weekday       39.5        53.3;
+              pLow    pHigh
+Sunday        17.8    51.6
+Saturday      17.8    51.6
+Weekday       37.6    60.7 ;
 
-$ontext
-Table Energy_Rate(Days,p)"Price of MegaWatt hour during different days and within period p ($ per MWh)"
-              pLow        pHigh
-Sunday       49.70        49.70
-Saturday     49.70        65.00
-Weekday      49.70        79.00  ;
-$offtext
 *===============================================
 SCALAR
 Convert                        Conversion factor from cfs to ac-ft per hour (0.0014*60)/0.083/
 Daily_RelRange                 Allowable daily release range (cfs)/8000/
 
-Totaldays                      Total number of days in the month/31/
+Totaldays                      Total number of days in the month/30/
 Nu_Saturdays                   Number of saturdays in the month/4/
 Nu_Sun_Holi                    Number of sundays + holidays in the month /4/
 *Here we are considering an arbitrary monthly calender with exact number of days as in real month but that considered month starts on monday.
@@ -139,9 +133,6 @@ EQ4_MaxR(FlowPattern,d,p)                        Max Release for any day type du
 EQ5_MinR(FlowPattern,d,p)                        Min Release for any day type with flows during any period p but it will not work when NumDays will be zero (cfs)
 EQ6_ZeroFlowDays(FlowPattern,d,p)                No release for any day type during any period p when Num_Days equal to zero(cfs)
 EQ7_Rel_Range(FlowPattern,d)                     Constraining the daily release range but it will not work when NumDays will be zero(cfs per day)
-EQ7a_AlternativeDays_Relrange                    Constraining release change between on-peak of current day and off-peak of next day to be less than or equal to 8000 (cfs)
-EQ7b_AlternativeDays_Relrange                    Constraining release change between on-peak of current day and off-peak of next day to be less than or equal to 8000 (cfs)
-EQ7c_AlternativeDays_Relrange                    Constraining release change between on-peak of current day and off-peak of next day to be less than or equal to 8000 (cfs)
 
 EQ8_Monthtlyrel                                  Constraining total monthly release volume (ac-ft)
 EQ9_RelVolume                                    Total volume from different types of day in the month (ac-ft)
@@ -149,7 +140,6 @@ EQ9_RelVolume                                    Total volume from different typ
 EQ10_SteadyFlow_Day(FlowPattern,d)               Constraining on-peak and off-peak releases during Steadyflow day to be equal (cfs)
 EQ11_Unsteadydays_OffpeakRel(FlowPattern,d)      Constraining off-peak releases during unsteady days to be equal to weekend off-peak release (cfs)
 EQ12_OffsetRel(FlowPattern)                      Offset release between off-peak unsteady weekday and off-peak steady weekend (saturday or and sunday)releses(cfs)
-
 
 EQ13a_OnPeak_Saturday(FlowPattern,d,p)           On-peak Saturday constraint. i.e. Weekend on-peak -2000 cfs (just as an example).
 EQ13b_OnPeak_Sunday(FlowPattern,d,p)             On-peak Sunday constraint. i.e.  equal to Saturday On-peak.
@@ -185,12 +175,6 @@ EQ5_MinR(FlowPattern,d,p)$(Num_Days(FlowPattern,d) gt 0)..                     R
 EQ6_ZeroFlowDays(FlowPattern,d,p)$(Num_Days(FlowPattern,d) eq 0)..             Release(FlowPattern,d,p)=e=0;
 
 EQ7_Rel_Range(FlowPattern,d)$(Num_Days(FlowPattern,d) gt 0)..                  Release(FlowPattern,d,"pHigh")- Release(FlowPattern,d,"pLow")=l=Daily_RelRange;
-
-*EQ7a_AlternativeDays_Relrange$(Num_days("HydroPeak","Sunday") gt 0)..           Release("HydroPeak","Saturday","pHigh")- Release("HydroPeak","Sunday","pLow")=l=Daily_RelRange;
-*EQ7b_AlternativeDays_Relrange$(Num_days("HydroPeak","Saturday") gt 0) ..        Release("HydroPeak","Weekday","pHigh")- Release("HydroPeak","Saturday","pLow")=l=Daily_RelRange;
-EQ7a_AlternativeDays_Relrange$(Num_days("HydroPeak","Sunday") gt 0)..          Release("HydroPeak","Saturday","pHigh")- Release("HydroPeak","Sunday","pLow")=l=Daily_RelRange;
-EQ7b_AlternativeDays_Relrange$(Num_days("HydroPeak","Saturday") gt 0)..        Release("HydroPeak","Weekday","pHigh")- Release("HydroPeak","Saturday","pLow")=l=Daily_RelRange;
-EQ7c_AlternativeDays_Relrange$(Num_days("HydroPeak","Weekday") gt 0)..         Release("HydroPeak","Sunday","pHigh")- Release("HydroPeak","Weekday","pLow")=l=Daily_RelRange;
 
 *EQ8_  constraining the overall monthly released volume..
 EQ8_Monthtlyrel..                                                              TotMonth_volume=e= Released_vol;
@@ -270,9 +254,9 @@ DISPLAY FStore,XStore,RStore,Sstore;
 *Following part of code creates  gdx and excel output file..
 
 *Dump all input data and results to a GAMS gdx file
-Execute_Unload "2024_Contract_March.gdx";
+Execute_Unload "2024_Contract_June.gdx";
 * Dump the gdx file to an Excel workbook
-Execute "gdx2xls 2024_Contract_March.gdx"
+Execute "gdx2xls 2024_Contract_June.gdx"
 
 
 
