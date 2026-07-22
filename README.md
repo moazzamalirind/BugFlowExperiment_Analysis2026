@@ -133,7 +133,7 @@ Schematic created using Microsoft PowerPoint.
 **Figure 4**
 Generated using `Results_2024Pricing/Contract Price Model/August/August18_Contract_2024.gms`.
 1. Run `gamside.exe`. Go to File and save the project at your desired location. It may be convenient to save the project inside the folder where you downloaded the repository.
-2. Import the code file:*File* $\rightarrow$ *Open* $\rightarrow$ `Results_2024Pricing/Contract Price Model/August/August18_Contract_2024.gms`. A main window with the model code will appear. You are only required to run the model (all inputs are defined in the code), and the output files will be generated/updated in the project's folder.
+2. Import the code file:*File* $\rightarrow$ *Open* $\rightarrow$ `Results_2024Pricing/Contract Price Model/August/August18_Contract_2024.gms`. A main window with the model code will appear. You are only required to run the model by either pressing F9 or Run button. (all inputs are defined in the code), and the output files will be generated/updated in the project's folder.
 3. Verify the run: Confirm `"Status: Normal completion"` and check for *"Optimal Solution found"*. Since checking individual log statuses across multiple scenarios is difficult, verify scenario statuses via the `.gdx` file instead.
 4. Check scenario results: Click *File* $\rightarrow$ *Open*, set *Files of type* to *GDX files (\*.gdx)*, and open `2024_Contract_August.gdx`. Scroll to the symbol *`ModelResults`* to view the `ModStat` and `SolStat` for each run. A value of **`1`** indicates an optimal solution. For further details on `ModStat` and `SolStat`, visit the [GAMS Documentation](https://www.gams.com/mccarlGuide/modelstat_tmodstat.htm).
 5. Prepare the visualization file: After verifying optimality, open `Tradeoffs.xlsx` located in `Results_2024Pricing/Figures_Analysis/`.
@@ -162,7 +162,7 @@ This table summarizes the relative loss in hydropeaking value under market prici
 i.  Import the code file into `gamside`:*File* $\rightarrow$ *Open* $\rightarrow$ `Results_2024Pricing/Market Price Model/August/August18_2024MarketPricing.gms`. A main window with the model code will appear. You are only required to run the model (all inputs are defined in the code), and the output files will be generated/updated in the project's folder.
 ii. Verify the run: Confirm `"Status: Normal completion"` and check for *"Optimal Solution found"*. Since checking individual log statuses across multiple scenarios is difficult, verify scenario statuses via the `.gdx` file instead.
 iii. Check scenario results: Click *File* $\rightarrow$ *Open*, set *Files of type* to *GDX files (\*.gdx)*, and open `Market_August_2024.gdx`. Scroll to the symbol *`ModelResults`* to view the `ModStat` and `SolStat` for each run. A value of `1` indicates an optimal solution.
-3. 
+3. For visulation, open `Tables.xlsx` available at `Results_2024Pricing/Figures_Analysis/`. Move to `Table1-2024Prices` worksheet.
 
 Move to March 2018 folder within Months of 2018 folder. Enter Market-Contract Price Model folder and get the March18_Market Pricing_Updated.gms. Now follow the same procedure i.e. either import the Code (.gms) file within the given project file "Market_Price.gpr" or create a new project in GAMS IDE and import the code file.
 4. Code file has all the required inputs and you are only expected to run the model by pressing F9 or Run button. Successfull run will update the output files (e.g. .gdx, .xlsx, etc.) within project folder.
