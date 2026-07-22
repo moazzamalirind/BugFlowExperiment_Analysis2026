@@ -71,7 +71,7 @@ There are four distinct folders:
 
 **a. Documents**
 
-Throughout this project, we produced a range of documents, including the research proposal, conference papers, thesis, journal article drafts, and supplementary materials. The initial linear optimization model is documented in "Rind\_LinearModel\_Final.pdf". The proposal is provided in "Proposal\_MS\_Rind.pdf", while the complete thesis is available in "Rind\_2022\_Thesis\_USU.pdf". The development of the journal article is represented by multiple versions, including "Final\_Draft\_JHI\_2025\_Feburary.pdf" and the updated resubmission, "JHI\_Resubmit2025\_December\_Article.pdf", together with their corresponding supplementary materials. Collectively, these documents provide a comprehensive record of the study’s objectives, methods, model development, results, and evolution over time.
+Throughout this project, we produced a range of documents, including the research proposal, conference papers, thesis, journal article drafts, and supplementary materials. The initial linear optimization model is documented in "Rind\_LinearModel\_Final.pdf". The proposal is provided in "Proposal\_MS\_Rind.pdf", while the complete thesis is available in "Rind\_2022\_Thesis\_USU.pdf". The development of the journal article is represented by multiple versions, including "Final\_Draft\_JHI\_2025\_Feburary.pdf", "JHI\_Resubmit2025\_December\_Article.pdf" and current resubmission "Rind and Rosenberg_July2026_Revised.pdf", together with their corresponding supplementary materials. Collectively, these documents provide a comprehensive record of the study’s objectives, methods, model development, results, and evolution over time.
 
 **b. EnergyPrices and Supporting Data**
 
@@ -110,7 +110,9 @@ ________________________________________________________________________________
 2. Microsoft Excel. We used Office 2016 for this analysis.
 ________________________________________________________________________________________________________________________________________________________
 ## Directions to Reproduce Results
-The following instructions will help users reproduce the results in "5.pdf ([Documents/Final_Draft_JHI_2025.pdf](https://github.com/moazzamalirind/GCD_BugFlowExperiment/blob/recovery3/Documents/Final_Draft_JHI_2025.pdf)
+The following instructions will help users to reproduce results in "Rind and Rosenberg_July2026_Revised.pdf"
+
+([Documents/Final_Draft_JHI_2025.pdf](https://github.com/moazzamalirind/GCD_BugFlowExperiment/blob/recovery3/Documents/Final_Draft_JHI_2025.pdf)
 
 
 sadas
