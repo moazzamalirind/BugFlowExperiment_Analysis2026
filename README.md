@@ -114,3 +114,29 @@ ________________________________________________________________________________
 The following instructions will help users reproduce the results in [Rind and Rosenberg_July2026_Revised.pdf](Documents/Rind%20and%20Rosenberg_July2026_Revised.pdf) and in [Rind and Rosenberg_Supplementary_July2026_Revised.pdf](Documents/Rind%20and%20Rosenberg_Supplementary_July2026_Revised.pdf)
 
 **Download the Repository:** Download and extract the repository from [GitHub](https://github.com/moazzamalirind/BugFlowExperiment_Analysis2026) into your desired local folder (e.g., `E:\GAMS`).
+
+**Figure 1** This location map was created using ArcMap 10.8 (GIS).
+
+**Figure 2**
+1. *Download Data:*
+   * Fetch the 15-minute observed hydrograph data for August 2018 from [USGS Water Data (Site 09380000)](https://waterdata.usgs.gov/usa/nwis/uv?09380000).
+2. *Update Excel Workbook:*
+   * Open `EnergyPrices and Supporting Data/Hydrographs_Observed_Used.xlsx`.
+   * Navigate to the **`August_2018`** sheet.
+   * Paste the downloaded release data into the corresponding time slots within the **blue-highlighted cells**.
+3. *Verify Visualization:*
+   * View the updated chart on the **August_2018 (Hydrograph)** worksheet.
+
+**Figure 3**
+Schematic created using Microsoft PowerPoint.
+
+**Figure 4**
+ Generated using `Results_2024Pricing/Contract Price Model/August/August18_Contract_2024.gms`.
+1. Run `gamside.exe`. Go to File and save the project at your desired location. It may be convenient to save the project inside the folder where you downloaded the repository.
+2. Import the code file:*File* $\rightarrow$ *Open* $\rightarrow$ `Results_2024Pricing/Contract Price Model/August/August18_Contract_2024.gms`. A main window with the model code will appear. You are only required to run the model (all inputs are defined in the code), and the output files will be generated/updated in the project's folder.
+3. Verify the run: Confirm `"Status: Normal completion"` and check for *"Optimal Solution found"*. Since checking individual log statuses across multiple scenarios is difficult, verify scenario statuses via the `.gdx` file instead.
+4. Check scenario results: Click *File* $\rightarrow$ *Open*, set *Files of type* to *GDX files (\*.gdx)*, and open `2024_Contract_August.gdx`. Scroll to the symbol *`ModelResults`* to view the `ModStat` and `SolStat` for each run. A value of **`1`** indicates an optimal solution. For further details on `ModStat` and `SolStat`, visit the [GAMS Documentation](https://www.gams.com/mccarlGuide/modelstat_tmodstat.htm).
+5. 
+6. 
+7. 
+ 
