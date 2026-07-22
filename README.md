@@ -176,4 +176,20 @@ iii. Check scenario results: Click *File* $\rightarrow$ *Open*, set *Files of ty
 7. Insert values manually for each month, updating the table step-by-step. 
 ________________________________________________________________________________________________________________________
 ### Supplemantary Section
+**Figure S1**
+We compiled hourly energy prices obtained from WAPA into `Energy Rates_2014.xlsx` (located at `BugFlowExperiment_Analysis2026/EnergyPrices and Supporting Data/2014Prices`). Each monthly worksheet (e.g., `August`) contains the observed hourly prices for that given month.
+
+**Table S1**
+These compiled rates are derived from 2014 WAPA energy pricing and are available in the `Pricing 2014` worksheet of `BugFlowExperiment_Analysis2026/EnergyPrices and Supporting Data/2014Prices/Price_comparison_2014vs2024.xlsx`.
+
+**Figures S2 and S3**
+These figures are adapted directly from [GCDEnergyPrice.pdf](https://github.com/dzeke/GlenCanyonDamEnergyPrices/blob/main/GCDEnergyPrice.pdf).
+
+**Table S2**
+These compiled 2024 energy rates are available in the `Pricing 2024` worksheet located at `BugFlowExperiment_Analysis2026/EnergyPrices and Supporting Data/2014Prices/Price_comparison_2014vs2024.xlsx`. Source prices were obtained directly from [GCDEnergyPrice.pdf](https://github.com/dzeke/GlenCanyonDamEnergyPrices/blob/main/GCDEnergyPrice.pdf).
+
+
+
+These observed releases were obtained from USGS 09380000 Colorado River at Lees Ferry, AZ (https://waterdata.usgs.gov/nwis/uv?site_no=09380000&legacy=1). Refer Hydrographs_Observed_Used (location: GCD_BugFlowExperiment/Supporting Data/Hydrographs_Observed_Used.xlsx).
+
 
