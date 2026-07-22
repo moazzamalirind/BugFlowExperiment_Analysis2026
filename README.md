@@ -121,7 +121,7 @@ The following instructions will help users reproduce the results in [Rind and Ro
 1. *Download Data:*
    * Fetch the 15-minute observed hydrograph data for August 2018 from [USGS Water Data (Site 09380000)](https://waterdata.usgs.gov/usa/nwis/uv?09380000).
 2. *Update Excel Workbook:*
-   * Open `EnergyPrices and Supporting Data/Hydrographs_Observed_Used.xlsx`.
+   * Open `EnergyPrices and Supporting Data/Observed_Hydrographs/Hydrographs_Observed_Used.xlsx`.
    * Navigate to the **`August_2018`** sheet.
    * Paste the downloaded release data into the corresponding time slots within the **blue-highlighted cells**.
 3. *Verify Visualization:*
@@ -188,8 +188,8 @@ These figures are adapted directly from [GCDEnergyPrice.pdf](https://github.com/
 **Table S2**
 These compiled 2024 energy rates are available in the `Pricing 2024` worksheet located at `BugFlowExperiment_Analysis2026/EnergyPrices and Supporting Data/2014Prices/Price_comparison_2014vs2024.xlsx`. Source prices were obtained directly from [GCDEnergyPrice.pdf](https://github.com/dzeke/GlenCanyonDamEnergyPrices/blob/main/GCDEnergyPrice.pdf).
 
+**Figure S2, S3, and S4**
+These observed releases were obtained from USGS 09380000 Colorado River at Lees Ferry, AZ [USGS Water Data (Site 09380000)](https://waterdata.usgs.gov/usa/nwis/uv?09380000). Refer Hydrographs_Observed_Used.xlsx (location: BugFlowExperiment_Analysis2026/EnergyPrices and Supporting Data/Observed_Hydrographs) and worksheets `March 2016, August 2015 and August 2017`.
 
-
-These observed releases were obtained from USGS 09380000 Colorado River at Lees Ferry, AZ (https://waterdata.usgs.gov/nwis/uv?site_no=09380000&legacy=1). Refer Hydrographs_Observed_Used (location: GCD_BugFlowExperiment/Supporting Data/Hydrographs_Observed_Used.xlsx).
 
 
