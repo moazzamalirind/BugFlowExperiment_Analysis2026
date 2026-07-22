@@ -110,9 +110,7 @@ ________________________________________________________________________________
 2. Microsoft Excel. We used Office 2016 for this analysis.
 ________________________________________________________________________________________________________________________________________________________
 ## Directions to Reproduce Results
-The following instructions will help users to reproduce results in "Rind and Rosenberg_July2026_Revised.pdf"
 
-([Documents/Final_Draft_JHI_2025.pdf](https://github.com/moazzamalirind/GCD_BugFlowExperiment/blob/recovery3/Documents/Final_Draft_JHI_2025.pdf)
+The following instructions will help users reproduce the results in [Rind and Rosenberg_July2026_Revised.pdf](Documents/Rind%20and%20Rosenberg_July2026_Revised.pdf) and in [Rind and Rosenberg_Supplementary_July2026_Revised.pdf](Documents/Rind%20and%20Rosenberg_Supplementary_July2026_Revised.pdf)
 
-
-sadas
+**Download the Repository:** Download and extract the repository from [GitHub](https://github.com/moazzamalirind/BugFlowExperiment_Analysis2026) into your desired local folder (e.g., `E:\GAMS`).
