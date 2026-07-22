@@ -136,10 +136,8 @@ Schematic created using Microsoft PowerPoint.
 2. Import the code file:*File* $\rightarrow$ *Open* $\rightarrow$ `Results_2024Pricing/Contract Price Model/August/August18_Contract_2024.gms`. A main window with the model code will appear. You are only required to run the model (all inputs are defined in the code), and the output files will be generated/updated in the project's folder.
 3. Verify the run: Confirm `"Status: Normal completion"` and check for *"Optimal Solution found"*. Since checking individual log statuses across multiple scenarios is difficult, verify scenario statuses via the `.gdx` file instead.
 4. Check scenario results: Click *File* $\rightarrow$ *Open*, set *Files of type* to *GDX files (\*.gdx)*, and open `2024_Contract_August.gdx`. Scroll to the symbol *`ModelResults`* to view the `ModStat` and `SolStat` for each run. A value of **`1`** indicates an optimal solution. For further details on `ModStat` and `SolStat`, visit the [GAMS Documentation](https://www.gams.com/mccarlGuide/modelstat_tmodstat.htm).
-
-  5.  After verifying the optimality of the runs, the results can be visualized using provided Excel file "Tradeoff_Figure4.xlsx" (Months of 2018/August 2018/Contract Price Model/Graphs.xlsx). 
-6. Move to the worksheet "Tradeoff_Graph". You are required to update the values in the blue highligted cells. Those values can be found in the .gdx file or the output .xlsx file.
-7. Open "Sat-Sun-Weekday_August.xlsx" located in the project output folder. Move to the worksheet "Fstore". You will see four populated columns (A-D). Figure 4 is for Zero offset (H1). So select only H1 in Offset column using filter function.  
-8. Copy the values from column D (Value) and paste them into the Tradeoff_Graph worksheet in Graphs.xlsx. The trade-off graph in Graph_Tradeoff will update automatically.
-
+5. Prepare the visualization file: After verifying optimality, open `Tradeoff_Figure4.xlsx` located in `Results_2024Pricing/Figures_Analysis/`.
+6. Locate the update sheet: Navigate to the `Tradeoff_Control` worksheet. You will update the `blue-highlighted cells` using data from the output `.xlsx` file.
+7. Extract model outputs: Open `2024_Contract_August.xlsx` from your project output folder and go to the `Fstore` worksheet. Filter the `Offset` column (column A) to select only `H4` (representing a 1000 cfs offset).
+8. Update the graph: Copy the filtered values from columns A–D and paste them into the `Tradeoff_Control` worksheet in `Tradeoff_Figure4.xlsx`. The trade-off plot in the `Graph_Tradeoff_2024_August` worksheet will update automatically.
  
