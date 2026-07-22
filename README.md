@@ -163,11 +163,17 @@ i.  Import the code file into `gamside`:*File* $\rightarrow$ *Open* $\rightarrow
 ii. Verify the run: Confirm `"Status: Normal completion"` and check for *"Optimal Solution found"*. Since checking individual log statuses across multiple scenarios is difficult, verify scenario statuses via the `.gdx` file instead.
 iii. Check scenario results: Click *File* $\rightarrow$ *Open*, set *Files of type* to *GDX files (\*.gdx)*, and open `Market_August_2024.gdx`. Scroll to the symbol *`ModelResults`* to view the `ModStat` and `SolStat` for each run. A value of `1` indicates an optimal solution.
 3. For visulation, open `Tables.xlsx` available at `Results_2024Pricing/Figures_Analysis/`. Move to `Table1-2024Prices` worksheet.
-
-Move to March 2018 folder within Months of 2018 folder. Enter Market-Contract Price Model folder and get the March18_Market Pricing_Updated.gms. Now follow the same procedure i.e. either import the Code (.gms) file within the given project file "Market_Price.gpr" or create a new project in GAMS IDE and import the code file.
-4. Code file has all the required inputs and you are only expected to run the model by pressing F9 or Run button. Successfull run will update the output files (e.g. .gdx, .xlsx, etc.) within project folder.
-5. Now collect the Fstore value either from .xlsx or .gdx files. For example, open Pricing_Model_Updated.gdx (Location: Months of 2018/March 2018/Market-Contract Price Model/Pricing_Model_Updated.gdx) and move to FStore tab. You can open .gdx file within the GAMS IDE.
-6. Lookout for only for  H4 (i.e. 1000 CFS offset release) and V2 (0.83 MAF) release volume values.
-
-
+4. Paste GDX output values: Copy the `Fstore` values from your generated `.gdx` output file and paste them into the designated `green-highlighted cells`.
+5. Update market price values and verify:
+   * Extract the `Fstore` values for each month from the market price model.
+   * As you paste the `Fstore` values into the green cells, the `yellow-highlighted cells` will automatically recalculate. 
+   * Verify that the calculated values in the yellow cells match the target values in the uncolored (no-color) cells in the table.
+   > Tip: Pay close attention to month lengths (30 vs. 31 days) when aligning and updating the data in the table.
+6. Configuration parameters: Note that all results in this worksheet correspond to `2024 Market Pricing` with:
+   * $5/MWh premium
+   * H4 (1,000 cfs offset release)
+   * V2 (0.83 MAF) monthly volume release
+7. Insert values manually for each month, updating the table step-by-step. 
+________________________________________________________________________________________________________________________
+### Supplemantary Section
 
