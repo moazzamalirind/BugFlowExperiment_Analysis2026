@@ -224,4 +224,4 @@ This table mirrors Table 1, with the primary difference being that it displays h
 
 **Table S8**
 This table compiles hydropeaking values from the 2014 and 2024 contract price model runs and calculates the slopes (loss or benefit per additional Saturday, Sunday, or weekday).
-*Location:* `BugFlowExperiment_Analysis2026/Results_2024Pricing/Figures_Analysis/Tables.xlsx` (`Compare2024to2014` worksheet)
+*Location:* `BugFlowExperiment_Analysis2026/Results_2024Pricing/Figures_Analysis/Tables.xlsx` and worksheet `Compare2024to2014`.
