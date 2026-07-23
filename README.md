@@ -199,10 +199,14 @@ These observed releases were obtained from USGS 09380000 Colorado River at Lees 
 
 **Figure S9**
 
+
 **Table S5**
 
 **Figure S10**
-
+1. Open `Hydrograph_August_2024Price.xlsx` located at `BugFlowExperiment_Analysis2026/Results_2024Pricing/Figures_Analysis/`.
+2. Locate `Market_August_2024.xlsx` in the GAMS project directory (the same directory selected in Figure 4).
+3. Open `Market_August_2024.xlsx` and go to the `RStore` worksheet. Filter for `PriceScen1` and `V2`, copy the values, and paste them into the corresponding blue-highlighted cells in `Hydrograph_August_2024Price.xlsx`.
+4. The hydrograph will update automatically.
 
 **Figure S11**
 Open `Tradeoffs.xlsx` located in `Results_2024Pricing/Figures_Analysis/` and navigate to the `Offset_2024Pricing` worksheet.
@@ -221,6 +225,10 @@ This information is sourced from `BugFlowExperiment_Analysis2026/EnergyPrices an
 
 **Table S7**
 This table mirrors Table 1, with the primary difference being that it displays hydropeaking values using 2014 energy prices instead of 2024 energy pricing.
+
+
+
+
 
 **Table S8**
 This table compiles hydropeaking values from the 2014 and 2024 contract price model runs and calculates the slopes (loss or benefit per additional Saturday, Sunday, or weekday).
