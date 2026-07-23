@@ -156,7 +156,7 @@ iii. Check scenario results: Click *File* $\rightarrow$ *Open*, set *Files of ty
 6. Graph in the `2024price_August_Compare` worksheet will update automatically.
 
 **Table 1**
-This table summarizes the relative loss in hydropeaking value under market pricing as steady low-flow days are added, compared with the no-bug-flow baseline of zero steady low-flow days.
+This table summarizes the relative loss in hydropeaking value under 2024 market pricing as steady low-flow days are added, compared with the no-bug-flow baseline of zero steady low-flow days.
 1. Run the Market Price Model separately for each month. All required codes are in the monthly subfolders within `BugFlowExperiment_Analysis2026/Results_2024Pricing/Market Price Model`.
 2. As a demonstration, we’ll reproduce the results for August. You can follow the same procedure for other months.
 i.  Import the code file into `gamside`:*File* $\rightarrow$ *Open* $\rightarrow$ `Results_2024Pricing/Market Price Model/August/August18_2024MarketPricing.gms`. A main window with the model code will appear. You are only required to run the model (all inputs are defined in the code), and the output files will be generated/updated in the project's folder.
@@ -225,6 +225,38 @@ This information is sourced from `BugFlowExperiment_Analysis2026/EnergyPrices an
 
 **Table S7**
 This table mirrors Table 1, with the primary difference being that it displays hydropeaking values using 2014 energy prices instead of 2024 energy pricing.
+
+This table summarizes the relative loss in hydropeaking value under 2014 market pricing as steady low-flow days are added, compared with the no-bug-flow baseline of zero steady low-flow days.
+
+1. Run the Market Price Model separately for each month. All required codes are in the monthly subfolders within `BugFlowExperiment_Analysis2026/Results_2014Pricing`.
+2. You will see Months followed by 2018 (e.g., August 2018). For demonstration, we are just using August 2018 but the same process has to be repeated for all other months. 
+3. Inside August 2018, you will find three folders. Hover to Market-Contract Price Model. 
+4. Open GAMS IDE. and then import the code and run by following steps:
+i.  Import the code file into `gamside`:*File* $\rightarrow$ *Open* $\rightarrow$ `Results_2014Pricing/August 2018/August18_MarketPricing_Updated.gms`. A main window with the model code will appear. You are only required to run the model (all inputs are defined in the code), and the output files will be generated/updated in the project's folder.
+ii. Verify the run: Confirm `"Status: Normal completion"` and check for *"Optimal Solution found"*. Since checking individual log statuses across multiple scenarios is difficult, verify scenario statuses via the `.gdx` file instead.
+iii. Check scenario results: Click *File* $\rightarrow$ *Open*, set *Files of type* to *GDX files (\*.gdx)*, and open `Pricing_Model_Updated.gdx`. Scroll to the symbol *`ModelResults`* to view the `ModStat` and `SolStat` for each run. A value of `1` indicates an optimal solution.
+5. For visulation, open `Tables.xlsx` available at `Results_2024Pricing/Figures_Analysis/`. Move to `Table1-2014Prices` worksheet.
+6. Paste GDX output values: Copy the `Fstore` values from your generated `.gdx` output file and paste them into the designated `green-highlighted cells`. 
+7. Update market price values and verify:
+   * Extract the `Fstore` values for each month from the market price model.
+   * As you paste the `Fstore` values into the green cells, the `yellow-highlighted cells` will automatically recalculate. Only focus on values in Yellow cells "PriceScen1".
+   * Verify that the calculated values in the yellow cells match the target values in the uncolored (no-color) cells in the table.
+   > Tip: Pay close attention to month lengths (30 vs. 31 days) when aligning and updating the data in the table.
+8. Configuration parameters: Note that all results in this worksheet correspond to `2014 Market Pricing` with:
+   * $5/MWh premium
+   * H4 (1,000 cfs offset release)
+   * V2 (0.83 MAF) monthly volume release
+9. Insert values manually for each month, updating the table step-by-step. 
+
+
+
+
+
+
+
+
+
+
 
 
 
