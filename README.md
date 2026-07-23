@@ -248,20 +248,6 @@ iii. Check scenario results: Click *File* $\rightarrow$ *Open*, set *Files of ty
    * V2 (0.83 MAF) monthly volume release
 9. Insert values manually for each month, updating the table step-by-step. 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 **Table S8**
 This table compiles hydropeaking values from the 2014 and 2024 contract price model runs and calculates the slopes (loss or benefit per additional Saturday, Sunday, or weekday).
 *Location:* `BugFlowExperiment_Analysis2026/Results_2024Pricing/Figures_Analysis/Tables.xlsx` and worksheet `Compare2024to2014`.
