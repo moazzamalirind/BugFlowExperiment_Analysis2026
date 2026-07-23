@@ -199,18 +199,13 @@ These are observed releases from August 2018 Colorado River at Lees Ferry, AZ [U
 
 **Figure S9**
 For August 2018, we compared observed daily energy generated from model using controlled hourly and saturday-sunday-weekday releases from Figure S8. 
-1. Download the daily energy generated at Glen Canyon Dam (https://www.usbr.gov/uc/rm/crsp/gc/index.html). You can also find this observed data in BugFlowExperiment_Analysis2026/EnergyPrices and Supporting Data/Observed_Energ/Models Results Summary.xlsx within "Data_Summary" spreadsheet.
-2. In the "Engery_Validation_2018" spreadsheet, Observed directly comes from "Data_Summary" worksheet. Just look for Aug-18 and column named Energy (MWh).
+1. Download the daily energy generated at Glen Canyon Dam (https://www.usbr.gov/uc/rm/crsp/gc/index.html). You can also find this observed data in BugFlowExperiment_Analysis2026/Validation/Models Results Summary.xlsx within "Data_Summary" spreadsheet.
+2. In the "Engery_Validation_2018" spreadsheet, Observed directly comes from "Data_Summary" worksheet. Just look for Aug-18 and column named Energy (MWh) in "Data Summary".
+3. Hourly energy values can be generated using the hourly validation code (BugFlowExperiment_Analysis2026/Validation/August/Weekend-Weekday&Hourly/August2018_Validation(Hourly).gms). The code require an input file "Input_August2018.xlsx" (BugFlowExperiment_Analysis2026/Validation/August/Weekend-Weekday&Hourly/Input_August2018.xlsx). The user must keep this input file in the project folder for GAMS IDE to detect it. The file contains observed releases at various time steps, which are fed directly into the model, requiring only the estimation of energy generation and hydropeaking values. The output energy generation values can be found using Valid_August2018(Hourly).gdx or Valid_August2018(Hourly).xlsx under "Energy_Gen" spreadsheet. It should be noted that "Energy_Gen" from the model is at an hourly time step. The user must sum the hourly values for each day (e.g., sum all for d1, then d2, etc.) and enter only the daily totals in the "Energy_Validation_2018" spreadsheet under the "hourly" blue-highlighted column (BugFlowExperiment_Analysis2026/Validation/Models Results Summary.xlsx).  
 
-XXXXXXXXXXXXXXXXXXXXXXXX
-3. Hourly energy values can be generated using the hourly validation code (GCD_BugFlowExperiment/Months of 2018/August 2018/Validation/August2018_Validation(Hourly).gms). The code require an input file "Input_August2018.xlsx" (GCD_BugFlowExperiment/Months of 2018/August 2018/Validation/Input_August2018.xlsx). The user must keep this input file in the project folder for GAMS IDE to detect it. The file contains observed releases at various time steps, which are fed directly into the model, requiring only the estimation of energy generation and hydropeaking values. The output energy generation values can be found using Valid_August2018.gdx or Valid_August2018.xlsx under Energy_Gen spreadsheet. It should be noted that Energy_Gen from the model is at an hourly time step. The user must sum the hourly values for each day (e.g., sum all for d1, then d2, etc.) and enter only the daily totals in the "Energy_Validation_2018" spreadsheet under the "hourly" column (GCD_BugFlowExperiment/Supporting Data/Models Results Summary.xlsx).
-   
+
+?????????????????
 6. Like step 3, generate energy values for the Saturday-Sunday-Weekday model template. The GAMS code file is at: GCD_BugFlowExperiment/Months of 2018/August 2018/Validation/August18_Sat_Validation.gms. This file includes predefined releases, so no input file is needed, and it can be run directly in the GAMS IDE. The output can be found in GCD_BugFlowExperiment/Months of 2018/August 2018/Validation/Valid_SatModel_August.gdx or GCD_BugFlowExperiment/Months of 2018/August 2018/Validation/Valid_SatModel_August.xlsx under XStore spreadsheet. Copy the three energy generation values and paste them into column O (highlighted in red). The graph will update automatically.
-
-
-
-
-
 
 
 
