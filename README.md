@@ -220,8 +220,8 @@ Open `Tradeoffs.xlsx` located in `Results_2024Pricing/Figures_Analysis/` and nav
 This information is sourced from `BugFlowExperiment_Analysis2026/EnergyPrices and Supporting Data/Observed_Hydrographs/Hydropower_Fluctuation(2018).xlsx`.
 
 **Table S7**
+This table mirrors Table 1, with the primary difference being that it displays hydropeaking values using 2014 energy prices instead of 2024 energy pricing.
 
 **Table S8**
-
-
-
+This table compiles hydropeaking values from both the 2014 and 2024 contract price model runs and provides the calculated slopes (i.e., the loss or benefit in hydropeaking value per additional Saturday, Sunday, and weekday).
+*Location:* `BugFlowExperiment_Analysis2026/Results_2024Pricing/Figures_Analysis/Tables.xlsx` (`Compare2024to2014` worksheet)
