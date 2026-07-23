@@ -121,7 +121,7 @@ The following instructions will help users reproduce the results in [Rind and Ro
 1. *Download Data:*
    * Fetch the 15-minute observed hydrograph data for August 2018 from [USGS Water Data (Site 09380000)](https://waterdata.usgs.gov/usa/nwis/uv?09380000).
 2. *Update Excel Workbook:*
-   * Open `EnergyPrices and Supporting Data/Hydrographs_Observed_Used.xlsx`.
+   * Open `EnergyPrices and Supporting Data/Observed_Hydrographs/Hydrographs_Observed_Used.xlsx`.
    * Navigate to the **`August_2018`** sheet.
    * Paste the downloaded release data into the corresponding time slots within the **blue-highlighted cells**.
 3. *Verify Visualization:*
@@ -133,7 +133,7 @@ Schematic created using Microsoft PowerPoint.
 **Figure 4**
 Generated using `Results_2024Pricing/Contract Price Model/August/August18_Contract_2024.gms`.
 1. Run `gamside.exe`. Go to File and save the project at your desired location. It may be convenient to save the project inside the folder where you downloaded the repository.
-2. Import the code file:*File* $\rightarrow$ *Open* $\rightarrow$ `Results_2024Pricing/Contract Price Model/August/August18_Contract_2024.gms`. A main window with the model code will appear. You are only required to run the model (all inputs are defined in the code), and the output files will be generated/updated in the project's folder.
+2. Import the code file:*File* $\rightarrow$ *Open* $\rightarrow$ `Results_2024Pricing/Contract Price Model/August/August18_Contract_2024.gms`. A main window with the model code will appear. You are only required to run the model by either pressing F9 or Run button. (all inputs are defined in the code), and the output files will be generated/updated in the project's folder.
 3. Verify the run: Confirm `"Status: Normal completion"` and check for *"Optimal Solution found"*. Since checking individual log statuses across multiple scenarios is difficult, verify scenario statuses via the `.gdx` file instead.
 4. Check scenario results: Click *File* $\rightarrow$ *Open*, set *Files of type* to *GDX files (\*.gdx)*, and open `2024_Contract_August.gdx`. Scroll to the symbol *`ModelResults`* to view the `ModStat` and `SolStat` for each run. A value of **`1`** indicates an optimal solution. For further details on `ModStat` and `SolStat`, visit the [GAMS Documentation](https://www.gams.com/mccarlGuide/modelstat_tmodstat.htm).
 5. Prepare the visualization file: After verifying optimality, open `Tradeoffs.xlsx` located in `Results_2024Pricing/Figures_Analysis/`.
@@ -141,16 +141,87 @@ Generated using `Results_2024Pricing/Contract Price Model/August/August18_Contra
 7. Extract model outputs: Open `2024_Contract_August.xlsx` from your project output folder and go to the `Fstore` worksheet. Filter the `Offset` column (column A) to select only `H4` (representing a 1000 cfs offset).
 8. Update the graph: Copy the filtered values from columns A–D and paste them into the `Tradeoff_Control` worksheet in `Tradeoffs.xlsx`. The trade-off plot in the `Graph_Tradeoff_2024_August` worksheet will update automatically.
 
- **Figure 5**  This figure compares two model formulations—contract pricing and market pricing—and illustrates how differences in price structure influence the trade-offs.
+**Figure 5**  This figure compares two model formulations—contract pricing and market pricing—and illustrates how differences in price structure influence the trade-offs.
 1. For the contract model, use same data as in Figure 4 (`Fstore` values from `2024_Contract_August.xlsx`).
 2. For the price model, you have to run the price model code (`Results_2024Pricing/Market Price Model/August/August18_2024MarketPricing.gms`).
 i.  Import the code file into `gamside`:*File* $\rightarrow$ *Open* $\rightarrow$ `Results_2024Pricing/Market Price Model/August/August18_2024MarketPricing.gms`. A main window with the model code will appear. You are only required to run the model (all inputs are defined in the code), and the output files will be generated/updated in the project's folder.
 ii. Verify the run: Confirm `"Status: Normal completion"` and check for *"Optimal Solution found"*. Since checking individual log statuses across multiple scenarios is difficult, verify scenario statuses via the `.gdx` file instead.
 iii. Check scenario results: Click *File* $\rightarrow$ *Open*, set *Files of type* to *GDX files (\*.gdx)*, and open `Market_August_2024.gdx`. Scroll to the symbol *`ModelResults`* to view the `ModStat` and `SolStat` for each run. A value of **`1`** indicates an optimal solution.
-3. 
+3. Open same `Tradeoffs.xlsx` located in `Results_2024Pricing/Figures_Analysis/` and move to `2024price_August_Compare` worksheet.
+4. Import GDX output files: In the GAMS IDE, open both `2024_Contract_August.gdx` and `Market_August_2024.gdx`. Locate the `Fstore` variable in each file.
+   > Tip: Review the column layout in the `2024price_August_Compare` worksheet first, then adjust/reorder the variable columns in the GDX viewer to match that exact layout for easy copying.
+5. Paste results: 
+   * Copy the *Contract price* `Fstore` values into the `2024price_August_Compare` worksheet under the yellow-highlighted Contract cell.
+   * Copy the *Market price* `Fstore` values into the same worksheet under the green-highlighted Market cell.
+6. Graph in the `2024price_August_Compare` worksheet will update automatically.
 
-4. Move to the Market-Contract Price Model (Months of 2018/August 2018/Market-Contract Price Model). You can use the GAMS project using Market_Pricing.gpr or create a new one similar to Figure 
-5. Open the code file (August18_MarketPricing_Updated.gms) within the GAMS IDE. The code takes care of both market pricings (+$5/MWh and +$30/MWh) and produce all the required results. The user is not required to change the code unless you want to test different scenarios.
-6. You are required to paste all the required hydropeaking values in the Graphs_August.xlsx (Months of 2018/August 2018/Market-Contract Price Model/Graphs_August.xlsx). The values are required to be pasted in the Tradeoff_Final_Compare worksheet. There are clear instructions about where to paste the values.
-7. The values should come from either .gdx files (Months of 2018/August 2018/Market-Contract Price ModelPricing_Model_Updated.gdx and Months of 2018/August 2018/Contract Price Model/Sat-Sun-Weekday_August.gdx) or the excel output files (Months of 2018/August 2018/Market-Contract Price Model/Pricing_Model_Updated.xlsx and Months of 2018/August 2018/Contract Price Model/Sat-Sun-Weekday_August.xlsx).
-Note: The process for acquiring Fstore values is the same as in Figure 4, but now you should only select data for the H4 offset scenario.
+**Table 1**
+This table summarizes the relative loss in hydropeaking value under market pricing as steady low-flow days are added, compared with the no-bug-flow baseline of zero steady low-flow days.
+1. Run the Market Price Model separately for each month. All required codes are in the monthly subfolders within `BugFlowExperiment_Analysis2026/Results_2024Pricing/Market Price Model`.
+2. As a demonstration, we’ll reproduce the results for August. You can follow the same procedure for other months.
+i.  Import the code file into `gamside`:*File* $\rightarrow$ *Open* $\rightarrow$ `Results_2024Pricing/Market Price Model/August/August18_2024MarketPricing.gms`. A main window with the model code will appear. You are only required to run the model (all inputs are defined in the code), and the output files will be generated/updated in the project's folder.
+ii. Verify the run: Confirm `"Status: Normal completion"` and check for *"Optimal Solution found"*. Since checking individual log statuses across multiple scenarios is difficult, verify scenario statuses via the `.gdx` file instead.
+iii. Check scenario results: Click *File* $\rightarrow$ *Open*, set *Files of type* to *GDX files (\*.gdx)*, and open `Market_August_2024.gdx`. Scroll to the symbol *`ModelResults`* to view the `ModStat` and `SolStat` for each run. A value of `1` indicates an optimal solution.
+3. For visulation, open `Tables.xlsx` available at `Results_2024Pricing/Figures_Analysis/`. Move to `Table1-2024Prices` worksheet.
+4. Paste GDX output values: Copy the `Fstore` values from your generated `.gdx` output file and paste them into the designated `green-highlighted cells`.
+5. Update market price values and verify:
+   * Extract the `Fstore` values for each month from the market price model.
+   * As you paste the `Fstore` values into the green cells, the `yellow-highlighted cells` will automatically recalculate. 
+   * Verify that the calculated values in the yellow cells match the target values in the uncolored (no-color) cells in the table.
+   > Tip: Pay close attention to month lengths (30 vs. 31 days) when aligning and updating the data in the table.
+6. Configuration parameters: Note that all results in this worksheet correspond to `2024 Market Pricing` with:
+   * $5/MWh premium
+   * H4 (1,000 cfs offset release)
+   * V2 (0.83 MAF) monthly volume release
+7. Insert values manually for each month, updating the table step-by-step. 
+________________________________________________________________________________________________________________________
+### Supplemantary Section
+**Figure S1**
+We compiled hourly energy prices obtained from WAPA into `Energy Rates_2014.xlsx` (located at `BugFlowExperiment_Analysis2026/EnergyPrices and Supporting Data/2014Prices`). Each monthly worksheet (e.g., `August`) contains the observed hourly prices for that given month.
+
+**Table S1**
+These compiled rates are derived from 2014 WAPA energy pricing and are available in the `Pricing 2014` worksheet of `BugFlowExperiment_Analysis2026/EnergyPrices and Supporting Data/2014Prices/Price_comparison_2014vs2024.xlsx`.
+
+**Figures S2 and S3**
+These figures are adapted directly from [GCDEnergyPrice.pdf](https://github.com/dzeke/GlenCanyonDamEnergyPrices/blob/main/GCDEnergyPrice.pdf).
+
+**Table S2**
+These compiled 2024 energy rates are available in the `Pricing 2024` worksheet located at `BugFlowExperiment_Analysis2026/EnergyPrices and Supporting Data/2014Prices/Price_comparison_2014vs2024.xlsx`. Source prices were obtained directly from [GCDEnergyPrice.pdf](https://github.com/dzeke/GlenCanyonDamEnergyPrices/blob/main/GCDEnergyPrice.pdf).
+
+**Figure S4, S5, and S6**
+These observed releases were obtained from USGS 09380000 Colorado River at Lees Ferry, AZ [USGS Water Data (Site 09380000)](https://waterdata.usgs.gov/usa/nwis/uv?09380000). Refer Hydrographs_Observed_Used.xlsx (location: BugFlowExperiment_Analysis2026/EnergyPrices and Supporting Data/Observed_Hydrographs) and worksheets `March 2016, August 2015 and August 2017`.
+
+**Figure S7**
+ Model structure flow diagram was created in Microsoft PowerPoint.
+
+**Figure S8**
+
+
+**Figure S9**
+
+**Table S5**
+
+**Figure S10**
+
+
+**Figure S11**
+Open `Tradeoffs.xlsx` located in `Results_2024Pricing/Figures_Analysis/` and navigate to the `Offset_2024Pricing` worksheet.
+1. Open `2024_Contract_August.gdx` in GAMS IDE and locate the `Fstore` symbol. The output .gdx file must be generated during model run within the project directory. 
+2. Copy the `Fstore` values from the gdx file and paste the values into the blue-highlighted cells in the `Offset_2024Pricing` worksheet.
+3. Verify that the graph in the worksheet updates automatically.
+
+**Figure S12**
+Open `Tradeoffs.xlsx` located in `Results_2024Pricing/Figures_Analysis/` and navigate to the `2024Pricing_August_5to30MWh` worksheet.
+1. Open `Market_August_2024.gdx` in GAMS IDE and locate the `Fstore` symbol. The output .gdx file must be generated during model run within the project directory. 
+2. Copy the `Fstore` values from the gdx file and paste the values into the blue-highlighted cells in the `2024Pricing_August_5to30MWh` worksheet.
+3. Verify that the graph in the worksheet updates automatically.
+
+**Table S6**
+This information is sourced from `BugFlowExperiment_Analysis2026/EnergyPrices and Supporting Data/Observed_Hydrographs/Hydropower_Fluctuation(2018).xlsx`.
+
+**Table S7**
+
+**Table S8**
+
+
+
