@@ -195,7 +195,7 @@ These observed releases were obtained from USGS 09380000 Colorado River at Lees 
  Model structure flow diagram was created in Microsoft PowerPoint.
 
 **Figure S8**
-
+These are observed releases from August 2018 at USGS 09380000 Colorado River at Lees Ferry, AZ. Refer to Hydrographs_Observed_Used.xlsx (location: BugFlowExperiment_Analysis2026/EnergyPrices and Supporting Data/Observed_Hydrographs/) and then move to August_2018(Hydrograph). The release data acquired was 15min time step (observed), then we averaged that to hourly time step (Hourly) and again averaged over the on and off-peak periods during different daytypes over the month (Saturday-Sunday-Weekday model). We expect the user to only acquire the 15 mins time step release data and paste those releases in August_2018 worksheet (blue-highlighted cells). The updated hydrograph can be seen in the "August_2018 (Hydrograph)" worksheet.
 
 **Figure S9**
 
