@@ -139,7 +139,7 @@ Generated using `Results_2024Pricing/Contract Price Model/August/August18_Contra
 6. Locate the update sheet: Navigate to the `Tradeoff_Control` worksheet. You will update the `blue-highlighted cells` using data from the output `.xlsx` file.
 7. Extract model outputs: Open `2024_Contract_August.xlsx` from your project output folder and go to the `Fstore` worksheet. Filter the `Offset` column (column A) to select only `H4` (representing a 1000 cfs offset).
 8. Update the graph: Copy the filtered values from columns A–D and paste them into the `Tradeoff_Control` worksheet in `Tradeoffs.xlsx`. The trade-off plot in the `Graph_Tradeoff_2024_August` worksheet will update automatically.
----
+
 **Figure 5**  This figure compares two model formulations—contract pricing and market pricing—and illustrates how differences in price structure influence the trade-offs.
 1. For the contract model, use same data as in Figure 4 (`Fstore` values from `2024_Contract_August.xlsx`).
 2. For the price model, you have to run the price model code (`Results_2024Pricing/Market Price Model/August/August18_2024MarketPricing.gms`).
@@ -153,7 +153,7 @@ iii. Check scenario results: Click *File* $\rightarrow$ *Open*, set *Files of ty
    * Copy the *Contract price* `Fstore` values into the `2024price_August_Compare` worksheet under the yellow-highlighted Contract cell.
    * Copy the *Market price* `Fstore` values into the same worksheet under the green-highlighted Market cell.
 6. Graph in the `2024price_August_Compare` worksheet will update automatically.
----
+
 **Table 1**
 This table summarizes the relative loss in hydropeaking value under 2024 market pricing as steady low-flow days are added, compared with the no-bug-flow baseline of zero steady low-flow days.
 1. Run the Market Price Model separately for each month. All required codes are in the monthly subfolders within `BugFlowExperiment_Analysis2026/Results_2024Pricing/Market Price Model`.
