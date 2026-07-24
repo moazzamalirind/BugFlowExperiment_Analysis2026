@@ -127,8 +127,7 @@ The following instructions will help users reproduce the results in [Rind and Ro
 3. *Verify Visualization:*
    * View the updated chart on the **August_2018 (Hydrograph)** worksheet.
 
-**Figure 3**
-Schematic created using Microsoft PowerPoint.
+**Figure 3** Schematic created using Microsoft PowerPoint.
 
 **Figure 4**
 Generated using `Results_2024Pricing/Contract Price Model/August/August18_Contract_2024.gms`.
@@ -156,7 +155,7 @@ iii. Check scenario results: Click *File* $\rightarrow$ *Open*, set *Files of ty
 6. Graph in the `2024price_August_Compare` worksheet will update automatically.
 
 **Table 1**
-This table summarizes the relative loss in hydropeaking value under market pricing as steady low-flow days are added, compared with the no-bug-flow baseline of zero steady low-flow days.
+This table summarizes the relative loss in hydropeaking value under 2024 market pricing as steady low-flow days are added, compared with the no-bug-flow baseline of zero steady low-flow days.
 1. Run the Market Price Model separately for each month. All required codes are in the monthly subfolders within `BugFlowExperiment_Analysis2026/Results_2024Pricing/Market Price Model`.
 2. As a demonstration, we’ll reproduce the results for August. You can follow the same procedure for other months.
 i.  Import the code file into `gamside`:*File* $\rightarrow$ *Open* $\rightarrow$ `Results_2024Pricing/Market Price Model/August/August18_2024MarketPricing.gms`. A main window with the model code will appear. You are only required to run the model (all inputs are defined in the code), and the output files will be generated/updated in the project's folder.
@@ -195,14 +194,69 @@ These observed releases were obtained from USGS 09380000 Colorado River at Lees 
  Model structure flow diagram was created in Microsoft PowerPoint.
 
 **Figure S8**
-
+These are observed releases from August 2018 Colorado River at Lees Ferry, AZ [USGS Water Data (Site 09380000)](https://waterdata.usgs.gov/usa/nwis/uv?09380000). Refer to Hydrographs_Observed_Used.xlsx (location: BugFlowExperiment_Analysis2026/EnergyPrices and Supporting Data/Observed_Hydrographs/) and then move to August_2018(Hydrograph). The release data acquired was 15min time step (observed), then we averaged that to hourly time step (Hourly) and again averaged over the on and off-peak periods during different daytypes over the month (Saturday-Sunday-Weekday model). We expect the user to only acquire the 15 mins time step release data and paste those releases in August_2018 worksheet (blue-highlighted cells). The updated hydrograph can be seen in the "August_2018 (Hydrograph)" worksheet.
 
 **Figure S9**
+For August 2018, we compared observed daily energy generated from the model using controlled hourly and Saturday–Sunday–Weekday releases from Figure S8.
 
-**Table S5**
+1. Download the daily energy generated at Glen Canyon Dam from the [USBR CRSP Website](https://www.usbr.gov/uc/rm/crsp/gc/index.html). You can also find this observed data in `BugFlowExperiment_Analysis2026/Validation/Models Results Summary.xlsx` within the `Data_Summary` worksheet.
+2. In the `Engery_Validation_2018` worksheet, the *Observed* column directly comes from the `Data_Summary` worksheet. Look for *Aug-18* and the column named `Energy (MWh)` in `Data_Summary`.
+3. Hourly energy values can be generated using the hourly validation code (`BugFlowExperiment_Analysis2026/Validation/August/Weekend-Weekday&Hourly/August2018_Validation(Hourly).gms`). The code requires an input file `Input_August2018.xlsx` located at `BugFlowExperiment_Analysis2026/Validation/August/Weekend-Weekday&Hourly/Input_August2018.xlsx`. Keep this input file in the project folder for the GAMS IDE to detect it. The file contains observed releases at various time steps, which are fed directly into the model to estimate energy generation and hydropeaking values. Output energy generation values can be found using `Valid_August2018(Hourly).gdx` or `Valid_August2018(Hourly).xlsx` under the `Energy_Gen` worksheet. Note that `Energy_Gen` values are hourly. Sum the hourly values for each day (e.g., sum all for d1, then d2, etc.) and enter only the daily totals in the `Engery_Validation_2018` worksheet under the blue-highlighted `Hourly` column in `Models Results Summary.xlsx`.
+4. Like step 3, generate energy values for the Saturday–Sunday–Weekday model template. The GAMS code file is at `BugFlowExperiment_Analysis2026/Validation/August/Saturday_Sunday_Weekday/August18_Sat_Validation.gms`. This file includes predefined releases, so no input file is needed, and it can be run directly in the GAMS IDE. The output files `Valid_SatModel_August.xlsx` and `Valid_SatModel_August.gdx` will be generated in your project directory. Pre-generated output files are also available at `BugFlowExperiment_Analysis2026/Validation/August/Saturday_Sunday_Weekday/`.
+5. Copy the three energy generation values in `Xstore` inside `Valid_SatModel_August.gdx` and paste them into column O (highlighted in red) in the `Engery_Validation_2018` worksheet. The graph will update automatically.
+
+**Table S5: Monthly Energy Validation Instructions**
+
+This table summarizes model validation results by comparing modeled vs. observed monthly energy generation, reporting percentage errors, and listing applicable monthly energy prices. 
+
+Follow the step-by-step workflow below to reproduce results for *August 2018*. The same workflow applies to all other months (March–October). Record all final values in the `Validation_Results` worksheet within:  
+`BugFlowExperiment_Analysis2026/Validation/Models Results Summary.xlsx`
+
+**a. Locate Model Files**
+All validation scripts are located in `BugFlowExperiment_Analysis2026/Validation/`.  
+Navigate to the `August` directory, which contains two subfolders:
+* `Weekend-Weekday&Hourly/`
+* `Saturday_Sunday_Weekday/`
+
+ **b. Run Weekend–Weekday & Hourly Models**
+Navigate to `BugFlowExperiment_Analysis2026/Validation/August/Weekend-Weekday&Hourly/`. You will run two scripts:
+* `August2018_Validation(Hourly).gms` (Hourly model: inputs hourly releases and prices)
+* `August2018_validation(2periods).gms` (Weekend–Weekday model: inputs 2 day-types)
+
+**Execution Steps:**
+1. Open the `.gms` file in GAMS IDE (`File > Open`). No code edits are required.
+2. Confirm that `Input_August2018.xlsx` is present in the active working directory. *(Note: This file contains additional datasets like revenue/pricing that feed the model; no user edits are needed).*
+3. Click **Run** on the GAMS toolbar.
+4. Verify execution success in the status window:
+   * Look for **"Status: Normal completion"**
+   * Look for **"Optimal Solution found"**
+
+> **Solver Note:** Models default to the CPLEX solver (`option LP = CPLEX;`). This model is linear and CPLEX was well-suited for this analysis. To use a different linear solver, comment out this line by adding an asterisk (`*`) at the beginning, then select a solver via `File > Options > Solvers`.
+
+**c. Extract Output Metrics**
+Open `Valid_August2018(Hourly).xlsx` and navigate to the `Scalar` worksheet:
+* **Released Volume (Ac-ft/Month):** Read directly from parameter `TotMonth_volume`.
+* **Total Monthly Energy Generated (MWh):** Sum parameters `XStore_Steady` + `XStore_unsteady`.
+* **Hydropeaking Value ($):** Read directly from parameter `FStore`.
+* **Percentage Error (%):** Calculate using:  
+  $$\% \text{Error} = 100 \times \frac{\text{Model} - \text{Observed}}{\text{Observed}}$$  
+  *(Example: $100 \times \frac{409,289 - 392,938}{392,938} = 4.2\%$)*
+  
+Replicate this exact extraction procedure for the two-period script (`August2018_validation(2periods).gms`).
+
+ **d. Run Saturday–Sunday–Weekday Model**
+i. Navigate to `BugFlowExperiment_Analysis2026/Validation/August/Saturday_Sunday_Weekday/`.
+ii. Run `August18_Sat_Validation.gms` following the same GAMS execution steps.
+iii. Extract output metrics from `Valid_SatModel_August.xlsx` (or `.gdx`).
+
+ **e. Complete Table S5**
+Repeat Steps a–d for all remaining months (March through October). Input all extracted metrics into the `Validation_Results` tab of `Models Results Summary.xlsx` to complete Table S5.
 
 **Figure S10**
-
+1. Open `Hydrograph_August_2024Price.xlsx` located at `BugFlowExperiment_Analysis2026/Results_2024Pricing/Figures_Analysis/`.
+2. Locate `Market_August_2024.xlsx` in the GAMS project directory (the same directory selected in Figure 4).
+3. Open `Market_August_2024.xlsx` and go to the `RStore` worksheet. Filter for `PriceScen1` and `V2`, copy the values, and paste them into the corresponding blue-highlighted cells in `Hydrograph_August_2024Price.xlsx`.
+4. The hydrograph will update automatically.
 
 **Figure S11**
 Open `Tradeoffs.xlsx` located in `Results_2024Pricing/Figures_Analysis/` and navigate to the `Offset_2024Pricing` worksheet.
@@ -220,8 +274,30 @@ Open `Tradeoffs.xlsx` located in `Results_2024Pricing/Figures_Analysis/` and nav
 This information is sourced from `BugFlowExperiment_Analysis2026/EnergyPrices and Supporting Data/Observed_Hydrographs/Hydropower_Fluctuation(2018).xlsx`.
 
 **Table S7**
+This table mirrors Table 1, with the primary difference being that it displays hydropeaking values using 2014 energy prices instead of 2024 energy pricing.
+
+This table summarizes the relative loss in hydropeaking value under 2014 market pricing as steady low-flow days are added, compared with the no-bug-flow baseline of zero steady low-flow days.
+
+1. Run the Market Price Model separately for each month. All required codes are in the monthly subfolders within `BugFlowExperiment_Analysis2026/Results_2014Pricing`.
+2. You will see Months followed by 2018 (e.g., August 2018). For demonstration, we are just using August 2018 but the same process has to be repeated for all other months. 
+3. Inside August 2018, you will find three folders. Hover to Market-Contract Price Model. 
+4. Open GAMS IDE. and then import the code and run by following steps:
+i.  Import the code file into `gamside`:*File* $\rightarrow$ *Open* $\rightarrow$ `Results_2014Pricing/August 2018/August18_MarketPricing_Updated.gms`. A main window with the model code will appear. You are only required to run the model (all inputs are defined in the code), and the output files will be generated/updated in the project's folder.
+ii. Verify the run: Confirm `"Status: Normal completion"` and check for *"Optimal Solution found"*. Since checking individual log statuses across multiple scenarios is difficult, verify scenario statuses via the `.gdx` file instead.
+iii. Check scenario results: Click *File* $\rightarrow$ *Open*, set *Files of type* to *GDX files (\*.gdx)*, and open `Pricing_Model_Updated.gdx`. Scroll to the symbol *`ModelResults`* to view the `ModStat` and `SolStat` for each run. A value of `1` indicates an optimal solution.
+5. For visulation, open `Tables.xlsx` available at `Results_2024Pricing/Figures_Analysis/`. Move to `Table1-2014Prices` worksheet.
+6. Paste GDX output values: Copy the `Fstore` values from your generated `.gdx` output file and paste them into the designated `green-highlighted cells`. 
+7. Update market price values and verify:
+   * Extract the `Fstore` values for each month from the market price model.
+   * As you paste the `Fstore` values into the green cells, the `yellow-highlighted cells` will automatically recalculate. Only focus on values in Yellow cells "PriceScen1".
+   * Verify that the calculated values in the yellow cells match the target values in the uncolored (no-color) cells in the table.
+   > Tip: Pay close attention to month lengths (30 vs. 31 days) when aligning and updating the data in the table.
+8. Configuration parameters: Note that all results in this worksheet correspond to `2014 Market Pricing` with:
+   * $5/MWh premium
+   * H4 (1,000 cfs offset release)
+   * V2 (0.83 MAF) monthly volume release
+9. Insert values manually for each month, updating the table step-by-step. 
 
 **Table S8**
-
-
-
+This table compiles hydropeaking values from the 2014 and 2024 contract price model runs and calculates the slopes (loss or benefit per additional Saturday, Sunday, or weekday).
+*Location:* `BugFlowExperiment_Analysis2026/Results_2024Pricing/Figures_Analysis/Tables.xlsx` and worksheet `Compare2024to2014`.
