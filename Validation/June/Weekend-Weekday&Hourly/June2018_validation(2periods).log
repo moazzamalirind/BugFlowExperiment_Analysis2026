@@ -1,0 +1,100 @@
+
+--- Job June2018_validation(2periods).gms Start 07/23/26 14:53:52 30.3.0 rc5da09e WEX-WEI x86 64bit/MS Windows
+--- GAMS Parameters defined
+    Input E:\OneDrive - Washington State University (email.wsu.edu)\Documents\GitHub\BugFlowExperiment_Analysis2026\Validation\June\Weekend-Weekday&Hourly\June2018_validation(2periods).gms
+    PageWidth 80
+    PageSize 0
+    PageContr 3
+    Action CE
+    ScrDir E:\OneDrive - Washington State University (email.wsu.edu)\Documents\GitHub\BugFlowExperiment_Analysis2026\Validation\June\Weekend-Weekday&Hourly\225b\
+    SysDir C:\GAMS\win64\30.3\
+    WorkDir E:\OneDrive - Washington State University (email.wsu.edu)\Documents\GitHub\BugFlowExperiment_Analysis2026\Validation\June\Weekend-Weekday&Hourly\
+    LogOption 3
+    DFormat 0
+    TFormat 0
+    License C:\Users\Mooz\Downloads\gamslice.txt
+    ErrorLog 99
+    IDE 1
+GAMS 30.3.0   Copyright (C) 1987-2020 GAMS Development. All rights reserved
+Licensee: Small MUD - 5 User License                     G200622/0001AP-GEN
+          Utah State University, Utah Water Research Laboratory      DC7087
+--- Starting compilation
+--- June2018_validation(2periods).gms(76) 3 Mb
+--- call GDXXRW.EXE input=Input_June2018.xlsx output=Valid_June2018(2Periods).gdx set=d rng=day!A1 Rdim=1  par=Inflow rng=inflow!A1 Rdim=1  par=initstorage rng=initstorage!A1 Rdim=0  par=maxstorage rng=maxstorage!A1 Rdim=0   par=minstorage rng=minstorage!
+
+GDXXRW           30.3.0 rc5da09e Released Mar 06, 2020 WEI x86 64bit/MS Window
+Input file : E:\OneDrive - Washington State University (email.wsu.edu)\Documents\GitHub\BugFlowExperiment_Analysis2026\Validation\June\Weekend-Weekday&Hourly\Input_June2018.xlsx
+Output file: E:\OneDrive - Washington State University (email.wsu.edu)\Documents\GitHub\BugFlowExperiment_Analysis2026\Validation\June\Weekend-Weekday&Hourly\Valid_June2018(2Periods).gdx
+Total time = 3438 Ms
+--- June2018_validation(2periods).gms(79) 3 Mb
+--- GDXin=E:\OneDrive - Washington State University (email.wsu.edu)\Documents\GitHub\BugFlowExperiment_Analysis2026\Validation\June\Weekend-Weekday&Hourly\Valid_June2018(2Periods).gdx
+--- June2018_validation(2periods).gms(220) 3 Mb
+--- Starting execution: elapsed 0:00:03.632
+--- June2018_validation(2periods).gms(196) 4 Mb
+--- Generating LP model Model2
+--- June2018_validation(2periods).gms(198) 4 Mb
+---   14 rows  10 columns  23 non-zeroes
+--- Executing BARON: elapsed 0:00:03.665
+
+GAMS/BARON       30.3.0 rc5da09e Released Mar 06, 2020 WEI x86 64bit/MS Window
+
+===========================================================================
+ BARON version 19.12.7. Built: WIN-64 Sat Dec 7 14:49:49 EST 2019 
+
+ BARON is a product of The Optimization Firm.
+ For information on BARON, see https://minlp.com/about-baron
+
+ If you use this software, please cite publications from
+ https://minlp.com/baron-publications, such as: 
+
+ Khajavirad, A. and N. V. Sahinidis,
+ A hybrid LP/NLP paradigm for global optimization relaxations,
+ Mathematical Programming Computation, 10, 383-421, 2018.
+===========================================================================
+ This BARON run may utilize the following subsolver(s)
+ For LP/MIP/QP: ILOG CPLEX                                      
+ For NLP: MINOS, SNOPT, GAMS external NLP, IPOPT, FILTERSD, FILTERSQP
+===========================================================================
+ Preprocessing found feasible solution with value  18308091.6946     
+ Problem solved during preprocessing
+ Upper bound is  18308091.6946     
+
+ Cleaning up
+
+                         *** Normal completion ***            
+
+ Wall clock time:                     0.06
+ Total CPU time used:                 0.02
+
+ Total no. of BaR iterations:      -1
+ Best solution found at node:      -1
+ Max. no. of nodes in memory:       0
+ 
+ All done
+===========================================================================
+
+Solution      = 18308091.6946285  best solution found during preprocessing
+Best possible = 18308091.6946285
+Absolute gap  = 0  optca = 1E-9
+Relative gap  = 0  optcr = 0.1
+  (Note that BARON uses a different formula to compute the relative gap as
+   was used for the above reported value.)
+
+--- Restarting execution
+--- June2018_validation(2periods).gms(198) 2 Mb
+--- Reading solution for model Model2
+--- Executing after solve: elapsed 0:00:04.147
+--- June2018_validation(2periods).gms(217) 3 Mb
+--- GDX File E:\OneDrive - Washington State University (email.wsu.edu)\Documents\GitHub\BugFlowExperiment_Analysis2026\Validation\June\Weekend-Weekday&Hourly\Valid_June2018(2Periods).gdx
+--- June2018_validation(2periods).gms(219) 3 Mb
+GDX2XLS          30.3.0 rc5da09e Released Mar 06, 2020 WEI x86 64bit/MS Window
+Output file: E:\OneDrive - Washington State University (email.wsu.edu)\Documents\GitHub\BugFlowExperiment_Analysis2026\Validation\June\Weekend-Weekday&Hourly\Valid_June2018(2Periods).xlsx
+*** Status: Normal completion
+--- Job June2018_validation(2periods).gms Stop 07/23/26 14:54:04 elapsed 0:00:12.539
+Cannot delete directory: 225b
+Cannot delete directory: 225b
+Cannot delete directory: 225b
+Cannot delete directory: 225b
+Cannot delete directory: 225b
+*** Error: Cannot delete process directory: 225b
+Exit code = 112

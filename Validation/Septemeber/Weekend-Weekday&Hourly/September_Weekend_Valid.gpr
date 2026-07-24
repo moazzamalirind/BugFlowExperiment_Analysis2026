@@ -1,0 +1,106 @@
+[PROJECT]
+
+[GDXDISP: Convert Par 0]
+PlaneDim=0
+RowDim=0
+Squeeze=1
+SqTrail0=0
+Order=
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: Avail_Water Var 0]
+PlaneDim=0
+RowDim=0
+Squeeze=1
+SqTrail0=0
+Order=1
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: FStore Par 0]
+PlaneDim=0
+RowDim=0
+Squeeze=1
+SqTrail0=0
+Order=
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: XStore_unsteady Par 0]
+PlaneDim=0
+RowDim=0
+Squeeze=1
+SqTrail0=0
+Order=
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: Energy_Gen Var 2]
+PlaneDim=0
+RowDim=2
+Squeeze=1
+SqTrail0=0
+Order=1,2,3
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: XStore_steady Par 0]
+PlaneDim=0
+RowDim=0
+Squeeze=1
+SqTrail0=0
+Order=
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: Xstore Par 1]
+PlaneDim=0
+RowDim=1
+Squeeze=1
+SqTrail0=0
+Order=1
+Decim=7
+PlaneRownr=-1
+
+[RP:MAY2018_VALIDATION(HOURLY)]
+1=
+
+[RP:MAY2018_VALIDATION(2PERIODS)]
+1=
+
+[RP:APRIL2018_VALIDATION(HOURLY)]
+1=
+
+[RP:APRIL2018_VALIDATION(2PERIODS)]
+1=
+
+[RP:SEPTEMBER2018_VALIDATION(HOURLY)]
+1=
+
+[RP:JUNE18_SAT_VALIDATION]
+1=
+
+[RP:JUNE18_SAT_SUN-WEEKDAY_MODEL]
+1=
+
+[OPENWINDOW_1]
+MAXIM=0
+TOP=-7
+LEFT=-15
+HEIGHT=719
+WIDTH=1163
+
+[RP:SEPTEMBER2018_VALIDATION(2PERIODS)]
+1=
+
+[MRUFILES]
+1=E:\Class project\GCD_BugFlowExperiment\September 2018\Weekend-Weekday\Validation\Valid_September2018(Hourly).gdx
+2=E:\Class project\GCD_BugFlowExperiment\September 2018\Weekend-Weekday\Validation\September2018_Validation(Hourly).gms
+3=E:\Class project\GCD_BugFlowExperiment\September 2018\Weekend-Weekday\Validation\September2018_validation(2periods).lst
+4=E:\Class project\GCD_BugFlowExperiment\September 2018\Weekend-Weekday\Validation\September2018_validation(2periods).gms
+5=E:\Class project\GCD_BugFlowExperiment\Meeting_4_1_2021\Saturday-Sunday-Weekday\June18_Sat_Sun-Weekday_Model.gms
+6=E:\Class project\GCD_BugFlowExperiment\March 2018\Saturday-Sunday-Weekday\Validation\June18_Sat_Validation.gms
+7=E:\Class project\GCD_BugFlowExperiment\September 2018\Weekend-Weekday\Validation\September2018_Validation(Hourly).lst
+8=E:\Class project\GCD_BugFlowExperiment\April 2018\Weekend-Weekday\Validation\Valid_April2018(Hourly).gdx
+9=E:\Class project\GCD_BugFlowExperiment\April 2018\Weekend-Weekday\Validation\April2018_Validation(Hourly).lst

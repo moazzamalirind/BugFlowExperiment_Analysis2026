@@ -1,0 +1,78 @@
+
+--- Job May2018_Validation(Hourly).gms Start 04/05/21 15:51:41 33.2.0 r4f23b21 WEX-WEI x86 64bit/MS Windows
+--- Applying:
+    C:\GAMS\33\gmsprmNT.txt
+--- GAMS Parameters defined
+    Input "E:\Class project\GCD_BugFlowExperiment\May 2018\Weekend-Weekday\Validation\May2018_Validation(Hourly).gms"
+    PageWidth 80
+    PageSize 0
+    PageContr 3
+    Action CE
+    ScrDir "E:\Class project\GCD_BugFlowExperiment\May 2018\Weekend-Weekday\Validation\225a\"
+    SysDir C:\GAMS\33\
+    WorkDir "E:\Class project\GCD_BugFlowExperiment\May 2018\Weekend-Weekday\Validation\"
+    LogOption 3
+    DFormat 0
+    TFormat 0
+    ErrorLog 99
+    IDE 1
+Licensee: Small MUD - 5 User License                     G200622/0001AP-GEN
+          Utah State University, Utah Water Research Laboratory      DC7087
+          C:\GAMS\33\gamslice.txt
+GAMS 33.2.0   Copyright (C) 1987-2020 GAMS Development. All rights reserved
+--- Starting compilation
+--- May2018_Validation(Hourly).gms(57) 3 Mb
+--- call GDXXRW.EXE input=Input_May2018.xlsx  output= Valid_May2018(Hourly).gdx  par=observed_release rng=Observed_Release(Hr)!A1:Y32 par=EnergyRate rng=Rates!A1 Rdim=1  set=d rng=day!A1 Rdim=1  par=Inflow rng=inflow!A1 Rdim=1 par=evap rng=Evaporation!A1 
+
+GDXXRW           33.2.0 r4f23b21 Released Dec 01, 2020 WEI x86 64bit/MS Window
+Input file : E:\Class project\GCD_BugFlowExperiment\May 2018\Weekend-Weekday\Validation\Input_May2018.xlsx
+Output file: E:\Class project\GCD_BugFlowExperiment\May 2018\Weekend-Weekday\Validation\Valid_May2018(Hourly).gdx
+Total time = 1078 Ms
+--- May2018_Validation(Hourly).gms(60) 3 Mb
+--- GDXin=E:\Class project\GCD_BugFlowExperiment\May 2018\Weekend-Weekday\Validation\Valid_May2018(Hourly).gdx
+--- May2018_Validation(Hourly).gms(153) 3 Mb
+--- Starting execution: elapsed 0:00:01.294
+--- May2018_Validation(Hourly).gms(71) 4 Mb
+--- Generating LP model validation
+--- May2018_Validation(Hourly).gms(137) 5 Mb
+---   5,303 rows  2,265 columns  9,766 non-zeroes
+--- Executing CPLEX (Solvelink=2): elapsed 0:00:01.333
+
+IBM ILOG CPLEX   33.2.0 r4f23b21 Released Dec 01, 2020 WEI x86 64bit/MS Window
+
+--- GAMS/Cplex licensed for continuous and discrete problems.
+--- Space for names approximately 0.21 Mb
+--- Use option 'names no' to turn use of names off
+--- GMO memory 1.35 Mb (peak 1.37 Mb)
+--- Dictionary memory 0.00 Mb
+--- Cplex 12.10.0.0 link memory 0.10 Mb (peak 0.47 Mb)
+--- Starting Cplex
+
+Version identifier: 12.10.0.0 | 2019-11-26 | 843d4de2ae
+CPXPARAM_Advance                                 0
+CPXPARAM_Threads                                 1
+CPXPARAM_MIP_Display                             4
+CPXPARAM_MIP_Tolerances_AbsMIPGap                0
+Tried aggregator 1 time.
+LP Presolve eliminated 5302 rows and 2265 columns.
+All rows and columns eliminated.
+Presolve time = 0.00 sec. (1.93 ticks)
+
+--- LP status (1): optimal.
+--- Cplex Time: 0.00sec (det. 3.64 ticks)
+
+
+Optimal solution found
+Objective:     15759215.419365
+
+--- Reading solution for model validation
+--- Executing after solve: elapsed 0:00:01.474
+--- May2018_Validation(Hourly).gms(148) 5 Mb
+--- GDX File (execute_unload) E:\Class project\GCD_BugFlowExperiment\May 2018\Weekend-Weekday\Validation\Valid_May2018(Hourly).gdx
+--- May2018_Validation(Hourly).gms(150) 5 Mb
+GDX2XLS          33.2.0 r4f23b21 Released Dec 01, 2020 WEI x86 64bit/MS Window
+Output file: E:\Class project\GCD_BugFlowExperiment\May 2018\Weekend-Weekday\Validation\Valid_May2018(Hourly).xlsx
+(Created backup file)
+*** Status: Normal completion
+--- May2018_Validation(Hourly).gms(150) 5 Mb  13 secs
+--- Job May2018_Validation(Hourly).gms Stop 04/05/21 15:51:56 elapsed 0:00:14.869

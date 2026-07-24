@@ -1,0 +1,73 @@
+
+--- Job June18_Sat_Validation.gms Start 07/23/26 23:56:18 30.3.0 rc5da09e WEX-WEI x86 64bit/MS Windows
+--- GAMS Parameters defined
+    Input E:\OneDrive - Washington State University (email.wsu.edu)\Documents\GitHub\BugFlowExperiment_Analysis2026\Validation\June\Saturday_Sunday_Weekday\June18_Sat_Validation.gms
+    PageWidth 80
+    PageSize 0
+    PageContr 3
+    Action CE
+    ScrDir E:\OneDrive - Washington State University (email.wsu.edu)\Documents\GitHub\BugFlowExperiment_Analysis2026\Validation\June\Saturday_Sunday_Weekday\225a\
+    SysDir C:\GAMS\win64\30.3\
+    WorkDir E:\OneDrive - Washington State University (email.wsu.edu)\Documents\GitHub\BugFlowExperiment_Analysis2026\Validation\June\Saturday_Sunday_Weekday\
+    LogOption 3
+    DFormat 0
+    TFormat 0
+    License C:\Users\Mooz\Downloads\gamslice.txt
+    ErrorLog 99
+    IDE 1
+GAMS 30.3.0   Copyright (C) 1987-2020 GAMS Development. All rights reserved
+Licensee: Small MUD - 5 User License                     G200622/0001AP-GEN
+          Utah State University, Utah Water Research Laboratory      DC7087
+--- Starting compilation
+--- June18_Sat_Validation.gms(200) 3 Mb
+--- Starting execution: elapsed 0:00:00.019
+--- June18_Sat_Validation.gms(153) 4 Mb
+--- Generating LP model Model1
+--- June18_Sat_Validation.gms(155) 4 Mb
+---   41 rows  15 columns  66 non-zeroes
+--- Executing CPLEX: elapsed 0:00:00.024
+
+IBM ILOG CPLEX   30.3.0 rc5da09e Released Mar 06, 2020 WEI x86 64bit/MS Window
+--- GAMS/Cplex Link licensed for continuous and discrete problems.
+Cplex 12.10.0.0
+
+Reading data...
+Starting Cplex...
+Space for names approximately 0.00 Mb
+Use option 'names no' to turn use of names off
+Version identifier: 12.10.0.0 | 2019-11-26 | 843d4de2ae
+CPXPARAM_Advance                                 0
+CPXPARAM_Threads                                 1
+CPXPARAM_Parallel                                1
+CPXPARAM_Simplex_Limits_Iterations               2000000000
+CPXPARAM_TimeLimit                               1000
+CPXPARAM_Tune_TimeLimit                          200
+Tried aggregator 1 time.
+LP Presolve eliminated 41 rows and 15 columns.
+All rows and columns eliminated.
+Presolve time = 0.00 sec. (0.01 ticks)
+LP status(1): optimal
+Cplex Time: 0.00sec (det. 0.03 ticks)
+
+Optimal solution found.
+Objective :    18695476.190526
+
+--- Restarting execution
+--- June18_Sat_Validation.gms(155) 2 Mb
+--- Reading solution for model Model1
+--- Executing after solve: elapsed 0:00:00.162
+--- June18_Sat_Validation.gms(187) 3 Mb
+--- GDX File E:\OneDrive - Washington State University (email.wsu.edu)\Documents\GitHub\BugFlowExperiment_Analysis2026\Validation\June\Saturday_Sunday_Weekday\Valid_SatModel_June.gdx
+--- June18_Sat_Validation.gms(189) 3 Mb
+GDX2XLS          30.3.0 rc5da09e Released Mar 06, 2020 WEI x86 64bit/MS Window
+Output file: E:\OneDrive - Washington State University (email.wsu.edu)\Documents\GitHub\BugFlowExperiment_Analysis2026\Validation\June\Saturday_Sunday_Weekday\Valid_SatModel_June.xlsx
+(Created backup file)
+*** Status: Normal completion
+--- Job June18_Sat_Validation.gms Stop 07/23/26 23:56:24 elapsed 0:00:06.818
+Cannot delete directory: 225a
+Cannot delete directory: 225a
+Cannot delete directory: 225a
+Cannot delete directory: 225a
+Cannot delete directory: 225a
+*** Error: Cannot delete process directory: 225a
+Exit code = 112

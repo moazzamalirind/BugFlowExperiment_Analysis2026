@@ -1,0 +1,83 @@
+
+--- Job June2018_Validation(Hourly).gms Start 07/23/26 15:17:07 30.3.0 rc5da09e WEX-WEI x86 64bit/MS Windows
+--- GAMS Parameters defined
+    Input E:\OneDrive - Washington State University (email.wsu.edu)\Documents\GitHub\BugFlowExperiment_Analysis2026\Validation\June\Weekend-Weekday&Hourly\June2018_Validation(Hourly).gms
+    PageWidth 80
+    PageSize 0
+    PageContr 3
+    Action CE
+    ScrDir E:\OneDrive - Washington State University (email.wsu.edu)\Documents\GitHub\BugFlowExperiment_Analysis2026\Validation\June\Weekend-Weekday&Hourly\225a\
+    SysDir C:\GAMS\win64\30.3\
+    WorkDir E:\OneDrive - Washington State University (email.wsu.edu)\Documents\GitHub\BugFlowExperiment_Analysis2026\Validation\June\Weekend-Weekday&Hourly\
+    LogOption 3
+    DFormat 0
+    TFormat 0
+    License C:\Users\Mooz\Downloads\gamslice.txt
+    ErrorLog 99
+    IDE 1
+GAMS 30.3.0   Copyright (C) 1987-2020 GAMS Development. All rights reserved
+Licensee: Small MUD - 5 User License                     G200622/0001AP-GEN
+          Utah State University, Utah Water Research Laboratory      DC7087
+--- Starting compilation
+--- June2018_Validation(Hourly).gms(57) 3 Mb
+--- call GDXXRW.EXE input=Input_June2018.xlsx  output= Valid_June2018(Hourly).gdx  par=observed_release rng=Observed_Release(Hr)!A1:Y32 par=EnergyRate rng=Rates!A1 Rdim=1  set=d rng=day!A1 Rdim=1  par=Inflow rng=inflow!A1 Rdim=1 par=evap rng=evap!A1 Rdim=
+
+GDXXRW           30.3.0 rc5da09e Released Mar 06, 2020 WEI x86 64bit/MS Window
+Input file : E:\OneDrive - Washington State University (email.wsu.edu)\Documents\GitHub\BugFlowExperiment_Analysis2026\Validation\June\Weekend-Weekday&Hourly\Input_June2018.xlsx
+Output file: E:\OneDrive - Washington State University (email.wsu.edu)\Documents\GitHub\BugFlowExperiment_Analysis2026\Validation\June\Weekend-Weekday&Hourly\Valid_June2018(Hourly).gdx
+Total time = 3219 Ms
+--- June2018_Validation(Hourly).gms(60) 3 Mb
+--- GDXin=E:\OneDrive - Washington State University (email.wsu.edu)\Documents\GitHub\BugFlowExperiment_Analysis2026\Validation\June\Weekend-Weekday&Hourly\Valid_June2018(Hourly).gdx
+--- June2018_Validation(Hourly).gms(153) 3 Mb
+--- Starting execution: elapsed 0:00:03.375
+--- June2018_Validation(Hourly).gms(71) 4 Mb
+--- Generating LP model validation
+--- June2018_Validation(Hourly).gms(137) 5 Mb
+---   5,132 rows  2,192 columns  9,451 non-zeroes
+--- Executing CPLEX: elapsed 0:00:03.386
+
+IBM ILOG CPLEX   30.3.0 rc5da09e Released Mar 06, 2020 WEI x86 64bit/MS Window
+--- GAMS/Cplex Link licensed for continuous and discrete problems.
+Cplex 12.10.0.0
+
+Reading data...
+Starting Cplex...
+Space for names approximately 0.20 Mb
+Use option 'names no' to turn use of names off
+Version identifier: 12.10.0.0 | 2019-11-26 | 843d4de2ae
+CPXPARAM_Advance                                 0
+CPXPARAM_Threads                                 1
+CPXPARAM_Parallel                                1
+CPXPARAM_Simplex_Limits_Iterations               2000000000
+CPXPARAM_TimeLimit                               1000
+CPXPARAM_Tune_TimeLimit                          200
+Tried aggregator 1 time.
+LP Presolve eliminated 5132 rows and 2192 columns.
+All rows and columns eliminated.
+Presolve time = 0.02 sec. (1.87 ticks)
+LP status(1): optimal
+Cplex Time: 0.02sec (det. 3.51 ticks)
+
+Optimal solution found.
+Objective :    18308023.256190
+
+--- Restarting execution
+--- June2018_Validation(Hourly).gms(137) 2 Mb
+--- Reading solution for model validation
+--- June2018_Validation(Hourly).gms(137) 3 Mb
+--- Executing after solve: elapsed 0:00:03.529
+--- June2018_Validation(Hourly).gms(148) 4 Mb
+--- GDX File E:\OneDrive - Washington State University (email.wsu.edu)\Documents\GitHub\BugFlowExperiment_Analysis2026\Validation\June\Weekend-Weekday&Hourly\Valid_June2018(Hourly).gdx
+--- June2018_Validation(Hourly).gms(150) 4 Mb
+GDX2XLS          30.3.0 rc5da09e Released Mar 06, 2020 WEI x86 64bit/MS Window
+Output file: E:\OneDrive - Washington State University (email.wsu.edu)\Documents\GitHub\BugFlowExperiment_Analysis2026\Validation\June\Weekend-Weekday&Hourly\Valid_June2018(Hourly).xlsx
+(Created backup file)
+*** Status: Normal completion
+--- Job June2018_Validation(Hourly).gms Stop 07/23/26 15:17:18 elapsed 0:00:11.557
+Cannot delete directory: 225a
+Cannot delete directory: 225a
+Cannot delete directory: 225a
+Cannot delete directory: 225a
+Cannot delete directory: 225a
+*** Error: Cannot delete process directory: 225a
+Exit code = 112

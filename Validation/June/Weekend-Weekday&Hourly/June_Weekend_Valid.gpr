@@ -1,0 +1,264 @@
+[PROJECT]
+
+[GDXDISP: Convert Par 0]
+PlaneDim=0
+RowDim=0
+Squeeze=1
+SqTrail0=0
+Order=
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: Avail_Water Var 0]
+PlaneDim=0
+RowDim=0
+Squeeze=1
+SqTrail0=0
+Order=1
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: FStore Par 0]
+PlaneDim=0
+RowDim=0
+Squeeze=1
+SqTrail0=0
+Order=
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: XStore_unsteady Par 0]
+PlaneDim=0
+RowDim=0
+Squeeze=1
+SqTrail0=0
+Order=
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: Energy_Gen Var 2]
+PlaneDim=0
+RowDim=2
+Squeeze=1
+SqTrail0=0
+Order=1,2,3
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: XStore_steady Par 0]
+PlaneDim=0
+RowDim=0
+Squeeze=1
+SqTrail0=0
+Order=
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: Xstore Par 1]
+PlaneDim=0
+RowDim=1
+Squeeze=1
+SqTrail0=0
+Order=1
+Decim=7
+PlaneRownr=-1
+
+[RP:MAY2018_VALIDATION(HOURLY)]
+1=
+
+[RP:MAY2018_VALIDATION(2PERIODS)]
+1=
+
+[RP:JUNE2018_VALIDATION]
+1=
+
+[RP:APRIL2018_VALIDATION(2PERIODS)]
+1=
+
+[RP:APRIL2018_VALIDATION(HOURLY)]
+1=
+
+[RP:UNTITLED_1]
+1=
+
+[GDXDISP: initstorage Par 0]
+PlaneDim=0
+RowDim=0
+Squeeze=1
+SqTrail0=0
+Order=
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: maxstorage Par 0]
+PlaneDim=0
+RowDim=0
+Squeeze=1
+SqTrail0=0
+Order=
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: maxRel Par 0]
+PlaneDim=0
+RowDim=0
+Squeeze=1
+SqTrail0=0
+Order=
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: minRel Par 0]
+PlaneDim=0
+RowDim=0
+Squeeze=1
+SqTrail0=0
+Order=
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: minstorage Par 0]
+PlaneDim=0
+RowDim=0
+Squeeze=1
+SqTrail0=0
+Order=
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: modpar Set 1]
+PlaneDim=0
+RowDim=1
+Squeeze=1
+SqTrail0=0
+Order=1
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: ModelResults Par 1]
+PlaneDim=0
+RowDim=1
+Squeeze=1
+SqTrail0=0
+Order=1
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: ObjectiveVal Var 0]
+PlaneDim=0
+RowDim=0
+Squeeze=1
+SqTrail0=0
+Order=1
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: observed_release Par 2]
+PlaneDim=0
+RowDim=2
+Squeeze=1
+SqTrail0=0
+Order=1,2
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: p Set 1]
+PlaneDim=0
+RowDim=1
+Squeeze=1
+SqTrail0=0
+Order=1
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: release Var 2]
+PlaneDim=0
+RowDim=2
+Squeeze=1
+SqTrail0=0
+Order=1,2,3
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: ReleaseVol Var 2]
+PlaneDim=0
+RowDim=2
+Squeeze=1
+SqTrail0=0
+Order=1,2,3
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: RStore Par 2]
+PlaneDim=0
+RowDim=2
+Squeeze=1
+SqTrail0=0
+Order=1,2
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: Sstore Par 1]
+PlaneDim=0
+RowDim=1
+Squeeze=1
+SqTrail0=0
+Order=1
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: storage Var 1]
+PlaneDim=0
+RowDim=1
+Squeeze=1
+SqTrail0=0
+Order=1,2
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: Vol_monthlyrelease Var 0]
+PlaneDim=0
+RowDim=0
+Squeeze=1
+SqTrail0=0
+Order=1
+Decim=7
+PlaneRownr=-1
+
+[RP:JUNE2018_VALIDATION(2PERIODS)]
+1=
+
+[RP:JUNE2018_VALIDATION(HOURLY)]
+1=
+
+[GDXDISP: EnergyRate Par 1]
+PlaneDim=0
+RowDim=1
+Squeeze=1
+SqTrail0=0
+Order=1
+Decim=7
+PlaneRownr=-1
+
+[MRUFILES]
+1=E:\OneDrive - Washington State University (email.wsu.edu)\Documents\GitHub\BugFlowExperiment_Analysis2026\Validation\June\Weekend-Weekday&Hourly\Untitled_1.gms
+2=E:\OneDrive - Washington State University (email.wsu.edu)\Documents\GitHub\BugFlowExperiment_Analysis2026\Validation\April\Weekend-Weekday&Hourly\April2018_validation(2periods).gms
+3=E:\OneDrive - Washington State University (email.wsu.edu)\Documents\GitHub\BugFlowExperiment_Analysis2026\Validation\June\Weekend-Weekday&Hourly\June2018_validation(2periods).lst
+4=E:\Class project\GCD_BugFlowExperiment\May 2018\Weekend-Weekday\Validation\Valid_May2018(Hourly).gdx
+5=E:\Class project\GCD_BugFlowExperiment\May 2018\Weekend-Weekday\Validation\Valid_May2018(2Periods).gdx
+6=E:\Class project\GCD_BugFlowExperiment\May 2018\Weekend-Weekday\Validation\May2018_Validation(Hourly).gms
+7=E:\Class project\GCD_BugFlowExperiment\May 2018\Weekend-Weekday\Validation\May2018_validation(2periods).lst
+8=E:\Class project\GCD_BugFlowExperiment\May 2018\Weekend-Weekday\Validation\May2018_validation(2periods).gms
+
+[OPENWINDOW_1]
+FILE0=E:\OneDrive - Washington State University (email.wsu.edu)\Documents\GitHub\BugFlowExperiment_Analysis2026\Validation\April\Weekend-Weekday&Hourly\April2018_Validation(Hourly).gms
+FILE1=E:\OneDrive - Washington State University (email.wsu.edu)\Documents\GitHub\BugFlowExperiment_Analysis2026\Validation\June\Weekend-Weekday&Hourly\June2018_validation(2periods).gms
+FILE2=E:\OneDrive - Washington State University (email.wsu.edu)\Documents\GitHub\BugFlowExperiment_Analysis2026\Validation\June\Weekend-Weekday&Hourly\June2018_Validation(Hourly).gms
+FILE3=E:\OneDrive - Washington State University (email.wsu.edu)\Documents\GitHub\BugFlowExperiment_Analysis2026\Validation\June\Weekend-Weekday&Hourly\June2018_Validation(Hourly).lst
+FILE4=E:\OneDrive - Washington State University (email.wsu.edu)\Documents\GitHub\BugFlowExperiment_Analysis2026\Validation\June\Weekend-Weekday&Hourly\Valid_June2018(Hourly).gdx
+FILE5=E:\OneDrive - Washington State University (email.wsu.edu)\Documents\GitHub\BugFlowExperiment_Analysis2026\Validation\June\Weekend-Weekday&Hourly\Valid_June2018(Hourly).gdx
+MAXIM=0
+TOP=-5
+LEFT=10
+HEIGHT=897
+WIDTH=951
