@@ -254,7 +254,7 @@ Repeat Steps a–d for all remaining months (March through October). Input all e
 
 **Figure S10**
 1. Open `Hydrograph_August_2024Price.xlsx` located at `BugFlowExperiment_Analysis2026/Results_2024Pricing/Figures_Analysis/`.
-2. Locate `Market_August_2024.xlsx` in the GAMS project directory (the same directory selected in Figure 4).
+2. Locate `Market_August_2024.xlsx` in the GAMS project directory (hint: results you also used in Figure 4).
 3. Open `Market_August_2024.xlsx` and go to the `RStore` worksheet. Filter for `PriceScen1` and `V2`, copy the values, and paste them into the corresponding blue-highlighted cells in `Hydrograph_August_2024Price.xlsx`.
 4. The hydrograph will update automatically.
 
