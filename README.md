@@ -179,13 +179,13 @@ ________________________________________________________________________________
 We compiled hourly energy prices obtained from WAPA into `Energy Rates_2014.xlsx` (located at `BugFlowExperiment_Analysis2026/EnergyPrices and Supporting Data/2014Prices`). Each monthly worksheet (e.g., `August`) contains the observed hourly prices for that given month.
 
 **Table S1**
-These compiled rates are derived from 2014 WAPA energy pricing and are available in the `Pricing 2014` worksheet of `BugFlowExperiment_Analysis2026/EnergyPrices and Supporting Data/2014Prices/Price_comparison_2014vs2024.xlsx`.
+These compiled rates are derived from 2014 WAPA energy pricing and are available in the `Pricing 2014` worksheet of `BugFlowExperiment_Analysis2026/EnergyPrices and Supporting Data/Price_comparison_2014vs2024.xlsx`.
 
 **Figures S2 and S3**
 These figures are adapted directly from [GCDEnergyPrice.pdf](https://github.com/dzeke/GlenCanyonDamEnergyPrices/blob/main/GCDEnergyPrice.pdf).
 
 **Table S2**
-These compiled 2024 energy rates are available in the `Pricing 2024` worksheet located at `BugFlowExperiment_Analysis2026/EnergyPrices and Supporting Data/2014Prices/Price_comparison_2014vs2024.xlsx`. Source prices were obtained directly from [GCDEnergyPrice.pdf](https://github.com/dzeke/GlenCanyonDamEnergyPrices/blob/main/GCDEnergyPrice.pdf).
+These compiled 2024 energy rates are available in the `Pricing 2024` worksheet located at `BugFlowExperiment_Analysis2026/EnergyPrices and Supporting Data/Price_comparison_2014vs2024.xlsx`. Source prices were obtained directly from [GCDEnergyPrice.pdf](https://github.com/dzeke/GlenCanyonDamEnergyPrices/blob/main/GCDEnergyPrice.pdf).
 
 **Figure S4, S5, and S6**
 These observed releases were obtained from USGS 09380000 Colorado River at Lees Ferry, AZ [USGS Water Data (Site 09380000)](https://waterdata.usgs.gov/usa/nwis/uv?09380000). Refer Hydrographs_Observed_Used.xlsx (location: BugFlowExperiment_Analysis2026/EnergyPrices and Supporting Data/Observed_Hydrographs) and worksheets `March 2016, August 2015 and August 2017`.
@@ -201,9 +201,9 @@ For August 2018, we compared observed daily energy generated from the model usin
 
 1. Download the daily energy generated at Glen Canyon Dam from the [USBR CRSP Website](https://www.usbr.gov/uc/rm/crsp/gc/index.html). You can also find this observed data in `BugFlowExperiment_Analysis2026/Validation/Models Results Summary.xlsx` within the `Data_Summary` worksheet.
 2. In the `Engery_Validation_2018` worksheet, the *Observed* column directly comes from the `Data_Summary` worksheet. Look for *Aug-18* and the column named `Energy (MWh)` in `Data_Summary`.
-3. Hourly energy values can be generated using the hourly validation code (`BugFlowExperiment_Analysis2026/Validation/August/Weekend-Weekday&Hourly/August2018_Validation(Hourly).gms`). The code requires an input file `Input_August2018.xlsx` located at `BugFlowExperiment_Analysis2026/Validation/August/Weekend-Weekday&Hourly/Input_August2018.xlsx`. Keep this input file in the project folder for the GAMS IDE to detect it. The file contains observed releases at various time steps, which are fed directly into the model to estimate energy generation and hydropeaking values. Output energy generation values can be found using `Valid_August2018(Hourly).gdx` or `Valid_August2018(Hourly).xlsx` under the `Energy_Gen` worksheet. Note that `Energy_Gen` values are hourly. Sum the hourly values for each day (e.g., sum all for d1, then d2, etc.) and enter only the daily totals in the `Engery_Validation_2018` worksheet under the blue-highlighted `Hourly` column in `Models Results Summary.xlsx`.
+3. Hourly energy values can be generated using the hourly validation code (`BugFlowExperiment_Analysis2026/Validation/August/Weekend-Weekday&Hourly/August2018_Validation(Hourly).gms`). The code requires an input file `Input_August2018.xlsx` located at `BugFlowExperiment_Analysis2026/Validation/August/Weekend-Weekday&Hourly/Input_August2018.xlsx`. Keep this input file in the project folder for the GAMS IDE to detect it. The file contains observed releases at various time steps, which are fed directly into the model to estimate energy generation and hydropeaking values. Output energy generation values can be found using `Valid_August2018(Hourly).gdx` or `Valid_August2018(Hourly).xlsx` under the `Energy_Gen` worksheet. Note that `Energy_Gen` values are hourly. You are expected to copy "Value" column from the `Energy_Gen` worksheet and paste it into the `Energy_Validation_2018` worksheet, under the blue highlighted cells. You can also read the instructions above those blue-highlighted cells, which say "Paste only the Value column...". The figure will update automatically.
 4. Like step 3, generate energy values for the Saturday–Sunday–Weekday model template. The GAMS code file is at `BugFlowExperiment_Analysis2026/Validation/August/Saturday_Sunday_Weekday/August18_Sat_Validation.gms`. This file includes predefined releases, so no input file is needed, and it can be run directly in the GAMS IDE. The output files `Valid_SatModel_August.xlsx` and `Valid_SatModel_August.gdx` will be generated in your project directory. Pre-generated output files are also available at `BugFlowExperiment_Analysis2026/Validation/August/Saturday_Sunday_Weekday/`.
-5. Copy the three energy generation values in `Xstore` inside `Valid_SatModel_August.gdx` and paste them into column O (highlighted in red) in the `Engery_Validation_2018` worksheet. The graph will update automatically.
+5. Copy the three energy generation values in `Xstore` inside `Valid_SatModel_August.gdx` and paste them into column O (highlighted in blue) in the `Engery_Validation_2018` worksheet. The graph will update automatically.
 
 **Table S5: Monthly Energy Validation Instructions**
 
@@ -235,13 +235,18 @@ Navigate to `BugFlowExperiment_Analysis2026/Validation/August/Weekend-Weekday&Ho
 
 **c. Extract Output Metrics**
 Open `Valid_August2018(Hourly).xlsx` and navigate to the `Scalar` worksheet:
-* **Released Volume (Ac-ft/Month):** Read directly from parameter `TotMonth_volume`.
-* **Total Monthly Energy Generated (MWh):** Sum parameters `XStore_Steady` + `XStore_unsteady`.
-* **Hydropeaking Value ($):** Read directly from parameter `FStore`.
-* **Percentage Error (%):** Calculate using:  
-  $$\% \text{Error} = 100 \times \frac{\text{Model} - \text{Observed}}{\text{Observed}}$$  
-  *(Example: $100 \times \frac{409,289 - 392,938}{392,938} = 4.2\%$)*
-  
+
+* Read the `Vol_monthlyrelease` parameter for *'Released volume (Ac-ft/Month)'*.
+* Read the `FStore` parameter for *'Hydropeaking value ($)'*.
+* For *'Energy Generated (MWh)'*, move to the `Xstore` worksheet (within the same file, `Valid_August2018(Hourly).xlsx`). Sum all values in that worksheet to get the total energy generated (MWh) for the month.
+* For *'Percentage Error in Energy (%)'*, calculate using:
+
+$$\text{Error} = 100 \times \frac{\text{Model} - \text{Observed}}{\text{Observed}}\ \%$$
+
+*Example:*
+
+$$ 100 \times \frac{\text{Hourly} - \text{Observed}}{\text{Observed}} = 100 \times \frac{409{,}289 - 392{,}938}{392{,}938} = 4.2\%$$
+
 Replicate this exact extraction procedure for the two-period script (`August2018_validation(2periods).gms`).
 
  **d. Run Saturday–Sunday–Weekday Model**
@@ -254,7 +259,7 @@ Repeat Steps a–d for all remaining months (March through October). Input all e
 
 **Figure S10**
 1. Open `Hydrograph_August_2024Price.xlsx` located at `BugFlowExperiment_Analysis2026/Results_2024Pricing/Figures_Analysis/`.
-2. Locate `Market_August_2024.xlsx` in the GAMS project directory (the same directory selected in Figure 4).
+2. Locate `Market_August_2024.xlsx` in the GAMS project directory (hint: results you also used in Figure 4).
 3. Open `Market_August_2024.xlsx` and go to the `RStore` worksheet. Filter for `PriceScen1` and `V2`, copy the values, and paste them into the corresponding blue-highlighted cells in `Hydrograph_August_2024Price.xlsx`.
 4. The hydrograph will update automatically.
 
