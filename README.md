@@ -235,13 +235,18 @@ Navigate to `BugFlowExperiment_Analysis2026/Validation/August/Weekend-Weekday&Ho
 
 **c. Extract Output Metrics**
 Open `Valid_August2018(Hourly).xlsx` and navigate to the `Scalar` worksheet:
-* **Released Volume (Ac-ft/Month):** Read directly from parameter `TotMonth_volume`.
-* **Total Monthly Energy Generated (MWh):** Sum parameters `XStore_Steady` + `XStore_unsteady`.
-* **Hydropeaking Value ($):** Read directly from parameter `FStore`.
-* **Percentage Error (%):** Calculate using:  
-  $$\% \text{Error} = 100 \times \frac{\text{Model} - \text{Observed}}{\text{Observed}}$$  
-  *(Example: $100 \times \frac{409,289 - 392,938}{392,938} = 4.2\%$)*
-  
+
+* Read the `Vol_monthlyrelease` parameter for *'Released volume (Ac-ft/Month)'*.
+* Read the `FStore` parameter for *'Hydropeaking value ($)'*.
+* For *'Energy Generated (MWh)'*, move to the `Xstore` worksheet (within the same file, `Valid_August2018(Hourly).xlsx`). Sum all values in that worksheet to get the total energy generated (MWh) for the month.
+* For *'Percentage Error in Energy (%)'*, calculate using:
+
+$$\text{Error} = 100 \times \frac{\text{Model} - \text{Observed}}{\text{Observed}}\ \%$$
+
+*Example:*
+
+$$ 100 \times \frac{\text{Hourly} - \text{Observed}}{\text{Observed}} = 100 \times \frac{409{,}289 - 392{,}938}{392{,}938} = 4.2\%$$
+
 Replicate this exact extraction procedure for the two-period script (`August2018_validation(2periods).gms`).
 
  **d. Run Saturday–Sunday–Weekday Model**
