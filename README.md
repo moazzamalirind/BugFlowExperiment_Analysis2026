@@ -14,7 +14,7 @@ This research was jointly funded by the Future of the Colorado River Project and
 
 Corresponding Author: **Moazzam Ali Rind** (moazzamalirind@gmail.com)
 
-Advised by: **Dr. David E. Rosenberg** (http://rosenberg.usu.edu/)
+Advised by: **Dr. David E. Rosenberg** (http://rosenberg.usu.edu/; david.rosenberg@usu.edu)
 
 Starting Date: 6/1/2019
 
