@@ -4,7 +4,7 @@ Glen Canyon Dam Bug Flow Experiment featuring GAMS optimization models and suppo
 
 ________________________________________________________________________________________________________________________________________________________________________________________________
 
-## Bugs Buy Steady Releases from Hydropower Producers to Reduce Hydropeaking Ecosystem Conflict 
+## Bugs Pay for Days of Steady Reservoir Releases to Reduce Hydropeaking-Ecosystem Conflict 
 
 _______________________________________________________________________________________________________________
 
